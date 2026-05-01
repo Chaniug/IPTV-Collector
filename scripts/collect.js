@@ -1,6 +1,6 @@
 /**
- * IPTV 源自动采集脚本
- * 功能：从多个 GitHub 仓库采集源、去重、测试、输出
+ * IPTV 源自动采集脚本 v2
+ * 专注于国内可用源，优先使用国内 CDN
  */
 
 const https = require('https');
@@ -8,22 +8,52 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-// 知名 IPTV 仓库列表
+// 可靠的采集源
 const SOURCES = [
-  // iptv-org 官方库
-  { name: 'iptv-org', url: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u' },
+  // iptv-org 中国源（过滤后）
+  { name: 'iptv-org 中国', url: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u' },
   
-  // FanMingMing/Live - 国内直播源
-  { name: 'FanMingMing/Live', url: 'https://raw.githubusercontent.com/FanmingFe/Live/master/README.m3u' },
-  
-  // 国内镜像源
-  { name: '国内源1', url: 'https://ghproxy.com/https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u' },
+  // 国内镜像（备选）
+  { name: 'Gitee镜像', url: 'https://gitee.com/xietao3/IPTV/raw/master/streams/cn.m3u' },
 ];
 
-// 分组名称映射
+// 国内 CDN 域名白名单（优先保留）
+const DOMAIN_WHITELIST = [
+  'bupt.edu.cn',
+  'chinamobile.com',
+  'chinaunicom.com',
+  'ctyun.cn',
+  'cdn.jsdelivr.net',
+  'ghproxy.com',
+  'gitproxy.com',
+  'tankr.net',
+  'tv.cctv.com',
+  'migu.cn',
+  'cmvideo.cn',
+  'goodiptv.club',
+  'wiserain.fr',
+];
+
+// 国外域名黑名单（大概率不可用）
+const DOMAIN_BLACKLIST = [
+  'youtube.com',
+  'twitch.tv',
+  'akamai',
+  'cloudfront',
+  'akamaized',
+  'dailymotion',
+  'stream.root',
+  '.ru/',
+  'us.to',
+];
+
+// 分组映射
 const GROUP_MAP = {
   'CCTV': '央视台',
   'CETV': '教育台',
+  'CETV-1': '教育台',
+  'BRTV': '地方台',
+  'BTV': '地方台',
   '北京': '地方台',
   '上海': '地方台',
   '广东': '地方台',
@@ -32,6 +62,7 @@ const GROUP_MAP = {
   '江苏': '地方台',
   '湖南': '地方台',
   '东方': '地方台',
+  '东方卫视': '卫视台',
   '安徽': '地方台',
   '山东': '地方台',
   '四川': '地方台',
@@ -66,39 +97,38 @@ const GROUP_MAP = {
   'JET': '卫视台',
   'J2': '卫视台',
   'VTV': '卫视台',
-  ' Channel': '卫视频',
   '卡通': '卡通类',
-  '金鹰': '卡通类',
-  '炫动': '卡通类',
-  '优漫': '卡通类',
-  '嘉佳': '卡通类',
-  '少儿': '卡通类',
+  '金鹰卡通': '卡通类',
+  '炫动卡通': '卡通类',
+  '优漫卡通': '卡通类',
+  '嘉佳卡通': '卡通类',
   '纪实': '纪实类',
-  'BRTV': '地方台',
-  '农林': '地方台',
   '新闻': '新闻类',
-  '国际': '国际台',
   'CGTN': '国际台',
   'DW': '国际台',
   'NHK': '国际台',
   'BBC': '国际台',
   'VOA': '国际台',
+  '农科': '科学类',
+  'CGTN': '国际台',
+  '国防军事': '军事类',
+  '农林卫视': '地方台',
 };
 
-const httpAgent = new http.Agent({ keepAlive: true, timeout: 10000 });
-const httpsAgent = new https.Agent({ keepAlive: true, timeout: 10000 });
-
 /**
- * HTTP GET 请求
+ * HTTP 请求封装
  */
-function fetch(url, timeout = 30000) {
+function fetch(url, timeout = 20000) {
   return new Promise((resolve, reject) => {
     const isHttps = url.startsWith('https://');
     const client = isHttps ? https : http;
-    const agent = isHttps ? httpsAgent : httpAgent;
     
-    const req = client.get(url, { agent }, (res) => {
-      // 处理重定向
+    const req = client.get(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'Accept': '*/*',
+      }
+    }, (res) => {
       if (res.statusCode === 301 || res.statusCode === 302) {
         if (res.headers.location) {
           return fetch(res.headers.location, timeout).then(resolve).catch(reject);
@@ -115,13 +145,39 @@ function fetch(url, timeout = 30000) {
     });
     
     req.on('error', reject);
-    req.on('timeout', () => {
+    req.setTimeout(timeout, () => {
       req.destroy();
       reject(new Error('Timeout'));
     });
-    
-    req.setTimeout(timeout);
   });
+}
+
+/**
+ * 检查 URL 是否可能可用（国内访问）
+ */
+function isLikelyAvailable(url) {
+  if (!url || !url.startsWith('http')) return false;
+  
+  // 检查黑名单
+  for (const black of DOMAIN_BLACKLIST) {
+    if (url.includes(black)) return false;
+  }
+  
+  // 检查白名单
+  for (const white of DOMAIN_WHITELIST) {
+    if (url.includes(white)) return true;
+  }
+  
+  // 检查是否为国内域名
+  const cnDomains = ['.cn', '.com.cn', '.net.cn', '.org.cn', '.gov.cn'];
+  const hasCnDomain = cnDomains.some(d => url.includes(d));
+  const hasBaiduMirror = url.includes('baidu') || url.includes('cn');
+  
+  // 检查端口（常见国内端口）
+  const commonPorts = [80, 443, 8080, 554, 8000, 8888];
+  const hasCommonPort = commonPorts.some(p => url.includes(`:${p}`));
+  
+  return hasCnDomain || hasBaiduMirror || hasCommonPort;
 }
 
 /**
@@ -137,27 +193,23 @@ function parseM3U(content) {
     const trimmed = line.trim();
     
     if (trimmed.startsWith('#EXTINF:')) {
-      // 解析扩展信息
       const info = trimmed.substring(8);
       const match = info.match(/,([^,]*)$/);
-      const name = match ? match[1] : '未知';
+      const name = match ? match[1].trim() : '未知';
       
-      // 提取属性
       const attrs = {};
-      const attrMatches = trimmed.matchAll(/([a-zA-Z0-9-]+)="([^"]*)"/g);
-      for (const m of attrMatches) {
+      for (const m of trimmed.matchAll(/([a-zA-Z0-9-]+)="([^"]*)"/g)) {
         attrs[m[1]] = m[2];
       }
       
       currentChannel = {
-        name: name,
+        name,
         url: '',
         logo: attrs['tvg-logo'] || attrs['logo'] || '',
-        group: attrs['group-title'] || attrs['tvg-group'] || '',
-        country: attrs['country'] || attrs['tvg-country'] || 'CN',
+        group: attrs['group-title'] || '',
+        country: attrs['country'] || 'CN',
       };
     } else if (trimmed && !trimmed.startsWith('#') && currentChannel) {
-      // URL 行
       currentChannel.url = trimmed;
       if (currentChannel.name && currentChannel.url) {
         channels.push({...currentChannel});
@@ -179,97 +231,70 @@ function determineGroup(name) {
     }
   }
   
-  // 默认分组
-  if (name.includes('CCTV') || name.includes('CETV')) {
-    return '央视台';
-  }
-  if (name.includes('卫视')) {
-    return '卫视台';
-  }
+  if (name.includes('CCTV') || name.includes('CETV')) return '央视台';
+  if (name.includes('卫视')) return '卫视台';
   
   return '其他台';
 }
 
 /**
- * 频道去重（基于 URL）
+ * 测试频道源
  */
-function deduplicateChannels(channels) {
-  const seen = new Set();
-  const result = [];
-  
-  for (const ch of channels) {
-    if (!seen.has(ch.url) && ch.url.startsWith('http')) {
-      seen.add(ch.url);
-      
-      // 如果分组为空，自动确定
-      if (!ch.group) {
-        ch.group = determineGroup(ch.name);
-      }
-      
-      result.push(ch);
-    }
-  }
-  
-  return result;
-}
-
-/**
- * 测试频道源是否有效
- */
-async function testChannel(channel, timeout = 8000) {
+async function testChannel(channel, timeout = 5000) {
   return new Promise((resolve) => {
-    const start = Date.now();
-    
     try {
       const req = (channel.url.startsWith('https') ? https : http).request(channel.url, {
         method: 'HEAD',
         timeout,
         headers: {
-          'User-Agent': 'Mozilla/5.0 (compatible; IPTV-Auto-Update/1.0)',
+          'User-Agent': 'VLC/3.0.18 LibVLC/3.0.18',
+          'Accept': '*/*',
         }
       }, (res) => {
-        const elapsed = Date.now() - start;
-        // 接受 2xx, 3xx 状态码
-        resolve({ ...channel, valid: res.statusCode >= 200 && res.statusCode < 400, elapsed });
+        resolve({ 
+          ...channel, 
+          valid: res.statusCode >= 200 && res.statusCode < 400,
+          status: res.statusCode
+        });
       });
       
-      req.on('error', () => {
-        resolve({ ...channel, valid: false, elapsed: Date.now() - start });
-      });
-      
+      req.on('error', () => resolve({ ...channel, valid: false }));
       req.on('timeout', () => {
         req.destroy();
-        resolve({ ...channel, valid: false, elapsed: timeout });
+        resolve({ ...channel, valid: false });
+      });
+      
+      req.setTimeout(timeout, () => {
+        req.destroy();
+        resolve({ ...channel, valid: false });
       });
       
       req.end();
     } catch (e) {
-      resolve({ ...channel, valid: false, elapsed: 0 });
+      resolve({ ...channel, valid: false });
     }
   });
 }
 
 /**
- * 生成 M3U 文件内容
+ * 生成 M3U 文件
  */
 function generateM3U(channels) {
   const lines = ['#EXTM3U', ''];
   
-  // 按分组排序
   const groups = {};
   for (const ch of channels) {
-    const group = ch.group || '其他台';
-    if (!groups[group]) groups[group] = [];
-    groups[group].push(ch);
+    const g = ch.group || '其他台';
+    if (!groups[g]) groups[g] = [];
+    groups[g].push(ch);
   }
   
-  const groupOrder = ['央视台', '卫视台', '地方台', '卡通类', '纪实类', '新闻类', '国际台', '其他台'];
+  const order = ['央视台', '卫视台', '地方台', '卡通类', '纪实类', '新闻类', '国际台', '其他台'];
   
-  for (const group of groupOrder) {
-    if (!groups[group]) continue;
-    
-    for (const ch of groups[group]) {
-      lines.push(`#EXTINF:-1 tvg-name="${ch.name}" tvg-logo="${ch.logo}" group-title="${group}",${ch.name}`);
+  for (const g of order) {
+    if (!groups[g]) continue;
+    for (const ch of groups[g].sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'))) {
+      lines.push(`#EXTINF:-1 tvg-name="${ch.name}" tvg-logo="${ch.logo}" group-title="${g}",${ch.name}`);
       lines.push(ch.url);
     }
     lines.push('');
@@ -279,101 +304,109 @@ function generateM3U(channels) {
 }
 
 /**
- * 生成 JSON 文件内容
- */
-function generateJSON(channels) {
-  return JSON.stringify({
-    update: new Date().toISOString(),
-    count: channels.length,
-    channels: channels.map(ch => ({
-      name: ch.name,
-      url: ch.url,
-      logo: ch.logo,
-      group: ch.group,
-    }))
-  }, null, 2);
-}
-
-/**
  * 主函数
  */
 async function main() {
-  console.log('🚀 IPTV 源自动采集开始...\n');
+  console.log('🚀 IPTV 源采集开始（国内优先版）\n');
   
   const allChannels = [];
   
-  // 从各来源采集
   for (const source of SOURCES) {
     try {
       console.log(`📡 从 ${source.name} 采集...`);
       const content = await fetch(source.url, 30000);
       const channels = parseM3U(content);
-      console.log(`   获取到 ${channels.length} 个频道`);
+      console.log(`   获取 ${channels.length} 个频道`);
       allChannels.push(...channels);
     } catch (e) {
       console.log(`   ❌ 失败: ${e.message}`);
     }
   }
   
-  console.log(`\n📊 共采集 ${allChannels.length} 个频道（去重前）`);
+  console.log(`\n📊 采集 ${allChannels.length} 个频道`);
+  
+  // 优先保留国内可用源
+  const priorityChannels = allChannels.filter(ch => isLikelyAvailable(ch.url));
+  const otherChannels = allChannels.filter(ch => !isLikelyAvailable(ch.url));
+  
+  console.log(`🎯 优先保留 ${priorityChannels.length} 个（国内/高可用）`);
+  console.log(`📦 备用 ${otherChannels.length} 个（待测试）`);
   
   // 去重
-  const uniqueChannels = deduplicateChannels(allChannels);
-  console.log(`🔄 去重后剩余 ${uniqueChannels.length} 个频道`);
+  const seen = new Set();
+  const deduplicated = [];
   
-  // 随机选取最多 200 个进行测试（完整测试太耗时）
-  const testCount = Math.min(200, uniqueChannels.length);
-  const testChannels = uniqueChannels
-    .sort(() => Math.random() - 0.5)
-    .slice(0, testCount);
+  for (const ch of [...priorityChannels, ...otherChannels]) {
+    if (!seen.has(ch.url) && ch.url.startsWith('http')) {
+      seen.add(ch.url);
+      if (!ch.group) ch.group = determineGroup(ch.name);
+      deduplicated.push(ch);
+    }
+  }
   
-  console.log(`\n⏱️  测试前 ${testCount} 个频道（并发 20）...`);
+  console.log(`🔄 去重后 ${deduplicated.length} 个频道`);
   
-  const concurrency = 20;
+  // 测试优先通道（前 150 个）
+  const toTest = deduplicated.slice(0, 150);
+  const untested = deduplicated.slice(150);
+  
+  console.log(`\n⏱️  测试 ${toTest.length} 个通道...`);
+  
+  const concurrency = 30;
   const validChannels = [];
   let tested = 0;
   
-  for (let i = 0; i < testChannels.length; i += concurrency) {
-    const batch = testChannels.slice(i, i + concurrency);
+  for (let i = 0; i < toTest.length; i += concurrency) {
+    const batch = toTest.slice(i, i + concurrency);
     const results = await Promise.all(batch.map(ch => testChannel(ch)));
     
-    for (const result of results) {
+    for (const r of results) {
       tested++;
-      if (result.valid) {
-        validChannels.push(result);
-        process.stdout.write(`\r   ✅ ${tested}/${testCount} 测试通过`);
-      } else {
-        process.stdout.write(`\r   ❌ ${tested}/${testCount} 测试失败`);
+      if (r.valid) {
+        validChannels.push(r);
+        process.stdout.write(`\r   ✅ ${tested}/${toTest.length}`);
       }
     }
   }
   
-  console.log(`\n\n✅ 有效源: ${validChannels.length}/${testCount}`);
+  console.log(`\n\n✅ 有效: ${validChannels.length}/${toTest.length}`);
   
-  // 对于未测试的频道，保留原样（标记为待测试）
-  const untestedChannels = uniqueChannels.slice(testCount);
-  console.log(`⏸️  未测试: ${untestedChannels.length} 个（直接保留）`);
+  // 合并：有效源 + 未测试的优先源
+  const finalChannels = [
+    ...validChannels,
+    ...untested.filter(ch => isLikelyAvailable(ch.url)),
+  ];
   
-  // 合并结果：有效的 + 未测试的
-  const finalChannels = [...validChannels, ...untestedChannels];
+  console.log(`📝 最终保留 ${finalChannels.length} 个频道`);
   
-  // 按名称排序
-  finalChannels.sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'));
+  // 保存
+  const m3uPath = path.join(__dirname, '..', 'iptv.m3u');
+  const jsonPath = path.join(__dirname, '..', 'channels.json');
   
-  console.log(`\n📝 生成最终文件（共 ${finalChannels.length} 个频道）...`);
+  fs.writeFileSync(m3uPath, generateM3U(finalChannels), 'utf8');
+  fs.writeFileSync(jsonPath, JSON.stringify({
+    update: new Date().toISOString(),
+    count: finalChannels.length,
+    valid: validChannels.length,
+    channels: finalChannels.map(ch => ({
+      name: ch.name,
+      url: ch.url,
+      logo: ch.logo,
+      group: ch.group,
+    }))
+  }, null, 2), 'utf8');
   
-  // 输出 M3U
-  const m3uContent = generateM3U(finalChannels);
-  fs.writeFileSync(path.join(__dirname, 'iptv.m3u'), m3uContent, 'utf8');
+  console.log('\n✅ 完成！');
+  console.log(`   iptv.m3u: ${finalChannels.length} 个`);
+  console.log(`   channels.json: ${finalChannels.length} 个`);
   
-  // 输出 JSON
-  const jsonContent = generateJSON(finalChannels);
-  fs.writeFileSync(path.join(__dirname, 'channels.json'), jsonContent, 'utf8');
-  
-  console.log('✅ 完成！');
-  console.log(`   - iptv.m3u: ${finalChannels.length} 个频道`);
-  console.log(`   - channels.json: ${finalChannels.length} 个频道`);
+  // 显示有效频道示例
+  if (validChannels.length > 0) {
+    console.log('\n📺 有效频道示例：');
+    validChannels.slice(0, 10).forEach(ch => {
+      console.log(`   ${ch.name} [${ch.group}]`);
+    });
+  }
 }
 
-// 运行
 main().catch(console.error);
