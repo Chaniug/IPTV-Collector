@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV 源采集器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📺 IPTV 源采集器</h1>
+            <p class="subtitle">采集、测试、管理您的 IPTV 源</p>
+        </header>
+
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="collector">采集源</button>
+            <button class="tab-btn" data-tab="player">播放器</button>
+            <button class="tab-btn" data-tab="favorites">收藏</button>
+            <button class="tab-btn" data-tab="settings">设置</button>
+        </nav>
+
+        <!-- 采集源面板 -->
+        <section id="collector" class="tab-panel active">
+            <div class="panel-header">
+                <h2>📡 采集管理</h2>
+                <div class="actions">
+                    <button id="collectAll" class="btn btn-primary">🚀 采集全部</button>
+                    <button id="testAll" class="btn btn-secondary">⚡ 测试全部</button>
+                </div>
+            </div>
+            
+            <div class="status-bar">
+                <span id="totalCount">总源数: 0</span>
+                <span id="validCount">有效: 0</span>
+                <span id="invalidCount">无效: 0</span>
+                <span id="progressText">就绪</span>
+            </div>
+
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="all">全部</button>
+                <button class="filter-btn" data-category="cctv">央视</button>
+                <button class="filter-btn" data-category="satellite">卫视</button>
+                <button class="filter-btn" data-category="local">地方台</button>
+                <button class="filter-btn" data-category="other">其他</button>
+            </div>
+
+            <div class="source-list" id="sourceList">
+                <div class="empty-state">
+                    <p>点击「采集全部」开始获取 IPTV 源</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 播放器面板 -->
+        <section id="player" class="tab-panel">
+            <div class="player-container">
+                <div class="video-wrapper">
+                    <video id="videoPlayer" controls autoplay>
+                        您的浏览器不支持视频播放
+                    </video>
+                </div>
+                <div class="channel-info">
+                    <h3 id="currentChannel">选择一个频道开始播放</h3>
+                </div>
+            </div>
+            
+            <div class="channel-grid" id="channelGrid">
+                <p class="empty-state">请先从「采集源」中选择频道</p>
+            </div>
+        </section>
+
+        <!-- 收藏面板 -->
+        <section id="favorites" class="tab-panel">
+            <div class="panel-header">
+                <h2>⭐ 我的收藏</h2>
+                <div class="actions">
+                    <button id="exportM3U" class="btn btn-secondary">📥 导出 M3U</button>
+                    <button id="clearFavorites" class="btn btn-danger">🗑️ 清空</button>
+                </div>
+            </div>
+            <div class="source-list" id="favoritesList">
+                <div class="empty-state">
+                    <p>收藏的频道将显示在这里</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 设置面板 -->
+        <section id="settings" class="tab-panel">
+            <div class="settings-group">
+                <h3>⚙️ 测试设置</h3>
+                <div class="setting-item">
+                    <label>超时时间（毫秒）</label>
+                    <input type="number" id="timeoutSetting" value="5000" min="1000" max="30000">
+                </div>
+                <div class="setting-item">
+                    <label>并发测试数</label>
+                    <input type="number" id="concurrencySetting" value="10" min="1" max="50">
+                </div>
+            </div>
+
+            <div class="settings-group">
+                <h3>📡 采集源配置</h3>
+                <div class="source-urls" id="sourceUrls">
+                    <div class="source-url-item">
+                        <input type="text" placeholder="API URL" value="https://iptv-org.github.io/api/channels.json">
+                        <button class="btn-icon delete-source">×</button>
+                    </div>
+                </div>
+                <button id="addSourceUrl" class="btn btn-secondary">+ 添加源</button>
+            </div>
+
+            <div class="settings-group">
+                <h3>🗑️ 数据管理</h3>
+                <button id="clearData" class="btn btn-danger">清除所有数据</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
