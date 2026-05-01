@@ -1,34 +1,71 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages & Auto Update
 
 on:
+  # 推送时部署
   push:
     branches: [master]
+  # 手动触发
   workflow_dispatch:
+  # 每天早上 6 点自动采集更新
+  schedule:
+    - cron: '0 6 * * *'
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
+  # 采集任务（每天自动执行）
+  collect:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Run Collector
+        run: node scripts/collect.js
+      
+      - name: Commit & Push
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          git diff --staged --quiet || git commit -m "auto: 更新 IPTV 源 $(date +'%Y-%m-%d %H:%M')"
+          git push
+
+  # 部署任务
   deploy:
+    needs: collect
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    if: github.event_name != 'schedule' || github.event_name == 'push'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
+      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

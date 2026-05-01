@@ -1,0 +1,14 @@
+{
+  "name": "iptv-collector",
+  "version": "1.0.0",
+  "description": "IPTV 源自动采集与更新工具",
+  "main": "scripts/collect.js",
+  "scripts": {
+    "collect": "node scripts/collect.js",
+    "collect:quick": "node scripts/collect.js --quick",
+    "collect:full": "node scripts/collect.js --full"
+  },
+  "keywords": ["iptv", "m3u", "tv"],
+  "author": "Chaniug",
+  "license": "MIT"
+}
