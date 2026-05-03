@@ -64,8 +64,6 @@ https://stream2.jlntv.cn/naxw/sd/live.m3u8
 http://palive.patv123.com:8091/live/xwpd_800K.m3u8
 #EXTINF:-1 tvg-name="四平新闻综合 [Geo-blocked]" tvg-logo="" group-title="新闻类",四平新闻综合 [Geo-blocked]
 https://stream2.jlntv.cn/sptv/sd/live.m3u8
-#EXTINF:-1 tvg-name="松原新闻综合 [Geo-blocked]" tvg-logo="" group-title="新闻类",松原新闻综合 [Geo-blocked]
-https://stream2.jlntv.cn/sytv/sd/live.m3u8
 #EXTINF:-1 tvg-name="通化新闻 [Geo-blocked]" tvg-logo="" group-title="新闻类",通化新闻 [Geo-blocked]
 https://stream2.jlntv.cn/tonghua1/sd/live.m3u8
 #EXTINF:-1 tvg-name="西安新闻 (1080p) [Not 24/7]" tvg-logo="" group-title="新闻类",西安新闻 (1080p) [Not 24/7]

@@ -1,7 +1,7 @@
 {
-  "update": "2026-05-02T07:42:11.854Z",
-  "count": 72,
-  "valid": 25,
+  "update": "2026-05-03T08:00:11.247Z",
+  "count": 71,
+  "valid": 24,
   "channels": [
     {
       "name": "Bread TV面包台 (720p)",
@@ -92,12 +92,6 @@
       "url": "http://183.207.248.71/cntv/live1/xinjiangstv/xinjiangstv",
       "logo": "",
       "group": "地方台"
-    },
-    {
-      "name": "松原新闻综合 [Geo-blocked]",
-      "url": "https://stream2.jlntv.cn/sytv/sd/live.m3u8",
-      "logo": "",
-      "group": "新闻类"
     },
     {
       "name": "江苏卫视 (1080p) [Not 24/7]",
