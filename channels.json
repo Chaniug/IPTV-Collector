@@ -1,6 +1,241 @@
 {
-  "update": "2026-05-03T08:27:35.859Z",
-  "count": 0,
+  "update": "2026-05-04T08:28:41.984Z",
+  "count": 39,
   "preset_valid": 0,
-  "channels": []
+  "channels": [
+    {
+      "name": "Ando TV",
+      "url": "http://play.kankanlive.com/live/1711956137852982.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Anshun Comprehensive News Channel",
+      "url": "https://hplayer1.juyun.tv/camera/154379194.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Beijing Traffic Radio TV [Geo-blocked]",
+      "url": "http://123.56.24.28:1935/live/fm1039/96K/tzwj_video.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Beijing Youth Radio [Geo-blocked]",
+      "url": "http://audiolive.rbc.cn:1935/live/am927/96K/tzwj_video.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Bingtuan Satellite TV",
+      "url": "http://49.113.179.174:4022/udp/238.125.4.13:5140",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Bread TV面包台 (720p)",
+      "url": "https://video.bread-tv.com:8091/hls-live24/online/index.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "BRTV Kaku Childrens Channel",
+      "url": "http://49.113.179.174:4022/udp/238.125.2.216:5140",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "BRTV Kaku Childrens Channel",
+      "url": "http://223.111.191.105/downflv.brtvcloud.com/kkkkasd/winfr.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "BRTV Science & Education Channel",
+      "url": "http://49.113.179.174:4022/udp/238.125.3.121:5140",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "BRTV 北京卫视 [Not 24/7]",
+      "url": "http://ivi.bupt.edu.cn/hls/btv1.m3u8",
+      "logo": "",
+      "group": "卫视台"
+    },
+    {
+      "name": "BRTV 北京卫视",
+      "url": "http://118.81.195.79:9003/hls/20/index.m3u8",
+      "logo": "",
+      "group": "卫视台"
+    },
+    {
+      "name": "CCTV-10 (576i)",
+      "url": "https://cdn4.skygo.mn/live/disk1/CCTV-10/HLSv3-FTA/CCTV-10.m3u8",
+      "logo": "",
+      "group": "央视台"
+    },
+    {
+      "name": "CCTV-13 (1080p)",
+      "url": "https://cdn3.163189.xyz/163189/cctv13",
+      "logo": "",
+      "group": "央视台"
+    },
+    {
+      "name": "CETV1 (576p)",
+      "url": "http://117.161.133.51:81/gitv_live/G_CETV-1/G_CETV-1.m3u8?p=GITV",
+      "logo": "",
+      "group": "央视台"
+    },
+    {
+      "name": "CETV2 (576p)",
+      "url": "http://117.161.133.51:81/gitv_live/G_CETV-2/G_CETV-2.m3u8?p=GITV",
+      "logo": "",
+      "group": "央视台"
+    },
+    {
+      "name": "CETV-1",
+      "url": "http://121.19.134.246:808/hls/62/index.m3u8",
+      "logo": "",
+      "group": "央视台"
+    },
+    {
+      "name": "CETV-4",
+      "url": "http://49.113.179.174:4022/udp/238.125.3.92:5140",
+      "logo": "",
+      "group": "央视台"
+    },
+    {
+      "name": "CGTN (1080p)",
+      "url": "https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "CGTN (1080p)",
+      "url": "https://english-livebkali.cgtn.com/live/encgtn.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "CGTN Documentary (1080p)",
+      "url": "https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Channel Law",
+      "url": "http://49.113.179.174:4022/udp/238.125.2.201:5140",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Chifeng Comprehensive News Chanel",
+      "url": "http://play1-qk.nmtv.cn/live/1735546697341033.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "City Theater Channel",
+      "url": "http://49.113.179.174:4022/udp/238.125.1.60:5140",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Documentary Humanities Channel",
+      "url": "http://49.113.179.174:4022/udp/238.125.3.135:5140",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Ecology & Environment TV",
+      "url": "http://49.113.179.174:4022/udp/238.125.2.175:5140",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Foshan News TV",
+      "url": "http://dslive.grtn.cn/fszh/sd/live.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Game Channel",
+      "url": "http://49.113.179.174:4022/udp/238.125.1.36:5140",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Golden Eagle Cartoon",
+      "url": "http://1.24.190.98:10080/hls/51/index.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Guangzhou TV",
+      "url": "https://tencentplaybusiness.gztv.com/live/zonghes.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Harbin Comprehensive News Channel",
+      "url": "https://stream.hrbtv.net/xwzh/playlist.m3u8?_upt=ef41dd531755913594",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Harbin Movie Channel",
+      "url": "https://stream.hrbtv.net/yspd/playlist.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Hunan Ping Yu",
+      "url": "http://49.113.179.174:4022/udp/238.125.5.102:5140",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Hunan TV (2160p)",
+      "url": "http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/dWlwPTEyNy4wLjAuMSZ1aWQ9cWluZy1jbXMmbm5fdGltZXpvbmU9OCZjZG5leF9pZD1hbF9obHNfbGR2dCZ1dWlkPTliODY4NmU5ZTM2YzYwMmMmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "JiaJia Cartoon",
+      "url": "http://49.113.179.174:4022/udp/238.125.0.158:5140",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Jiangxi Children's Channel",
+      "url": "https://play-live-hls.jxtvcn.com.cn/live-city/tv_jxtv6.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Jiangxi City Channel",
+      "url": "https://play-live-hls.jxtvcn.com.cn/live-city/tv_jxtv2.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Jiangxi Economy & Life Channel",
+      "url": "https://play-live-hls.jxtvcn.com.cn/live-city/tv_jxtv3.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Jiangxi Movie Channel",
+      "url": "https://play-live-hls.jxtvcn.com.cn/live-city/tv_jxtv4.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Jiangxi Public & Agriculture Channel",
+      "url": "https://play-live-hls.jxtvcn.com.cn/live-city/tv_jxtv5.m3u8",
+      "logo": "",
+      "group": "其他台"
+    }
+  ]
 }
