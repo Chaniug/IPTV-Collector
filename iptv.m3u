@@ -1,5 +1,9 @@
 #EXTM3U
 
+#EXTINF:-1 tvg-name="CCTV-1 (1080p)" tvg-logo="" group-title="央视台",CCTV-1 (1080p)
+http://69.30.245.50/live/cctv1.m3u8
+#EXTINF:-1 tvg-name="CCTV-1 (1080p)" tvg-logo="" group-title="央视台",CCTV-1 (1080p)
+http://198.204.240.250:82/live/cctv1.m3u8
 #EXTINF:-1 tvg-name="CCTV-1 (720p)" tvg-logo="" group-title="央视台",CCTV-1 (720p)
 http://74.91.26.218:82/live/cctv1hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-10 (576i)" tvg-logo="" group-title="央视台",CCTV-10 (576i)
@@ -12,6 +16,8 @@ http://74.91.26.218:82/live/cctv11hd.m3u8
 http://74.91.26.218:82/live/cctv12hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-13 (1080p)" tvg-logo="" group-title="央视台",CCTV-13 (1080p)
 https://cdn3.163189.xyz/163189/cctv13
+#EXTINF:-1 tvg-name="CCTV-13 (1080p)" tvg-logo="" group-title="央视台",CCTV-13 (1080p)
+http://go.bkpcp.top/mg/cctv13
 #EXTINF:-1 tvg-name="CCTV-13 (720p)" tvg-logo="" group-title="央视台",CCTV-13 (720p)
 http://74.91.26.218:82/live/cctv13hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-14 (1080p)" tvg-logo="" group-title="央视台",CCTV-14 (1080p)
@@ -34,12 +40,18 @@ http://198.204.240.250:82/live/cctv4k.m3u8
 http://74.91.26.218:82/live/cctv5hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-5+ (720p)" tvg-logo="" group-title="央视台",CCTV-5+ (720p)
 http://192.151.150.154/live/cctv5p.m3u8
+#EXTINF:-1 tvg-name="CCTV-6 (1080p)" tvg-logo="" group-title="央视台",CCTV-6 (1080p)
+http://198.204.240.250:82/live/cctv6.m3u8
+#EXTINF:-1 tvg-name="CCTV-6 (1080p)" tvg-logo="" group-title="央视台",CCTV-6 (1080p)
+http://69.30.245.50/live/cctv6.m3u8
 #EXTINF:-1 tvg-name="CCTV-7 (720p)" tvg-logo="" group-title="央视台",CCTV-7 (720p)
 http://74.91.26.218:82/live/cctv7hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-8 (720p)" tvg-logo="" group-title="央视台",CCTV-8 (720p)
 http://74.91.26.218:82/live/cctv8hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-8K (1080p)" tvg-logo="" group-title="央视台",CCTV-8K (1080p)
 http://198.204.240.250:82/live/cctv8k.m3u8
+#EXTINF:-1 tvg-name="CCTV-8K (1080p)" tvg-logo="" group-title="央视台",CCTV-8K (1080p)
+http://192.151.150.154/live/cctv8k.m3u8
 #EXTINF:-1 tvg-name="CCTV-9 (576i)" tvg-logo="" group-title="央视台",CCTV-9 (576i)
 https://xykt-fix.github.io/Y77.m3u8
 #EXTINF:-1 tvg-name="CETV-1" tvg-logo="" group-title="央视台",CETV-1
@@ -53,6 +65,8 @@ http://117.161.133.51:81/gitv_live/G_CETV-2/G_CETV-2.m3u8?p=GITV
 
 #EXTINF:-1 tvg-name="BRTV 北京卫视" tvg-logo="" group-title="卫视台",BRTV 北京卫视
 http://118.81.195.79:9003/hls/20/index.m3u8
+#EXTINF:-1 tvg-name="BRTV 北京卫视 (1080p)" tvg-logo="" group-title="卫视台",BRTV 北京卫视 (1080p)
+http://go.bkpcp.top/mg/bjws
 #EXTINF:-1 tvg-name="BRTV 北京卫视 [Not 24/7]" tvg-logo="" group-title="卫视台",BRTV 北京卫视 [Not 24/7]
 http://ivi.bupt.edu.cn/hls/btv1.m3u8
 
@@ -82,15 +96,3 @@ https://english-livebkali.cgtn.com/live/encgtn.m3u8
 https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8
 #EXTINF:-1 tvg-name="Channel Law" tvg-logo="" group-title="其他台",Channel Law
 http://49.113.179.174:4022/udp/238.125.2.201:5140
-#EXTINF:-1 tvg-name="Chifeng Comprehensive News Chanel" tvg-logo="" group-title="其他台",Chifeng Comprehensive News Chanel
-http://play1-qk.nmtv.cn/live/1735546697341033.m3u8
-#EXTINF:-1 tvg-name="City Theater Channel" tvg-logo="" group-title="其他台",City Theater Channel
-http://49.113.179.174:4022/udp/238.125.1.60:5140
-#EXTINF:-1 tvg-name="Documentary Humanities Channel" tvg-logo="" group-title="其他台",Documentary Humanities Channel
-http://49.113.179.174:4022/udp/238.125.3.135:5140
-#EXTINF:-1 tvg-name="Ecology & Environment TV" tvg-logo="" group-title="其他台",Ecology & Environment TV
-http://49.113.179.174:4022/udp/238.125.2.175:5140
-#EXTINF:-1 tvg-name="Foshan News TV" tvg-logo="" group-title="其他台",Foshan News TV
-http://dslive.grtn.cn/fszh/sd/live.m3u8
-#EXTINF:-1 tvg-name="Game Channel" tvg-logo="" group-title="其他台",Game Channel
-http://49.113.179.174:4022/udp/238.125.1.36:5

@@ -1,6 +1,6 @@
 {
-  "update": "2026-05-26T09:54:02.316Z",
-  "count": 46,
+  "update": "2026-05-27T09:43:00.295Z",
+  "count": 47,
   "preset_valid": 0,
   "channels": [
     {
@@ -58,6 +58,12 @@
       "group": "其他台"
     },
     {
+      "name": "BRTV 北京卫视 (1080p)",
+      "url": "http://go.bkpcp.top/mg/bjws",
+      "logo": "",
+      "group": "卫视台"
+    },
+    {
       "name": "BRTV 北京卫视 [Not 24/7]",
       "url": "http://ivi.bupt.edu.cn/hls/btv1.m3u8",
       "logo": "",
@@ -100,6 +106,12 @@
       "group": "央视台"
     },
     {
+      "name": "CCTV-13 (1080p)",
+      "url": "http://go.bkpcp.top/mg/cctv13",
+      "logo": "",
+      "group": "央视台"
+    },
+    {
       "name": "CCTV-13 (720p)",
       "url": "http://74.91.26.218:82/live/cctv13hd.m3u8",
       "logo": "",
@@ -126,6 +138,18 @@
     {
       "name": "CCTV-17 (1080p)",
       "url": "http://74.91.26.218:82/live/cctv17hd.m3u8",
+      "logo": "",
+      "group": "央视台"
+    },
+    {
+      "name": "CCTV-1 (1080p)",
+      "url": "http://69.30.245.50/live/cctv1.m3u8",
+      "logo": "",
+      "group": "央视台"
+    },
+    {
+      "name": "CCTV-1 (1080p)",
+      "url": "http://198.204.240.250:82/live/cctv1.m3u8",
       "logo": "",
       "group": "央视台"
     },
@@ -166,6 +190,24 @@
       "group": "央视台"
     },
     {
+      "name": "CCTV-5+ (720p)",
+      "url": "http://192.151.150.154/live/cctv5p.m3u8",
+      "logo": "",
+      "group": "央视台"
+    },
+    {
+      "name": "CCTV-6 (1080p)",
+      "url": "http://198.204.240.250:82/live/cctv6.m3u8",
+      "logo": "",
+      "group": "央视台"
+    },
+    {
+      "name": "CCTV-6 (1080p)",
+      "url": "http://69.30.245.50/live/cctv6.m3u8",
+      "logo": "",
+      "group": "央视台"
+    },
+    {
       "name": "CCTV-7 (720p)",
       "url": "http://74.91.26.218:82/live/cctv7hd.m3u8",
       "logo": "",
@@ -184,14 +226,14 @@
       "group": "央视台"
     },
     {
-      "name": "CCTV-9 (576i)",
-      "url": "https://xykt-fix.github.io/Y77.m3u8",
+      "name": "CCTV-8K (1080p)",
+      "url": "http://192.151.150.154/live/cctv8k.m3u8",
       "logo": "",
       "group": "央视台"
     },
     {
-      "name": "CCTV-5+ (720p)",
-      "url": "http://192.151.150.154/live/cctv5p.m3u8",
+      "name": "CCTV-9 (576i)",
+      "url": "https://xykt-fix.github.io/Y77.m3u8",
       "logo": "",
       "group": "央视台"
     },
@@ -240,42 +282,6 @@
     {
       "name": "Channel Law",
       "url": "http://49.113.179.174:4022/udp/238.125.2.201:5140",
-      "logo": "",
-      "group": "其他台"
-    },
-    {
-      "name": "Chifeng Comprehensive News Chanel",
-      "url": "http://play1-qk.nmtv.cn/live/1735546697341033.m3u8",
-      "logo": "",
-      "group": "其他台"
-    },
-    {
-      "name": "City Theater Channel",
-      "url": "http://49.113.179.174:4022/udp/238.125.1.60:5140",
-      "logo": "",
-      "group": "其他台"
-    },
-    {
-      "name": "Documentary Humanities Channel",
-      "url": "http://49.113.179.174:4022/udp/238.125.3.135:5140",
-      "logo": "",
-      "group": "其他台"
-    },
-    {
-      "name": "Ecology & Environment TV",
-      "url": "http://49.113.179.174:4022/udp/238.125.2.175:5140",
-      "logo": "",
-      "group": "其他台"
-    },
-    {
-      "name": "Foshan News TV",
-      "url": "http://dslive.grtn.cn/fszh/sd/live.m3u8",
-      "logo": "",
-      "group": "其他台"
-    },
-    {
-      "name": "Game Channel",
-      "url": "http://49.113.179.174:4022/udp/238.125.1.36:5",
       "logo": "",
       "group": "其他台"
     }
