@@ -32,7 +32,7 @@ http://74.91.26.218:82/live/cctv17hd.m3u8
 http://74.91.26.218:82/live/cctv2hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-3 (720p)" tvg-logo="" group-title="央视台",CCTV-3 (720p)
 http://74.91.26.218:82/live/cctv3hd.m3u8
-#EXTINF:-1 tvg-name="CCTV-4 (720p)" tvg-logo="" group-title="央视台",CCTV-4 (720p)
+#EXTINF:-1 tvg-name="CCTV-4 Asia (720p)" tvg-logo="" group-title="央视台",CCTV-4 Asia (720p)
 http://74.91.26.218:82/live/cctv4hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-4K (1080p)" tvg-logo="" group-title="央视台",CCTV-4K (1080p)
 http://198.204.240.250:82/live/cctv4k.m3u8
