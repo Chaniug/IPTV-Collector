@@ -1,5 +1,5 @@
 {
-  "update": "2026-06-04T09:54:15.184Z",
+  "update": "2026-06-05T09:44:06.163Z",
   "count": 47,
   "preset_valid": 0,
   "channels": [
@@ -28,12 +28,6 @@
       "group": "其他台"
     },
     {
-      "name": "Bingtuan Satellite TV",
-      "url": "http://49.113.179.174:4022/udp/238.125.4.13:5140",
-      "logo": "",
-      "group": "其他台"
-    },
-    {
       "name": "Bread TV面包台 (720p)",
       "url": "https://video.bread-tv.com:8091/hls-live24/online/index.m3u8",
       "logo": "",
@@ -41,19 +35,7 @@
     },
     {
       "name": "BRTV Kaku Childrens Channel",
-      "url": "http://49.113.179.174:4022/udp/238.125.2.216:5140",
-      "logo": "",
-      "group": "其他台"
-    },
-    {
-      "name": "BRTV Kaku Childrens Channel",
       "url": "http://223.111.191.105/downflv.brtvcloud.com/kkkkasd/winfr.m3u8",
-      "logo": "",
-      "group": "其他台"
-    },
-    {
-      "name": "BRTV Science & Education Channel",
-      "url": "http://49.113.179.174:4022/udp/238.125.3.121:5140",
       "logo": "",
       "group": "其他台"
     },
@@ -184,8 +166,8 @@
       "group": "央视台"
     },
     {
-      "name": "CCTV-5 (720p)",
-      "url": "http://74.91.26.218:82/live/cctv5hd.m3u8",
+      "name": "CCTV-5 (1080p)",
+      "url": "http://192.151.150.154/live/cctv5hd.m3u8",
       "logo": "",
       "group": "央视台"
     },
@@ -256,12 +238,6 @@
       "group": "央视台"
     },
     {
-      "name": "CETV-4",
-      "url": "http://49.113.179.174:4022/udp/238.125.3.92:5140",
-      "logo": "",
-      "group": "央视台"
-    },
-    {
       "name": "CGTN (1080p)",
       "url": "https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master.m3u8",
       "logo": "",
@@ -280,8 +256,32 @@
       "group": "其他台"
     },
     {
-      "name": "Channel Law",
-      "url": "http://49.113.179.174:4022/udp/238.125.2.201:5140",
+      "name": "Chifeng Comprehensive News Chanel",
+      "url": "http://play1-qk.nmtv.cn/live/1735546697341033.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Foshan News TV",
+      "url": "http://dslive.grtn.cn/fszh/sd/live.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Golden Eagle Cartoon",
+      "url": "http://1.24.190.98:10080/hls/51/index.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Guangzhou TV",
+      "url": "https://tencentplaybusiness.gztv.com/live/zonghes.m3u8",
+      "logo": "",
+      "group": "其他台"
+    },
+    {
+      "name": "Harbin Comprehensive News Channel",
+      "url": "https://stream.hrbtv.net/xwzh/playlist.m3u8?_upt=ef41dd531755913594",
       "logo": "",
       "group": "其他台"
     }

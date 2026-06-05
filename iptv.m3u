@@ -36,8 +36,8 @@ http://74.91.26.218:82/live/cctv3hd.m3u8
 http://74.91.26.218:82/live/cctv4hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-4K (1080p)" tvg-logo="" group-title="央视台",CCTV-4K (1080p)
 http://198.204.240.250:82/live/cctv4k.m3u8
-#EXTINF:-1 tvg-name="CCTV-5 (720p)" tvg-logo="" group-title="央视台",CCTV-5 (720p)
-http://74.91.26.218:82/live/cctv5hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-5 (1080p)" tvg-logo="" group-title="央视台",CCTV-5 (1080p)
+http://192.151.150.154/live/cctv5hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-5+ (720p)" tvg-logo="" group-title="央视台",CCTV-5+ (720p)
 http://192.151.150.154/live/cctv5p.m3u8
 #EXTINF:-1 tvg-name="CCTV-6 (1080p)" tvg-logo="" group-title="央视台",CCTV-6 (1080p)
@@ -56,8 +56,6 @@ http://192.151.150.154/live/cctv8k.m3u8
 https://xykt-fix.github.io/Y77.m3u8
 #EXTINF:-1 tvg-name="CETV-1" tvg-logo="" group-title="央视台",CETV-1
 http://121.19.134.246:808/hls/62/index.m3u8
-#EXTINF:-1 tvg-name="CETV-4" tvg-logo="" group-title="央视台",CETV-4
-http://49.113.179.174:4022/udp/238.125.3.92:5140
 #EXTINF:-1 tvg-name="CETV1 (576p)" tvg-logo="" group-title="央视台",CETV1 (576p)
 http://117.161.133.51:81/gitv_live/G_CETV-1/G_CETV-1.m3u8?p=GITV
 #EXTINF:-1 tvg-name="CETV2 (576p)" tvg-logo="" group-title="央视台",CETV2 (576p)
@@ -78,21 +76,23 @@ https://hplayer1.juyun.tv/camera/154379194.m3u8
 http://123.56.24.28:1935/live/fm1039/96K/tzwj_video.m3u8
 #EXTINF:-1 tvg-name="Beijing Youth Radio [Geo-blocked]" tvg-logo="" group-title="其他台",Beijing Youth Radio [Geo-blocked]
 http://audiolive.rbc.cn:1935/live/am927/96K/tzwj_video.m3u8
-#EXTINF:-1 tvg-name="Bingtuan Satellite TV" tvg-logo="" group-title="其他台",Bingtuan Satellite TV
-http://49.113.179.174:4022/udp/238.125.4.13:5140
 #EXTINF:-1 tvg-name="Bread TV面包台 (720p)" tvg-logo="" group-title="其他台",Bread TV面包台 (720p)
 https://video.bread-tv.com:8091/hls-live24/online/index.m3u8
 #EXTINF:-1 tvg-name="BRTV Kaku Childrens Channel" tvg-logo="" group-title="其他台",BRTV Kaku Childrens Channel
-http://49.113.179.174:4022/udp/238.125.2.216:5140
-#EXTINF:-1 tvg-name="BRTV Kaku Childrens Channel" tvg-logo="" group-title="其他台",BRTV Kaku Childrens Channel
 http://223.111.191.105/downflv.brtvcloud.com/kkkkasd/winfr.m3u8
-#EXTINF:-1 tvg-name="BRTV Science & Education Channel" tvg-logo="" group-title="其他台",BRTV Science & Education Channel
-http://49.113.179.174:4022/udp/238.125.3.121:5140
 #EXTINF:-1 tvg-name="CGTN (1080p)" tvg-logo="" group-title="其他台",CGTN (1080p)
 https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master.m3u8
 #EXTINF:-1 tvg-name="CGTN (1080p)" tvg-logo="" group-title="其他台",CGTN (1080p)
 https://english-livebkali.cgtn.com/live/encgtn.m3u8
 #EXTINF:-1 tvg-name="CGTN Documentary (1080p)" tvg-logo="" group-title="其他台",CGTN Documentary (1080p)
 https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8
-#EXTINF:-1 tvg-name="Channel Law" tvg-logo="" group-title="其他台",Channel Law
-http://49.113.179.174:4022/udp/238.125.2.201:5140
+#EXTINF:-1 tvg-name="Chifeng Comprehensive News Chanel" tvg-logo="" group-title="其他台",Chifeng Comprehensive News Chanel
+http://play1-qk.nmtv.cn/live/1735546697341033.m3u8
+#EXTINF:-1 tvg-name="Foshan News TV" tvg-logo="" group-title="其他台",Foshan News TV
+http://dslive.grtn.cn/fszh/sd/live.m3u8
+#EXTINF:-1 tvg-name="Golden Eagle Cartoon" tvg-logo="" group-title="其他台",Golden Eagle Cartoon
+http://1.24.190.98:10080/hls/51/index.m3u8
+#EXTINF:-1 tvg-name="Guangzhou TV" tvg-logo="" group-title="其他台",Guangzhou TV
+https://tencentplaybusiness.gztv.com/live/zonghes.m3u8
+#EXTINF:-1 tvg-name="Harbin Comprehensive News Channel" tvg-logo="" group-title="其他台",Harbin Comprehensive News Channel
+https://stream.hrbtv.net/xwzh/playlist.m3u8?_upt=ef41dd531755913594
