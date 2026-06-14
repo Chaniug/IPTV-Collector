@@ -1,1 +1,98 @@
 #EXTM3U
+
+#EXTINF:-1 tvg-name="CCTV-1 (1080p)" tvg-logo="" group-title="央视台",CCTV-1 (1080p)
+http://69.30.245.50/live/cctv1.m3u8
+#EXTINF:-1 tvg-name="CCTV-1 (1080p)" tvg-logo="" group-title="央视台",CCTV-1 (1080p)
+http://198.204.240.250:82/live/cctv1.m3u8
+#EXTINF:-1 tvg-name="CCTV-1 (720p)" tvg-logo="" group-title="央视台",CCTV-1 (720p)
+http://74.91.26.218:82/live/cctv1hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-10 (576i)" tvg-logo="" group-title="央视台",CCTV-10 (576i)
+https://cdn4.skygo.mn/live/disk1/CCTV-10/HLSv3-FTA/CCTV-10.m3u8
+#EXTINF:-1 tvg-name="CCTV-10 (720p)" tvg-logo="" group-title="央视台",CCTV-10 (720p)
+http://74.91.26.218:82/live/cctv10hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-11" tvg-logo="" group-title="央视台",CCTV-11
+https://xykt-fix.github.io/play/a02b/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-11 (720p)" tvg-logo="" group-title="央视台",CCTV-11 (720p)
+http://74.91.26.218:82/live/cctv11hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-12 (720p)" tvg-logo="" group-title="央视台",CCTV-12 (720p)
+http://74.91.26.218:82/live/cctv12hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-13 (1080p)" tvg-logo="" group-title="央视台",CCTV-13 (1080p)
+http://go.bkpcp.top/mg/cctv13
+#EXTINF:-1 tvg-name="CCTV-13 (1080p)" tvg-logo="" group-title="央视台",CCTV-13 (1080p)
+https://cdn3.163189.xyz/163189/cctv13
+#EXTINF:-1 tvg-name="CCTV-13 (720p)" tvg-logo="" group-title="央视台",CCTV-13 (720p)
+http://74.91.26.218:82/live/cctv13hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-14 (1080p)" tvg-logo="" group-title="央视台",CCTV-14 (1080p)
+http://74.91.26.218:82/live/cctv14hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-15 (1080p)" tvg-logo="" group-title="央视台",CCTV-15 (1080p)
+https://xykt-fix.github.io/play/a02e/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-15 (720p)" tvg-logo="" group-title="央视台",CCTV-15 (720p)
+http://74.91.26.218:82/live/cctv15hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-16 (1080p)" tvg-logo="" group-title="央视台",CCTV-16 (1080p)
+http://74.91.26.218:82/live/cctv16hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-17 (1080p)" tvg-logo="" group-title="央视台",CCTV-17 (1080p)
+http://74.91.26.218:82/live/cctv17hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-2 (720p)" tvg-logo="" group-title="央视台",CCTV-2 (720p)
+http://74.91.26.218:82/live/cctv2hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-3 (720p)" tvg-logo="" group-title="央视台",CCTV-3 (720p)
+http://74.91.26.218:82/live/cctv3hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-4 Asia (720p)" tvg-logo="" group-title="央视台",CCTV-4 Asia (720p)
+http://74.91.26.218:82/live/cctv4hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-4K (1080p)" tvg-logo="" group-title="央视台",CCTV-4K (1080p)
+http://198.204.240.250:82/live/cctv4k.m3u8
+#EXTINF:-1 tvg-name="CCTV-6 (1080p)" tvg-logo="" group-title="央视台",CCTV-6 (1080p)
+http://69.30.245.50/live/cctv6.m3u8
+#EXTINF:-1 tvg-name="CCTV-6 (1080p)" tvg-logo="" group-title="央视台",CCTV-6 (1080p)
+http://198.204.240.250:82/live/cctv6.m3u8
+#EXTINF:-1 tvg-name="CCTV-7 (720p)" tvg-logo="" group-title="央视台",CCTV-7 (720p)
+http://74.91.26.218:82/live/cctv7hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-8 (720p)" tvg-logo="" group-title="央视台",CCTV-8 (720p)
+http://74.91.26.218:82/live/cctv8hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-8K (1080p)" tvg-logo="" group-title="央视台",CCTV-8K (1080p)
+http://192.151.150.154/live/cctv8k.m3u8
+#EXTINF:-1 tvg-name="CCTV-8K (1080p)" tvg-logo="" group-title="央视台",CCTV-8K (1080p)
+http://198.204.240.250:82/live/cctv8k.m3u8
+#EXTINF:-1 tvg-name="CCTV-9 (576i)" tvg-logo="" group-title="央视台",CCTV-9 (576i)
+https://xykt-fix.github.io/Y77.m3u8
+#EXTINF:-1 tvg-name="CETV-1" tvg-logo="" group-title="央视台",CETV-1
+http://121.19.134.246:808/hls/62/index.m3u8
+#EXTINF:-1 tvg-name="CETV1 (576p)" tvg-logo="" group-title="央视台",CETV1 (576p)
+http://117.161.133.51:81/gitv_live/G_CETV-1/G_CETV-1.m3u8?p=GITV
+#EXTINF:-1 tvg-name="CETV2 (576p)" tvg-logo="" group-title="央视台",CETV2 (576p)
+http://117.161.133.51:81/gitv_live/G_CETV-2/G_CETV-2.m3u8?p=GITV
+
+#EXTINF:-1 tvg-name="BRTV 北京卫视" tvg-logo="" group-title="卫视台",BRTV 北京卫视
+http://118.81.195.79:9003/hls/20/index.m3u8
+#EXTINF:-1 tvg-name="BRTV 北京卫视 (1080p)" tvg-logo="" group-title="卫视台",BRTV 北京卫视 (1080p)
+http://go.bkpcp.top/mg/bjws
+#EXTINF:-1 tvg-name="BRTV 北京卫视 [Not 24/7]" tvg-logo="" group-title="卫视台",BRTV 北京卫视 [Not 24/7]
+http://ivi.bupt.edu.cn/hls/btv1.m3u8
+
+#EXTINF:-1 tvg-name="Ando TV (1080p)" tvg-logo="" group-title="其他台",Ando TV (1080p)
+http://play.kankanlive.com/live/1711956137852982.m3u8
+#EXTINF:-1 tvg-name="Anshun Comprehensive News Channel" tvg-logo="" group-title="其他台",Anshun Comprehensive News Channel
+https://hplayer1.juyun.tv/camera/154379194.m3u8
+#EXTINF:-1 tvg-name="Beijing Traffic Radio TV [Geo-blocked]" tvg-logo="" group-title="其他台",Beijing Traffic Radio TV [Geo-blocked]
+http://123.56.24.28:1935/live/fm1039/96K/tzwj_video.m3u8
+#EXTINF:-1 tvg-name="Beijing Youth Radio [Geo-blocked]" tvg-logo="" group-title="其他台",Beijing Youth Radio [Geo-blocked]
+http://audiolive.rbc.cn:1935/live/am927/96K/tzwj_video.m3u8
+#EXTINF:-1 tvg-name="Bread TV面包台 (720p)" tvg-logo="" group-title="其他台",Bread TV面包台 (720p)
+https://video.bread-tv.com:8091/hls-live24/online/index.m3u8
+#EXTINF:-1 tvg-name="BRTV Kaku Childrens Channel" tvg-logo="" group-title="其他台",BRTV Kaku Childrens Channel
+http://223.111.191.105/downflv.brtvcloud.com/kkkkasd/winfr.m3u8
+#EXTINF:-1 tvg-name="CGTN (1080p)" tvg-logo="" group-title="其他台",CGTN (1080p)
+https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master.m3u8
+#EXTINF:-1 tvg-name="CGTN (1080p)" tvg-logo="" group-title="其他台",CGTN (1080p)
+https://english-livebkali.cgtn.com/live/encgtn.m3u8
+#EXTINF:-1 tvg-name="CGTN Documentary (1080p)" tvg-logo="" group-title="其他台",CGTN Documentary (1080p)
+https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8
+#EXTINF:-1 tvg-name="Chifeng Comprehensive News Chanel" tvg-logo="" group-title="其他台",Chifeng Comprehensive News Chanel
+http://play1-qk.nmtv.cn/live/1735546697341033.m3u8
+#EXTINF:-1 tvg-name="Foshan News TV" tvg-logo="" group-title="其他台",Foshan News TV
+http://dslive.grtn.cn/fszh/sd/live.m3u8
+#EXTINF:-1 tvg-name="Golden Eagle Cartoon" tvg-logo="" group-title="其他台",Golden Eagle Cartoon
+http://1.24.190.98:10080/hls/51/index.m3u8
+#EXTINF:-1 tvg-name="Guangzhou TV" tvg-logo="" group-title="其他台",Guangzhou TV
+https://tencentplaybusiness.gztv.com/live/zonghes.m3u8
+#EXTINF:-1 tvg-name="Harbin Comprehensive News Channel" tvg-logo="" group-title="其他台",Harbin Comprehensive News Channel
+https://stream.hrbtv.net/xwzh/playlist.m3u8?_upt=ef41dd531755913594
