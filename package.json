@@ -6,7 +6,9 @@
   "scripts": {
     "collect": "node scripts/collect.js",
     "collect:quick": "node scripts/collect.js --quick",
-    "collect:full": "node scripts/collect.js --full"
+    "collect:full": "node scripts/collect.js --full",
+    "dev": "npx http-server -p 8080 -cors",
+    "start": "npx http-server -p 8080 -cors"
   },
   "keywords": ["iptv", "m3u", "tv"],
   "author": "Chaniug",

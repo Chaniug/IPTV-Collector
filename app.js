@@ -9,13 +9,41 @@ class IPTVApp {
         try {
             const response = await fetch('channels.json');
             const data = await response.json();
-            this.channels = data.channels;
+            
+            if (!data.channels || data.channels.length === 0) {
+                document.getElementById('channelList').innerHTML = 
+                    '<p class="empty">暂无频道数据，请运行 <code>npm run collect</code> 采集数据</p>';
+                return;
+            }
+            
+            this.channels = data.channels.map(ch => ({
+                ...ch,
+                category: ch.category || ch.group || 'other' // 兼容 group 和 category 字段
+            }));
             this.renderChannels();
             this.updateStats();
+            this.updateLastUpdated(data.update);
         } catch (e) {
             console.error('加载频道失败:', e);
             document.getElementById('channelList').innerHTML = 
-                '<p class="error">加载频道失败，请刷新页面重试</p>';
+                '<p class="error">加载频道失败，请检查 channels.json 文件</p>';
+        }
+    }
+
+    updateLastUpdated(updateString) {
+        const el = document.getElementById('lastUpdated');
+        if (!el || !updateString) return;
+        
+        try {
+            const date = new Date(updateString);
+            const formatted = date.toLocaleDateString('zh-CN', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit'
+            });
+            el.textContent = formatted;
+        } catch (e) {
+            el.textContent = updateString;
         }
     }
 
@@ -31,17 +59,23 @@ class IPTVApp {
         }
 
         container.innerHTML = filtered.map(ch => `
-            <div class="channel-item" data-url="${ch.url}">
+            <div class="channel-item" data-url="${this.escapeHtml(ch.url)}" data-name="${this.escapeHtml(ch.name)}">
                 <div class="channel-logo">
-                    <img src="${ch.logo}" alt="${ch.name}" 
+                    <img src="${this.escapeHtml(ch.logo)}" alt="${this.escapeHtml(ch.name)}" 
                          onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>📺</text></svg>'">
                 </div>
-                <div class="channel-name">${ch.name}</div>
-                <div class="channel-category">${this.getCategoryName(ch.category)}</div>
-                <button class="btn-copy" onclick="app.copyUrl('${ch.url}', '${ch.name}')">复制地址</button>
-                <button class="btn-play" onclick="app.playUrl('${ch.url}', '${ch.name}')">播放</button>
+                <div class="channel-name">${this.escapeHtml(ch.name)}</div>
+                <div class="channel-category">${this.escapeHtml(this.getCategoryName(ch.category))}</div>
+                <button class="btn-copy" data-action="copy">复制地址</button>
+                <button class="btn-play" data-action="play">播放</button>
             </div>
         `).join('');
+    }
+
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
     }
 
     getCategoryName(category) {
@@ -91,10 +125,10 @@ class IPTVApp {
         for (const ch of testChannels) {
             try {
                 const controller = new AbortController();
-                const timeout = setTimeout(() => controller.abort(), 5000);
+                const timeout = setTimeout(() => controller.abort(), 8000);
                 
                 const response = await fetch(ch.url, { 
-                    method: 'HEAD',
+                    method: 'GET',
                     signal: controller.signal 
                 });
                 
@@ -104,9 +138,9 @@ class IPTVApp {
                 const cls = response.ok ? 'valid' : 'invalid';
                 if (response.ok) validCount++;
                 
-                html += `<div class="test-item ${cls}">${ch.name}: ${status}</div>`;
+                html += `<div class="test-item ${cls}">${this.escapeHtml(ch.name)}: ${status}</div>`;
             } catch {
-                html += `<div class="test-item invalid">${ch.name}: ✗ 超时</div>`;
+                html += `<div class="test-item invalid">${this.escapeHtml(ch.name)}: ✗ 超时</div>`;
             }
         }
         
@@ -131,6 +165,21 @@ class IPTVApp {
 
 // 初始化
 const app = new IPTVApp();
+
+// 事件委托 - 频道列表按钮点击
+document.getElementById('channelList').addEventListener('click', (e) => {
+    const channelItem = e.target.closest('.channel-item');
+    if (!channelItem) return;
+    
+    const url = channelItem.dataset.url;
+    const name = channelItem.dataset.name;
+    
+    if (e.target.dataset.action === 'copy') {
+        app.copyUrl(url, name);
+    } else if (e.target.dataset.action === 'play') {
+        app.playUrl(url, name);
+    }
+});
 
 // 筛选按钮事件
 document.querySelectorAll('.filter-btn').forEach(btn => {

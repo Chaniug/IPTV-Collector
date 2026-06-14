@@ -105,7 +105,6 @@ async function testChannel(channel, timeout = 10000) {
         (res) => resolve({ ...channel, valid: res.statusCode >= 200 && res.statusCode < 400, status: res.statusCode }));
       
       req.on('error', () => resolve({ ...channel, valid: false }));
-      req.on('timeout', () => { req.destroy(); resolve({ ...channel, valid: false }); });
       req.setTimeout(timeout, () => { req.destroy(); resolve({ ...channel, valid: false }); });
       req.end();
     } catch (e) {
