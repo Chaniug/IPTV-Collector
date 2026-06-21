@@ -18,6 +18,7 @@
 | 🏷️ **智能分类** | 基于频道名称自动归类为央视、卫视、卡通、新闻、体育、电影、其他 |
 | 🧪 **自动验证** | 对频道进行 HEAD 可达性测试，生成有效源子集 |
 | 🌐 **网页预览** | 通过 GitHub Pages 在线查看、筛选、测试频道 |
+| ⚡ **CDN 加速** | 网页支持 jsDelivr / ghproxy 镜像订阅，国内访问更稳定 |
 | 📥 **多格式支持** | 提供 M3U 播放列表与 JSON 数据两种格式 |
 
 ---
@@ -31,6 +32,18 @@ https://chaniug.github.io/IPTV-Collector/iptv.m3u
 ```
 
 *复制到 VLC、PotPlayer、TVBox 等播放器中订阅即可。*
+
+#### CDN 加速订阅
+
+国内访问 GitHub Pages 较慢时，可在网页右上角选择加速线路：
+
+| 线路 | 订阅示例 |
+|------|---------|
+| 官方直连 | `https://chaniug.github.io/IPTV-Collector/iptv.m3u` |
+| jsDelivr | `https://cdn.jsdelivr.net/gh/Chaniug/IPTV-Collector@master/iptv.m3u` |
+| ghproxy | `https://ghproxy.com/https://raw.githubusercontent.com/Chaniug/IPTV-Collector/master/iptv.m3u` |
+
+把对应链接的 `iptv.m3u` 换成 `iptv-valid.m3u` 即可订阅验证版。
 
 ### 方式二：直接下载
 
@@ -260,6 +273,7 @@ IPTV-Collector/
 - ✅ 重构采集脚本，增加多个公开源
 - ✅ 生成全量 + 海外可达双数据源
 - ✅ 网页新增数据源切换功能
+- ✅ 网页新增 jsDelivr / ghproxy CDN 加速订阅
 - ✅ 优化 Actions 提交策略，无变化不提交
 - ✅ 重写 README，增加架构图与流程图
 

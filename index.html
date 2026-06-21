@@ -28,6 +28,14 @@
 
                     <div class="method">
                         <h3>方式一：订阅链接（推荐）</h3>
+                        <div class="cdn-selector">
+                            <label>加速线路：</label>
+                            <select id="cdnSelect">
+                                <option value="direct">🌐 官方直连（GitHub Pages）</option>
+                                <option value="jsdelivr">⚡ jsDelivr 加速</option>
+                                <option value="ghproxy">🇨🇳 ghproxy 国内镜像</option>
+                            </select>
+                        </div>
                         <div class="copy-box">
                             <code id="subUrl">https://chaniug.github.io/IPTV-Collector/iptv.m3u</code>
                             <button class="btn" onclick="copyText('subUrl')">复制</button>

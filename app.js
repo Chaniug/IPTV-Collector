@@ -3,7 +3,14 @@ class IPTVApp {
     constructor() {
         this.channels = [];
         this.currentSource = localStorage.getItem('iptv-source') || 'channels.json';
+        this.currentCDN = localStorage.getItem('iptv-cdn') || 'direct';
+        this.cdnBase = {
+            direct: 'https://chaniug.github.io/IPTV-Collector',
+            jsdelivr: 'https://cdn.jsdelivr.net/gh/Chaniug/IPTV-Collector@master',
+            ghproxy: 'https://ghproxy.com/https://raw.githubusercontent.com/Chaniug/IPTV-Collector/master'
+        };
         this.initSourceSelector();
+        this.initCDNSelector();
         this.loadChannels(this.currentSource);
     }
 
@@ -20,28 +27,49 @@ class IPTVApp {
         this.updateDownloadLinks();
     }
 
-    updateDownloadLinks() {
-        const isValid = this.currentSource === 'channels-valid.json';
-        const m3uFile = isValid ? 'iptv-valid.m3u' : 'iptv.m3u';
-        const jsonFile = isValid ? 'channels-valid.json' : 'channels.json';
+    initCDNSelector() {
+        const select = document.getElementById('cdnSelect');
+        if (!select) return;
+        select.value = this.currentCDN;
+        select.addEventListener('change', (e) => {
+            this.currentCDN = e.target.value;
+            localStorage.setItem('iptv-cdn', this.currentCDN);
+            this.updateDownloadLinks();
+        });
+    }
 
-        const subUrl = `https://chaniug.github.io/IPTV-Collector/${m3uFile}`;
-        document.getElementById('subUrl').textContent = subUrl;
+    getM3uFile() {
+        return this.currentSource === 'channels-valid.json' ? 'iptv-valid.m3u' : 'iptv.m3u';
+    }
+
+    getJsonFile() {
+        return this.currentSource === 'channels-valid.json' ? 'channels-valid.json' : 'channels.json';
+    }
+
+    buildUrl(file) {
+        return `${this.cdnBase[this.currentCDN]}/${file}`;
+    }
+
+    updateDownloadLinks() {
+        const m3uFile = this.getM3uFile();
+        const jsonFile = this.getJsonFile();
+
+        document.getElementById('subUrl').textContent = this.buildUrl(m3uFile);
 
         const m3uBtn = document.getElementById('downloadM3u');
         const jsonBtn = document.getElementById('downloadJson');
         if (m3uBtn) {
-            m3uBtn.href = m3uFile;
-            m3uBtn.download = isValid ? 'IPTV有效直播源.m3u' : 'IPTV直播源.m3u';
+            m3uBtn.href = this.buildUrl(m3uFile);
+            m3uBtn.download = this.currentSource === 'channels-valid.json' ? 'IPTV有效直播源.m3u' : 'IPTV直播源.m3u';
         }
         if (jsonBtn) {
-            jsonBtn.href = jsonFile;
+            jsonBtn.href = this.buildUrl(jsonFile);
             jsonBtn.download = jsonFile;
         }
 
         const hint = document.getElementById('subHint');
         if (hint) {
-            hint.textContent = isValid
+            hint.textContent = this.currentSource === 'channels-valid.json'
                 ? '仅包含在海外节点验证可通的频道，适合求稳使用'
                 : '包含所有采集到的频道，适合国内网络使用（频道最全）';
         }
@@ -49,7 +77,7 @@ class IPTVApp {
 
     async loadChannels(sourceFile) {
         try {
-            const response = await fetch(sourceFile + '?t=' + Date.now());
+            const response = await fetch(this.buildUrl(sourceFile) + '?t=' + Date.now());
             const data = await response.json();
             
             if (!data.channels || data.channels.length === 0) {
