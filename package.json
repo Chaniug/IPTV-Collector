@@ -5,13 +5,9 @@
   "main": "scripts/collect.js",
   "scripts": {
     "collect": "node scripts/collect-practical.js",
-    "collect:backup": "node scripts/collect.js",
-    "collect:improved": "node scripts/collect-improved.js",
-    "collect:practical": "node scripts/collect-practical.js",
     "test": "node scripts/test-channels.js",
     "dev": "npx http-server -p 8080 -cors",
-    "start": "npx http-server -p 8080 -cors",
-    "update": "node scripts/collect-practical.js && git add iptv.m3u channels.json && git commit -m \"auto: 更新 IPTV 源 $(date '+%Y-%m-%d %H:%M')\" || true"
+    "start": "npx http-server -p 8080 -cors"
   },
   "keywords": ["iptv", "m3u", "tv"],
   "author": "Chaniug",

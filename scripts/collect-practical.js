@@ -64,93 +64,25 @@ function categorizeChannel(name, originalGroup = '') {
   // 清理和标准化名称
   const cleanName = name.replace(/\[.*?\]|\(.*?\)|【.*?】/g, '').trim();
 
-  // 央视台
-  const cctvKeywords = ['CCTV', 'CETV', '央视', '中国教育', 'CGTN'];
-  for (const kw of cctvKeywords) {
-    if (cleanName.includes(kw)) {
-      return {
-        group: '央视台',
-        category: 'cctv',
-        cleanName: cleanName
-      };
+  const categoryRules = [
+    { keywords: ['CCTV', 'CETV', '央视', '中国教育', 'CGTN'], group: '央视台', category: 'cctv' },
+    { keywords: ['卫视', '东方卫视', '湖南卫视', '浙江卫视', '江苏卫视', '北京卫视', '凤凰卫视', '凤凰资讯', '凤凰'], group: '卫视台', category: 'satellite' },
+    { keywords: ['卡通', '少儿', '儿童', '动漫', '动画'], group: '卡通类', category: 'cartoon' },
+    { keywords: ['新闻', '资讯', 'NEWS'], group: '新闻类', category: 'news' },
+    { keywords: ['体育', '足球', '篮球', '奥运', '体育赛事'], group: '体育类', category: 'sports' },
+    { keywords: ['电影', '影院', '剧场', '影视'], group: '电影类', category: 'movie' }
+  ];
+
+  for (const rule of categoryRules) {
+    if (rule.keywords.some(kw => cleanName.includes(kw))) {
+      return { group: rule.group, category: rule.category, cleanName };
     }
   }
 
-  // 卫视台
-  const satelliteKeywords = ['卫视', '东方卫视', '湖南卫视', '浙江卫视', '江苏卫视', '北京卫视', '凤凰卫视', '凤凰资讯', '凤凰'];
-  for (const kw of satelliteKeywords) {
-    if (cleanName.includes(kw)) {
-      return {
-        group: '卫视台',
-        category: 'satellite',
-        cleanName: cleanName
-      };
-    }
-  }
-
-  // 地方台
-  const localKeywords = ['卫视', '地方', '城市', '省', '市', '台'];
-  if (cleanName.includes('卫视')) {
-    // 卫视已经在上面的分类中处理过了
-    return {
-      group: '卫视台',
-      category: 'satellite',
-      cleanName: cleanName
-    };
-  }
-
-  // 卡通类
-  const cartoonKeywords = ['卡通', '少儿', '儿童', '动漫', '动画'];
-  for (const kw of cartoonKeywords) {
-    if (cleanName.includes(kw)) {
-      return {
-        group: '卡通类',
-        category: 'cartoon',
-        cleanName: cleanName
-      };
-    }
-  }
-
-  // 其他分类
-  const newsKeywords = ['新闻', '资讯', 'NEWS'];
-  const sportsKeywords = ['体育', '足球', '篮球', '奥运', '体育赛事'];
-  const movieKeywords = ['电影', '影院', '剧场', '影视'];
-
-  for (const kw of newsKeywords) {
-    if (cleanName.includes(kw)) {
-      return {
-        group: '新闻类',
-        category: 'news',
-        cleanName: cleanName
-      };
-    }
-  }
-
-  for (const kw of sportsKeywords) {
-    if (cleanName.includes(kw)) {
-      return {
-        group: '体育类',
-        category: 'sports',
-        cleanName: cleanName
-      };
-    }
-  }
-
-  for (const kw of movieKeywords) {
-    if (cleanName.includes(kw)) {
-      return {
-        group: '电影类',
-        category: 'movie',
-        cleanName: cleanName
-      };
-    }
-  }
-
-  // 默认分类
   return {
     group: originalGroup || '其他台',
     category: 'other',
-    cleanName: cleanName
+    cleanName
   };
 }
 
@@ -281,50 +213,46 @@ async function main() {
       console.log(`   ✅ 从 ${sourceName} 解析出 ${m3uChannels.length} 个频道`);
 
       if (m3uChannels.length > 0) {
-        // 测试前20个频道
-        console.log(`   📡 测试前 ${Math.min(20, m3uChannels.length)} 个频道...`);
-        const testBatch = m3uChannels.slice(0, Math.min(20, m3uChannels.length));
+        const样本频道
+        const sampleSize = Math.min(10, m3uChannels.length);
+        console.log(`   📡 测试 ${sampleSize} 个样本频道...`);
+        const testBatch = m3uChannels.slice(0, sampleSize);
         const testResults = await Promise.all(
           testBatch.map(ch => testUrl(ch.url).then(result => ({ ...ch, ...result })))
         );
 
         const validChannels = testResults.filter(ch => ch.valid);
-        console.log(`   ✅ 有效频道: ${validChannels.length}/${testBatch.length}`);
+        console.log(`   ✅ 有效样本: ${validChannels.length}/${testBatch.length}`);
 
-        // 如果测试通过率大于50%，添加所有频道（不进一步测试，节省时间）
-        if (validChannels.length > 0) {
+        const passRate = validChannels.length / testBatch.length;
+        if (passRate >= 0.5) {
           allChannels.push(...m3uChannels);
+        } else {
+          console.log(`   ⚠️  源可用率过低 (${(passRate * 100).toFixed(0)}%)，跳过该源`);
         }
       }
 
     } catch (error) {
-      console.log(`   ❌ ${sourceName} 处理失败: ${error.message}`);
-    }
-
-    // 如果已经采集到足够多的频道，停止继续采集
-    if (allChannels.length > 50) {
-      console.log('\n⚠️ 已采集到足够多的频道，停止进一步采集');
+      console.log(`   ❌ ${sourceName} 处理失败: ${error.message}`)SourceCount = {};
+  for (const ch of allChannels) {
+    urlSourceCount[ch.url] = (urlSourceCount[ch.url] || 0) + 1; console.log('\n⚠️ 已采集到足够多的频道，停止进一步采集');
       break;
     }
   }
 
-  // 去重（按URL和名称）
-  const uniqueChannels = [];
-  const uniqueKeys = new Set();
-
+  // 去重（按URL）并统计每个URL出现次数
+  const urlMap = new Map();
   for (const ch of allChannels) {
-    const key = `${ch.url}|${ch.name}`;
-    if (!uniqueKeys.has(key)) {
-      uniqueKeys.add(key);
-      uniqueChannels.push(ch);
+    if (!urlMap.has(ch.url)) {
+      urlMap.set(ch.url, ch);
     }
   }
 
+  let uniqueChannels = Array.from(urlMap.values());
   console.log(`\n📊 初步采集: ${uniqueChannels.length} 个频道`);
 
   if (uniqueChannels.length === 0) {
     console.log('❌ 没有采集到任何频道，使用备用方案...');
-    // 使用一些已知的稳定源
     const fallbackChannels = [
       { name: 'CCTV-1 综合', url: 'http://39.134.66.66/PLTV/88888888/224/3221227200/index.m3u8', group: '央视台', category: 'cctv', logo: 'https://epg.112114.xyz/logo/CCTV1.png' },
       { name: 'CCTV-2 财经', url: 'http://39.134.66.66/PLTV/88888888/224/3221227201/index.m3u8', group: '央视台', category: 'cctv', logo: 'https://epg.112114.xyz/logo/CCTV2.png' },
@@ -332,11 +260,9 @@ async function main() {
       { name: '湖南卫视', url: 'http://39.134.66.66/PLTV/88888888/224/3221227337/index.m3u8', group: '卫视台', category: 'satellite', logo: 'https://epg.112114.xyz/logo/湖南卫视.png' },
       { name: '浙江卫视', url: 'http://39.134.66.66/PLTV/88888888/224/3221227336/index.m3u8', group: '卫视台', category: 'satellite', logo: 'https://epg.112114.xyz/logo/浙江卫视.png' },
       { name: '江苏卫视', url: 'http://39.134.66.66/PLTV/88888888/224/3221227205/index.m3u8', group: '卫视台', category: 'satellite', logo: 'https://epg.112114.xyz/logo/江苏卫视.png' },
-      { name: '北京卫视', url: 'http://39.134.66.66/PLTV/88888888/224/3221227210/index.m3u8', group: '卫视台', category: 'satellite', logo: 'https://epg.112114.xyz/logo/北京卫视.png' },
+      { name: '北京卫视', url: 'http://39.134.66.66/PLTV/88888888/224/3221227210/index.m3u8', group: '卫视台', category: 'satellite', logo: 'https://epg.112114.xyz/logo/北京卫视.png' }
     ];
-    allChannels = fallbackChannels;
-    uniqueChannels.length = 0;
-    fallbackChannels.forEach(ch => uniqueChannels.push(ch));
+    uniqueChannels = fallbackChannels;
   }
 
   // 分组统计
@@ -366,7 +292,9 @@ async function main() {
     const categoryChannels = uniqueChannels.filter(ch => ch.group === category);
     if (categoryChannels.length > 0) {
       categoryChannels.forEach(ch => {
-        m3uContent += `#EXTINF:-1 tvg-id="${ch.name.replace(/\s+/g, '')}" tvg-name="${ch.name}" tvg-logo="${ch.logo}" group-title="${ch.group}",${ch.name}\n`;
+        const safeName = ch.name.replace(/"/g, '');
+        const safeId = safeName.replace(/\s+/g, '').replace(/[^a-zA-Z0-9\u4e00-\u9fa5_-]/g, '');
+        m3uContent += `#EXTINF:-1 tvg-id="${safeId}" tvg-name="${safeName}" tvg-logo="${ch.logo}" group-title="${ch.group}",${safeName}\n`;
         m3uContent += `${ch.url}\n`;
       });
       m3uContent += '\n';

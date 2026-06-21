@@ -68,33 +68,29 @@ async function testChannel(url, timeout = 10000) {
 }
 
 // 测试前 N 个频道
-async function testSampleChannels(sampleSize = 20) {
-  console.log(`⚡ 测试前 ${sampleSize} 个频道...`);
+async function testSampleChannels(sampleSize = 30) {
+  console.log(`⚡ 抽样测试最多 ${sampleSize} 个频道...`);
 
-  // 选择不同分组的频道进行测试
-  const groups = Object.keys(groupStats).slice(0, 5); // 测试前5个分组
+  const groups = Object.keys(groupStats).slice(0, 6);
   const testChannels = [];
 
   for (const group of groups) {
-    const groupChannels = channels.filter(ch => ch.group === group).slice(0, 4); // 每个分组测试最多4个
+    const groupChannels = channels.filter(ch => ch.group === group).slice(0, 5);
     testChannels.push(...groupChannels);
-
-    if (testChannels.length >= sampleSize) {
-      break;
-    }
+    if (testChannels.length >= sampleSize) break;
   }
 
   if (testChannels.length < sampleSize) {
-    // 补充随机频道
     const remaining = channels.slice(0, sampleSize - testChannels.length);
     testChannels.push(...remaining);
   }
 
+  testChannels.length = Math.min(testChannels.length, sampleSize);
+
   const results = [];
   const startTime = Date.now();
-
-  // 并发测试
   const concurrency = 5;
+
   for (let i = 0; i < testChannels.length; i += concurrency) {
     const batch = testChannels.slice(i, i + concurrency);
     const batchResults = await Promise.all(batch.map(async (ch) => {
@@ -108,8 +104,6 @@ async function testSampleChannels(sampleSize = 20) {
     }));
 
     results.push(...batchResults);
-
-    // 进度显示
     const passed = results.filter(r => r.valid).length;
     process.stdout.write(`\r   ${results.length}/${testChannels.length} 个频道 | ✅ 有效: ${passed}`);
   }
@@ -120,7 +114,6 @@ async function testSampleChannels(sampleSize = 20) {
   console.log(`\n\n✅ 测试完成 (耗时: ${totalTime}秒)`);
   console.log(`   📊 结果: ${results.filter(r => r.valid).length}/${results.length} 个有效`);
 
-  // 分组统计结果
   const groupResults = {};
   results.forEach(r => {
     if (!groupResults[r.group]) groupResults[r.group] = { total: 0, valid: 0 };
@@ -134,11 +127,10 @@ async function testSampleChannels(sampleSize = 20) {
     console.log(`   ${group}: ${stats.valid}/${stats.total} (${percentage}%)`);
   }
 
-  // 显示一些无效频道的例子（可能的原因）
   const invalidChannels = results.filter(r => !r.valid);
   if (invalidChannels.length > 0) {
     console.log('\n⚠️  无效频道示例 (可能原因):');
-    invalidChannels.slice(0, 3).forEach(ch => {
+    invalidChannels.slice(0, 5).forEach(ch => {
       console.log(`   - ${ch.name} (${ch.group})`);
       console.log(`     原因: ${ch.statusCode === 0 ? '超时/网络错误' : `HTTP ${ch.statusCode}`}`);
     });

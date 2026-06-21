@@ -6,9 +6,6 @@ on:
     - cron: '0 8 * * *'
   # 手动触发
   workflow_dispatch:
-  # 推送时也触发（可选）
-  push:
-    branches: [master]
 
 permissions:
   contents: write
@@ -25,21 +22,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # 获取完整历史，便于推送
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'  # 启用 npm 缓存
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run IPTV Collector
         run: npm run collect
         env:
-          NODE_OPTIONS: '--max-old-space-size=4096'  # 增加内存限制
+          NODE_OPTIONS: '--max-old-space-size=4096'
 
       - name: Display collection summary
         run: |
@@ -66,53 +63,38 @@ jobs:
             echo "❌ iptv.m3u 文件不存在"
           fi
 
-      - name: Test channels (可选)
+      - name: Test channels (optional)
         run: npm run test
-        continue-on-error: true  # 即使测试失败也继续
+        continue-on-error: true
 
-      - name: Show git status
-        run: git status
-
-      - name: Detect file changes
-        id: changes
-        run: |
-          if git diff --name-only | grep -q "\.json\|\.m3u$"; then
-            echo "changes=true" >> $GITHUB_OUTPUT
-            echo "检测到以下文件变化:"
-            git diff --name-only | grep "\.json\|\.m3u$"
-          else
-            echo "changes=false" >> $GITHUB_OUTPUT
-            echo "没有检测到文件变化"
-          fi
-
-      - name: Commit and push
-        if: steps.changes.outputs.changes == 'true'
+      - name: Commit and push if changed
+        id: commit
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add -A
-
-          # 获取统计信息用于提交信息
-          if [ -f channels.json ]; then
-            COUNT=$(jq -r '.count // 0' channels.json)
+          if git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ 没有检测到文件变化，无需提交"
+          else
+            COUNT=$(jq -r '.count // 0' channels.json 2>/dev/null || echo 0)
             UPDATE_TIME=$(date +'%Y-%m-%d %H:%M')
             COMMIT_MSG="auto: 更新 IPTV 源 $UPDATE_TIME (共 $COUNT 个频道)"
-          else
-            COMMIT_MSG="auto: 更新 IPTV 源 $(date +'%Y-%m-%d %H:%M')"
+            git commit -m "$COMMIT_MSG"
+            git push
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "✅ 已提交: $COMMIT_MSG"
           fi
-
-          git commit -m "$COMMIT_MSG"
-          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create success summary
         if: always()
         run: |
-          if [ "${{ steps.changes.outputs.changes }}" == "true" ]; then
+          if [ "${{ steps.commit.outputs.changed }}" == "true" ]; then
             echo "✅ 采集完成并已提交更新"
           else
-            echo "ℹ️  没有检测到文件变化，无需提交"
+            echo "ℹ️ 没有检测到文件变化，无需提交"
           fi
           echo "📅 运行时间: $(date '+%Y-%m-%d %H:%M:%S')"
 
