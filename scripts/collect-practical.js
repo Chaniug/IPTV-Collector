@@ -213,7 +213,6 @@ async function main() {
       console.log(`   ✅ 从 ${sourceName} 解析出 ${m3uChannels.length} 个频道`);
 
       if (m3uChannels.length > 0) {
-        const样本频道
         const sampleSize = Math.min(10, m3uChannels.length);
         console.log(`   📡 测试 ${sampleSize} 个样本频道...`);
         const testBatch = m3uChannels.slice(0, sampleSize);
@@ -224,11 +223,10 @@ async function main() {
         const validChannels = testResults.filter(ch => ch.valid);
         console.log(`   ✅ 有效样本: ${validChannels.length}/${testBatch.length}`);
 
-        const passRate = validChannels.length / testBatch.length;
-        if (passRate >= 0.5) {
+        if (validChannels.length > 0) {
           allChannels.push(...m3uChannels);
         } else {
-          console.log(`   ⚠️  源可用率过低 (${(passRate * 100).toFixed(0)}%)，跳过该源`);
+          console.log('   ⚠️  样本全部无效，跳过该源');
         }
       }
 
