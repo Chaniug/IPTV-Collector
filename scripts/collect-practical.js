@@ -278,56 +278,76 @@ async function main() {
     console.log(`   ${group}: ${count}个`);
   }
 
+  // 测试所有频道在海外节点的可达性（仅用于生成 valid 子集，不丢弃全量）
+  console.log('\n🔍 开始验证频道海外可达性...');
+  const validChannels = [];
+  const testConcurrency = 10;
+  for (let i = 0; i < uniqueChannels.length; i += testConcurrency) {
+    const batch = uniqueChannels.slice(i, i + testConcurrency);
+    const results = await Promise.all(
+      batch.map(ch => testUrl(ch.url, 8000).then(r => ({ ...ch, ...r })))
+    );
+    results.forEach(r => {
+      if (r.valid) validChannels.push(r);
+    });
+    process.stdout.write(`\r   ${Math.min(i + testConcurrency, uniqueChannels.length)}/${uniqueChannels.length} | ✅ 有效: ${validChannels.length}`);
+  }
+  console.log('');
+
   // 生成最终输出
   const m3uPath = path.join(__dirname, '..', 'iptv.m3u');
   const jsonPath = path.join(__dirname, '..', 'channels.json');
+  const validM3uPath = path.join(__dirname, '..', 'iptv-valid.m3u');
+  const validJsonPath = path.join(__dirname, '..', 'channels-valid.json');
 
-  // 生成 M3U 文件
-  let m3uContent = '#EXTM3U\n';
-  m3uContent += '\n';
-
-  // 按分类排序
   const categoryOrder = ['央视台', '卫视台', '卡通类', '新闻类', '体育类', '电影类', '教育台', '其他台'];
-  for (const category of categoryOrder) {
-    const categoryChannels = uniqueChannels.filter(ch => ch.group === category);
-    if (categoryChannels.length > 0) {
-      categoryChannels.forEach(ch => {
-        const safeName = ch.name.replace(/"/g, '');
-        const safeId = safeName.replace(/\s+/g, '').replace(/[^a-zA-Z0-9\u4e00-\u9fa5_-]/g, '');
-        m3uContent += `#EXTINF:-1 tvg-id="${safeId}" tvg-name="${safeName}" tvg-logo="${ch.logo}" group-title="${ch.group}",${safeName}\n`;
-        m3uContent += `${ch.url}\n`;
-      });
-      m3uContent += '\n';
+
+  function buildM3u(channels) {
+    let content = '#EXTM3U\n\n';
+    for (const category of categoryOrder) {
+      const categoryChannels = channels.filter(ch => ch.group === category);
+      if (categoryChannels.length > 0) {
+        categoryChannels.forEach(ch => {
+          const safeName = ch.name.replace(/"/g, '');
+          const safeId = safeName.replace(/\s+/g, '').replace(/[^a-zA-Z0-9\u4e00-\u9fa5_-]/g, '');
+          content += `#EXTINF:-1 tvg-id="${safeId}" tvg-name="${safeName}" tvg-logo="${ch.logo}" group-title="${ch.group}",${safeName}\n`;
+          content += `${ch.url}\n`;
+        });
+        content += '\n';
+      }
     }
+    return content;
   }
 
-  fs.writeFileSync(m3uPath, m3uContent, 'utf8');
+  function buildJson(channels) {
+    return {
+      update: new Date().toISOString(),
+      count: channels.length,
+      sources: STABLE_SOURCES.length,
+      channels: channels.map(ch => ({
+        name: ch.name,
+        url: ch.url,
+        logo: ch.logo,
+        group: ch.group,
+        category: ch.category
+      }))
+    };
+  }
 
-  // 生成 JSON 文件
-  const jsonData = {
-    update: new Date().toISOString(),
-    count: uniqueChannels.length,
-    sources: STABLE_SOURCES.length,
-    channels: uniqueChannels.map(ch => ({
-      name: ch.name,
-      url: ch.url,
-      logo: ch.logo,
-      group: ch.group,
-      category: ch.category // 兼容字段，与group相同或更小的分类
-    }))
-  };
-
-  fs.writeFileSync(jsonPath, JSON.stringify(jsonData, null, 2), 'utf8');
+  fs.writeFileSync(m3uPath, buildM3u(uniqueChannels), 'utf8');
+  fs.writeFileSync(jsonPath, JSON.stringify(buildJson(uniqueChannels), null, 2), 'utf8');
+  fs.writeFileSync(validM3uPath, buildM3u(validChannels), 'utf8');
+  fs.writeFileSync(validJsonPath, JSON.stringify(buildJson(validChannels), null, 2), 'utf8');
 
   console.log('\n✅ 采集完成！');
-  console.log(`   📁 iptv.m3u: ${uniqueChannels.length} 个频道`);
-  console.log(`   📁 channels.json: ${uniqueChannels.length} 个频道`);
+  console.log(`   📁 iptv.m3u / channels.json: ${uniqueChannels.length} 个频道（全量）`);
+  console.log(`   📁 iptv-valid.m3u / channels-valid.json: ${validChannels.length} 个频道（海外可达）`);
   console.log(`\n📅 更新时间: ${new Date().toLocaleString('zh-CN')}`);
 
   console.log('\n💡 使用方法:');
-  console.log('   1. 将 iptv.m3u 文件导入到 VLC、PotPlayer 等播放器');
-  console.log('   2. 或在网页中打开 index.html 查看频道列表');
-  console.log('   3. 部分源可能需要特定的网络环境才能播放');
+  console.log('   1. 国内用户优先使用 iptv.m3u（频道最全）');
+  console.log('   2. 海外环境或求稳使用 iptv-valid.m3u');
+  console.log('   3. 将 m3u 导入 VLC、PotPlayer 等播放器播放');
 }
 
 // 运行主函数

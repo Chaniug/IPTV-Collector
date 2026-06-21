@@ -63,6 +63,16 @@ jobs:
             echo "❌ iptv.m3u 文件不存在"
           fi
 
+          if [ -f iptv-valid.m3u ]; then
+            echo "✅ iptv-valid.m3u 信息:"
+            VALID_LINES=$(wc -l < iptv-valid.m3u)
+            VALID_SIZE=$(ls -lh iptv-valid.m3u | awk '{print $5}')
+            echo "   文件大小: $VALID_SIZE"
+            echo "   总行数: $VALID_LINES"
+          else
+            echo "❌ iptv-valid.m3u 文件不存在"
+          fi
+
       - name: Test channels (optional)
         run: npm run test
         continue-on-error: true
@@ -106,4 +116,6 @@ jobs:
           path: |
             iptv.m3u
             channels.json
+            iptv-valid.m3u
+            channels-valid.json
           retention-days: 7
