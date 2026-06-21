@@ -171,6 +171,7 @@ IPTV-Collector/
 ├── app.js                    # 前端逻辑
 ├── index.html                # 网页入口
 ├── styles.css                # 样式
+├── sources.txt               # 自定义采集源（每行一个）
 ├── iptv.m3u                  # 全量 M3U 输出
 ├── channels.json             # 全量 JSON 输出
 ├── iptv-valid.m3u            # 海外可达 M3U 输出
@@ -233,7 +234,45 @@ IPTV-Collector/
 
 - 确保源为公开且稳定
 - 优先选择国内可访问、海外也能通的源
-- 在 `collect-practical.js` 的 `STABLE_SOURCES` 中添加
+- 编辑 `sources.txt` 添加源地址（每行一个），无需修改代码
+
+### 自定义采集源
+
+项目支持两种自定义源配置方式，优先级：`sources.txt` > `sources.json` > 内置默认。
+
+#### 方式一：sources.txt（推荐）
+
+在项目根目录创建或编辑 `sources.txt`，每行一个源地址，`#` 开头为注释：
+
+```text
+# 我的自定义 IPTV 源
+https://example.com/iptv.m3u
+https://mirror.example.com/live.m3u
+```
+
+#### 方式二：sources.json
+
+在项目根目录创建 `sources.json`，格式如下：
+
+```json
+[
+  "https://example.com/iptv.m3u",
+  "https://mirror.example.com/live.m3u"
+]
+```
+
+或：
+
+```json
+{
+  "sources": [
+    "https://example.com/iptv.m3u",
+    "https://mirror.example.com/live.m3u"
+  ]
+}
+```
+
+保存后运行 `npm run collect` 或在 GitHub Actions 中手动触发即可生效。
 
 ---
 
@@ -274,6 +313,7 @@ IPTV-Collector/
 - ✅ 生成全量 + 海外可达双数据源
 - ✅ 网页新增数据源切换功能
 - ✅ 网页新增 jsDelivr / ghproxy CDN 加速订阅
+- ✅ 支持 `sources.txt` / `sources.json` 自定义采集源
 - ✅ 优化 Actions 提交策略，无变化不提交
 - ✅ 重写 README，增加架构图与流程图
 

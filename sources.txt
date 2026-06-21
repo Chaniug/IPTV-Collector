@@ -1,0 +1,18 @@
+# IPTV 采集源列表
+# 每行一个源地址，以 # 开头的行为注释
+
+# 国际聚合源
+https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u
+https://iptv-org.github.io/iptv/index.m3u
+
+# 国内常用聚合仓库
+https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/global.m3u
+https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u
+
+# 在线 IPTV 服务
+https://iptv.228088.xyz/cn.m3u
+https://epg.pw/test_channels.m3u
+
+# 其他公开列表
+https://raw.githubusercontent.com/imDazui/Tvlist-awesome-m3u-m3u8/master/m3u/%E5%85%A8%E5%9B%BD%E4%B8%BB%E6%B5%81%E5%8D%AB%E8%A7%86%E5%8F%B0%E9%AB%98%E6%B8%85.m3u
+https://raw.githubusercontent.com/imDazui/Tvlist-awesome-m3u-m3u8/master/m3u/%E4%B8%AD%E5%A4%AE%E7%94%B5%E8%A7%86%E5%8F%B0%E9%AB%98%E6%B8%85.m3u

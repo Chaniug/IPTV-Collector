@@ -8,24 +8,56 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-// ========== 公开源列表 ==========
-const STABLE_SOURCES = [
-  // 国际聚合源
+// ========== 默认公开源列表 ==========
+const DEFAULT_SOURCES = [
   'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u',
   'https://iptv-org.github.io/iptv/index.m3u',
-
-  // 国内常用聚合仓库
   'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/global.m3u',
   'https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u',
-
-  // 在线 IPTV 服务
   'https://iptv.228088.xyz/cn.m3u',
   'https://epg.pw/test_channels.m3u',
-
-  // 其他公开列表
   'https://raw.githubusercontent.com/imDazui/Tvlist-awesome-m3u-m3u8/master/m3u/%E5%85%A8%E5%9B%BD%E4%B8%BB%E6%B5%81%E5%8D%AB%E8%A7%86%E5%8F%B0%E9%AB%98%E6%B8%85.m3u',
-  'https://raw.githubusercontent.com/imDazui/Tvlist-awesome-m3u-m3u8/master/m3u/%E4%B8%AD%E5%A4%AE%E7%94%B5%E8%A7%86%E5%8F%B0%E9%AB%98%E6%B8%85.m3u',
+  'https://raw.githubusercontent.com/imDazui/Tvlist-awesome-m3u-m3u8/master/m3u/%E4%B8%AD%E5%A4%AE%E7%94%B5%E8%A7%86%E5%8F%B0%E9%AB%98%E6%B8%85.m3u'
 ];
+
+function loadSources() {
+  const root = path.join(__dirname, '..');
+  const txtPath = path.join(root, 'sources.txt');
+  const jsonPath = path.join(root, 'sources.json');
+
+  // 优先读取 sources.txt，每行一个地址
+  if (fs.existsSync(txtPath)) {
+    try {
+      const lines = fs.readFileSync(txtPath, 'utf8')
+        .split(/\r?\n/)
+        .map(line => line.trim())
+        .filter(line => line && !line.startsWith('#'));
+      if (lines.length > 0) {
+        console.log(`📄 已从 sources.txt 加载 ${lines.length} 个采集源`);
+        return lines;
+      }
+    } catch (e) {
+      console.log('⚠️  读取 sources.txt 失败，使用默认源:', e.message);
+    }
+  }
+
+  // 其次读取 sources.json
+  if (fs.existsSync(jsonPath)) {
+    try {
+      const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+      const urls = Array.isArray(data) ? data : data.sources;
+      if (Array.isArray(urls) && urls.length > 0) {
+        console.log(`📄 已从 sources.json 加载 ${urls.length} 个采集源`);
+        return urls;
+      }
+    } catch (e) {
+      console.log('⚠️  读取 sources.json 失败，使用默认源:', e.message);
+    }
+  }
+
+  console.log(`📄 未找到自定义源配置，使用默认 ${DEFAULT_SOURCES.length} 个采集源`);
+  return DEFAULT_SOURCES;
+}
 
 // ========== 改进的 HTTP 请求 ==========
 function fetchSource(url, timeout = 20000) {
@@ -140,6 +172,7 @@ async function main() {
   console.log('🚀 IPTV 源采集开始（实用版）\n');
   console.log('📡 从稳定的公开源采集...\n');
 
+  const STABLE_SOURCES = loadSources();
   let allChannels = [];
   const seenUrls = new Set();
 
