@@ -1,0 +1,127 @@
+name: IPTV Auto Collector
+
+on:
+  # 每天早上 8 点自动采集更新
+  schedule:
+    - cron: '0 8 * * *'
+  # 手动触发
+  workflow_dispatch:
+  # 推送时也触发（可选）
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整历史，便于推送
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'  # 启用 npm 缓存
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run IPTV Collector
+        run: npm run collect
+        env:
+          NODE_OPTIONS: '--max-old-space-size=4096'  # 增加内存限制
+
+      - name: Display collection summary
+        run: |
+          echo "=== 采集结果汇总 ==="
+          if [ -f channels.json ]; then
+            echo "📊 channels.json 信息:"
+            COUNT=$(jq -r '.count // 0' channels.json)
+            UPDATE=$(jq -r '.update // "unknown"' channels.json)
+            SOURCES=$(jq -r '.sources // 0' channels.json)
+            echo "   频道总数: $COUNT"
+            echo "   数据来源: $SOURCES 个源"
+            echo "   更新时间: $UPDATE"
+          else
+            echo "❌ channels.json 文件不存在"
+          fi
+
+          if [ -f iptv.m3u ]; then
+            echo "📱 iptv.m3u 信息:"
+            LINES=$(wc -l < iptv.m3u)
+            SIZE=$(ls -lh iptv.m3u | awk '{print $5}')
+            echo "   文件大小: $SIZE"
+            echo "   总行数: $LINES"
+          else
+            echo "❌ iptv.m3u 文件不存在"
+          fi
+
+      - name: Test channels (可选)
+        run: npm run test
+        continue-on-error: true  # 即使测试失败也继续
+
+      - name: Show git status
+        run: git status
+
+      - name: Detect file changes
+        id: changes
+        run: |
+          if git diff --name-only | grep -q "\.json\|\.m3u$"; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "检测到以下文件变化:"
+            git diff --name-only | grep "\.json\|\.m3u$"
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "没有检测到文件变化"
+          fi
+
+      - name: Commit and push
+        if: steps.changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+
+          # 获取统计信息用于提交信息
+          if [ -f channels.json ]; then
+            COUNT=$(jq -r '.count // 0' channels.json)
+            UPDATE_TIME=$(date +'%Y-%m-%d %H:%M')
+            COMMIT_MSG="auto: 更新 IPTV 源 $UPDATE_TIME (共 $COUNT 个频道)"
+          else
+            COMMIT_MSG="auto: 更新 IPTV 源 $(date +'%Y-%m-%d %H:%M')"
+          fi
+
+          git commit -m "$COMMIT_MSG"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create success summary
+        if: always()
+        run: |
+          if [ "${{ steps.changes.outputs.changes }}" == "true" ]; then
+            echo "✅ 采集完成并已提交更新"
+          else
+            echo "ℹ️  没有检测到文件变化，无需提交"
+          fi
+          echo "📅 运行时间: $(date '+%Y-%m-%d %H:%M:%S')"
+
+      - name: Archive IPTV files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: iptv-files
+          path: |
+            iptv.m3u
+            channels.json
+          retention-days: 7

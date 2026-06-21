@@ -83,19 +83,56 @@ class IPTVApp {
             'cctv': '央视',
             'satellite': '卫视',
             'local': '地方台',
+            'cartoon': '卡通',
+            'news': '新闻',
+            'sports': '体育',
+            'movie': '电影',
             'other': '其他'
         };
-        return names[category] || '其他';
+        return names[category] || category || '其他';
     }
 
     updateStats() {
-        document.getElementById('totalCount').textContent = this.channels.length;
-        document.getElementById('cctvCount').textContent = 
-            this.channels.filter(ch => ch.category === 'cctv').length;
-        document.getElementById('satelliteCount').textContent = 
-            this.channels.filter(ch => ch.category === 'satellite').length;
-        document.getElementById('localCount').textContent = 
-            this.channels.filter(ch => ch.category === 'local').length;
+        const container = document.getElementById('statsContainer');
+        if (!container) return;
+
+        const stats = {
+            total: this.channels.length,
+            cctv: this.channels.filter(ch => ch.category === 'cctv').length,
+            satellite: this.channels.filter(ch => ch.category === 'satellite').length,
+            cartoon: this.channels.filter(ch => ch.category === 'cartoon').length,
+            news: this.channels.filter(ch => ch.category === 'news').length,
+            sports: this.channels.filter(ch => ch.category === 'sports').length,
+            movie: this.channels.filter(ch => ch.category === 'movie').length,
+            other: this.channels.filter(ch => ch.category === 'other' || !ch.category).length
+        };
+
+        // 更新简单统计
+        if (document.getElementById('totalCount')) {
+            document.getElementById('totalCount').textContent = stats.total;
+            document.getElementById('cctvCount').textContent = stats.cctv;
+            document.getElementById('satelliteCount').textContent = stats.satellite;
+
+            // 如果没有localCount元素，使用卡通分类来代替
+            const localEl = document.getElementById('localCount');
+            if (localEl) {
+                localEl.textContent = stats.cartoon + stats.news + stats.sports + stats.movie + stats.other;
+            }
+        }
+
+        // 更新详细统计表格（如果存在）
+        const statsTable = document.getElementById('statsTable');
+        if (statsTable) {
+            statsTable.innerHTML = `
+                <tr><td>央视台</td><td>${stats.cctv}</td></tr>
+                <tr><td>卫视台</td><td>${stats.satellite}</td></tr>
+                <tr><td>卡通类</td><td>${stats.cartoon}</td></tr>
+                <tr><td>新闻类</td><td>${stats.news}</td></tr>
+                <tr><td>体育类</td><td>${stats.sports}</td></tr>
+                <tr><td>电影类</td><td>${stats.movie}</td></tr>
+                <tr><td>其他台</td><td>${stats.other}</td></tr>
+            `;
+        }
     }
 
     copyUrl(url, name) {

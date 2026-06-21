@@ -73,19 +73,31 @@
                     <button class="filter-btn active" data-category="all">全部</button>
                     <button class="filter-btn" data-category="cctv">央视</button>
                     <button class="filter-btn" data-category="satellite">卫视</button>
-                    <button class="filter-btn" data-category="local">地方台</button>
+                    <button class="filter-btn" data-category="cartoon">卡通</button>
+                    <button class="filter-btn" data-category="news">新闻</button>
+                    <button class="filter-btn" data-category="sports">体育</button>
+                    <button class="filter-btn" data-category="movie">电影</button>
+                    <button class="filter-btn" data-category="other">其他</button>
                 </div>
                 
                 <div id="channelList" class="channel-grid"></div>
                 
-                <div class="stats">
-                    <span>共 <strong id="totalCount">0</strong> 个频道</span>
-                    <span>|</span>
-                    <span>央视 <strong id="cctvCount">0</strong></span>
-                    <span>|</span>
-                    <span>卫视 <strong id="satelliteCount">0</strong></span>
-                    <span>|</span>
-                    <span>地方台 <strong id="localCount">0</strong></span>
+                <div class="stats" id="statsContainer">
+                    <div class="quick-stats">
+                        <span>共 <strong id="totalCount">0</strong> 个频道</span>
+                        <span>|</span>
+                        <span>央视 <strong id="cctvCount">0</strong></span>
+                        <span>|</span>
+                        <span>卫视 <strong id="satelliteCount">0</strong></span>
+                        <span>|</span>
+                        <span>其他 <strong id="localCount">0</strong></span>
+                    </div>
+                    <details class="detailed-stats">
+                        <summary>📊 详细统计</summary>
+                        <table id="statsTable" class="stats-table">
+                            <tbody></tbody>
+                        </table>
+                    </details>
                 </div>
             </section>
 
