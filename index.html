@@ -18,23 +18,31 @@
             <section class="card">
                 <h2>📡 如何订阅</h2>
                 <div class="method-box">
+                    <div class="source-selector">
+                        <label>选择数据源：</label>
+                        <select id="sourceSelect">
+                            <option value="channels.json">📺 全量源（频道最多，适合国内）</option>
+                            <option value="channels-valid.json">✅ 有效源（海外可达，更稳定）</option>
+                        </select>
+                    </div>
+
                     <div class="method">
                         <h3>方式一：订阅链接（推荐）</h3>
                         <div class="copy-box">
                             <code id="subUrl">https://chaniug.github.io/IPTV-Collector/iptv.m3u</code>
                             <button class="btn" onclick="copyText('subUrl')">复制</button>
                         </div>
-                        <p class="hint">复制链接到 IPTV 播放器中订阅即可</p>
+                        <p class="hint" id="subHint">复制链接到 IPTV 播放器中订阅即可</p>
                     </div>
                     
                     <div class="method">
                         <h3>方式二：直接下载 M3U 文件</h3>
-                        <a href="iptv.m3u" download="IPTV直播源.m3u" class="btn btn-download">📥 下载 M3U 文件</a>
+                        <a id="downloadM3u" href="iptv.m3u" download="IPTV直播源.m3u" class="btn btn-download">📥 下载 M3U 文件</a>
                     </div>
                     
                     <div class="method">
                         <h3>方式三：JSON 格式数据</h3>
-                        <a href="channels.json" download="channels.json" class="btn btn-download">📄 下载 JSON</a>
+                        <a id="downloadJson" href="channels.json" download="channels.json" class="btn btn-download">📄 下载 JSON</a>
                     </div>
                 </div>
             </section>

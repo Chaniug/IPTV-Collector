@@ -1,13 +1,55 @@
-// IPTV 电视直播源 - 简化版
+// IPTV 电视直播源
 class IPTVApp {
     constructor() {
         this.channels = [];
-        this.loadChannels();
+        this.currentSource = localStorage.getItem('iptv-source') || 'channels.json';
+        this.initSourceSelector();
+        this.loadChannels(this.currentSource);
     }
 
-    async loadChannels() {
+    initSourceSelector() {
+        const select = document.getElementById('sourceSelect');
+        if (!select) return;
+        select.value = this.currentSource;
+        select.addEventListener('change', (e) => {
+            this.currentSource = e.target.value;
+            localStorage.setItem('iptv-source', this.currentSource);
+            this.updateDownloadLinks();
+            this.loadChannels(this.currentSource);
+        });
+        this.updateDownloadLinks();
+    }
+
+    updateDownloadLinks() {
+        const isValid = this.currentSource === 'channels-valid.json';
+        const m3uFile = isValid ? 'iptv-valid.m3u' : 'iptv.m3u';
+        const jsonFile = isValid ? 'channels-valid.json' : 'channels.json';
+
+        const subUrl = `https://chaniug.github.io/IPTV-Collector/${m3uFile}`;
+        document.getElementById('subUrl').textContent = subUrl;
+
+        const m3uBtn = document.getElementById('downloadM3u');
+        const jsonBtn = document.getElementById('downloadJson');
+        if (m3uBtn) {
+            m3uBtn.href = m3uFile;
+            m3uBtn.download = isValid ? 'IPTV有效直播源.m3u' : 'IPTV直播源.m3u';
+        }
+        if (jsonBtn) {
+            jsonBtn.href = jsonFile;
+            jsonBtn.download = jsonFile;
+        }
+
+        const hint = document.getElementById('subHint');
+        if (hint) {
+            hint.textContent = isValid
+                ? '仅包含在海外节点验证可通的频道，适合求稳使用'
+                : '包含所有采集到的频道，适合国内网络使用（频道最全）';
+        }
+    }
+
+    async loadChannels(sourceFile) {
         try {
-            const response = await fetch('channels.json');
+            const response = await fetch(sourceFile + '?t=' + Date.now());
             const data = await response.json();
             
             if (!data.channels || data.channels.length === 0) {
@@ -18,7 +60,7 @@ class IPTVApp {
             
             this.channels = data.channels.map(ch => ({
                 ...ch,
-                category: ch.category || ch.group || 'other' // 兼容 group 和 category 字段
+                category: ch.category || ch.group || 'other'
             }));
             this.renderChannels();
             this.updateStats();
@@ -26,7 +68,7 @@ class IPTVApp {
         } catch (e) {
             console.error('加载频道失败:', e);
             document.getElementById('channelList').innerHTML = 
-                '<p class="error">加载频道失败，请检查 channels.json 文件</p>';
+                `<p class="error">加载 ${sourceFile} 失败，请检查文件是否存在</p>`;
         }
     }
 
