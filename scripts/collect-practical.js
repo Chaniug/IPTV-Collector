@@ -284,6 +284,21 @@ async function main() {
   let uniqueChannels = Array.from(urlMap.values());
   console.log(`\n📊 初步采集: ${uniqueChannels.length} 个频道`);
 
+  // 限制总频道数，优先保留常见分类
+  const MAX_CHANNELS = 500;
+  if (uniqueChannels.length > MAX_CHANNELS) {
+    console.log(`⚠️  频道过多，限制为前 ${MAX_CHANNELS} 个（优先央视/卫视/体育/电影/新闻/卡通）`);
+    const priority = ['央视台', '卫视台', '体育类', '电影类', '新闻类', '卡通类', '其他台'];
+    const sorted = [];
+    const rest = [];
+    for (const ch of uniqueChannels) {
+      if (priority.includes(ch.group)) sorted.push(ch);
+      else rest.push(ch);
+    }
+    sorted.sort((a, b) => priority.indexOf(a.group) - priority.indexOf(b.group));
+    uniqueChannels = sorted.concat(rest).slice(0, MAX_CHANNELS);
+  }
+
   if (uniqueChannels.length === 0) {
     console.log('❌ 没有采集到任何频道，使用备用方案...');
     const fallbackChannels = [
