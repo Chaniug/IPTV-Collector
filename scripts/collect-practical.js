@@ -233,14 +233,11 @@ async function main() {
       }
 
     } catch (error) {
-      console.log(`   ❌ ${sourceName} 处理失败: ${error.message}`)SourceCount = {};
-  for (const ch of allChannels) {
-    urlSourceCount[ch.url] = (urlSourceCount[ch.url] || 0) + 1; console.log('\n⚠️ 已采集到足够多的频道，停止进一步采集');
-      break;
+      console.log(`   ❌ ${sourceName} 处理失败: ${error.message}`);
     }
   }
 
-  // 去重（按URL）并统计每个URL出现次数
+  // 去重（按URL）
   const urlMap = new Map();
   for (const ch of allChannels) {
     if (!urlMap.has(ch.url)) {
