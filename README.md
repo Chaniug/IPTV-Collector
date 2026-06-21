@@ -1,202 +1,267 @@
 # 📺 IPTV 电视直播源收集器（自动化更新版）
 
-🚀 **自动收集、测试和更新国内可用电视频道直播源**，每天更新保证源的新鲜度。
+🚀 **自动收集、测试和更新 IPTV 直播源**，每天自动运行，提供全量与验证两种频道列表。
 
-[![GitHub Actions Status](https://github.com/Chaniug/IPTV-Collector/actions/workflows/deploy.yml/badge.svg)](https://github.com/Chaniug/IPTV-Collector/actions/workflows/deploy.yml)
-[![Auto Collect Status](https://github.com/Chaniug/IPTV-Collector/actions/workflows/collect-only.yml/badge.svg)](https://github.com/Chaniug/IPTV-Collector/actions/workflows/collect-only.yml)
+[![Deploy to GitHub Pages](https://github.com/Chaniug/IPTV-Collector/actions/workflows/deploy.yml/badge.svg)](https://github.com/Chaniug/IPTV-Collector/actions/workflows/deploy.yml)
+[![Auto Collect](https://github.com/Chaniug/IPTV-Collector/actions/workflows/collect-only.yml/badge.svg)](https://github.com/Chaniug/IPTV-Collector/actions/workflows/collect-only.yml)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-已部署-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-## 🔥 主要特性
+---
 
-✅ **每天自动更新** - GitHub Actions 每天早上 8 点自动采集最新源  
-✅ **527+ 个频道** - 7 个分类，覆盖央视、卫视、卡通、新闻等  
-✅ **智能分类** - 基于频道名称自动分类到合适的类别  
-✅ **源质量测试** - 自动测试频道有效性，确保可用性  
-✅ **多格式支持** - 同时提供 M3U 和 JSON 格式  
-✅ **网页预览** - 可通过 GitHub Pages 直接查看和测试  
-✅ **自动部署** - 更新后自动部署到 GitHub Pages  
+## ✨ 主要特性
 
-## 📡 订阅方式（推荐）
+| 特性 | 说明 |
+|------|------|
+| ⏰ **每天自动采集** | 北京时间每天 16:00 自动运行 GitHub Actions 采集最新源 |
+| 📁 **双数据源输出** | 同时生成 `iptv.m3u`（全量）与 `iptv-valid.m3u`（海外可达） |
+| 🏷️ **智能分类** | 基于频道名称自动归类为央视、卫视、卡通、新闻、体育、电影、其他 |
+| 🧪 **自动验证** | 对频道进行 HEAD 可达性测试，生成有效源子集 |
+| 🌐 **网页预览** | 通过 GitHub Pages 在线查看、筛选、测试频道 |
+| 📥 **多格式支持** | 提供 M3U 播放列表与 JSON 数据两种格式 |
 
-### 方法一：订阅链接（最新）
-```
+---
+
+## 📡 订阅方式
+
+### 方式一：订阅链接（推荐）
+
+```text
 https://chaniug.github.io/IPTV-Collector/iptv.m3u
 ```
-*复制链接到任意 IPTV 播放器中订阅即可*  
 
-### 方法二：直接下载
-- [iptv.m3u](iptv.m3u) - M3U播放列表文件  
-- [channels.json](channels.json) - JSON格式数据（开发者用）
+*复制到 VLC、PotPlayer、TVBox 等播放器中订阅即可。*
 
-### 方法三：在线预览
-👉 **[点击查看网页版频道列表](https://chaniug.github.io/IPTV-Collector/)**
+### 方式二：直接下载
 
-## 📺 频道分类
+| 文件 | 说明 | 下载 |
+|------|------|------|
+| `iptv.m3u` | 全量频道列表 | [下载](iptv.m3u) |
+| `channels.json` | 全量频道数据（JSON） | [下载](channels.json) |
+| `iptv-valid.m3u` | 海外可达频道列表 | [下载](iptv-valid.m3u) |
+| `channels-valid.json` | 海外可达频道数据（JSON） | [下载](channels-valid.json) |
 
-| 分类 | 频道数 | 说明 |
-|------|--------|------|
-| **央视台** | 33 | CCTV 1-17、CETV、CGTN 等 |
-| **卫视台** | 150 | 湖南、浙江、江苏、东方、北京等各大卫视 |
-| **卡通类** | 14 | 金鹰卡通、优漫卡通、卡酷少儿等 |
-| **新闻类** | 44 | 新闻资讯频道 |
-| **体育类** | 10 | 体育赛事频道 |
-| **电影类** | 15 | 电影、影视剧场频道 |
-| **其他台** | 261 | 地方台、专业频道等其他类型 |
-| **总计** | **527** | 👆 更新时间：{{UPDATE_TIME}} |
+### 方式三：在线预览
 
-*数据每天自动更新，具体数量可能变化*
+👉 **[https://chaniug.github.io/IPTV-Collector/](https://chaniug.github.io/IPTV-Collector/)**
 
-## 🚀 如何订阅使用
+网页版支持数据源切换、分类筛选、在线测试前 10 个频道。
 
-### 快速开始
-1. **复制订阅链接**：`https://chaniug.github.io/IPTV-Collector/iptv.m3u`
-2. **打开播放器**：VLC、PotPlayer、TVBox 等
-3. **添加订阅**：找到"添加网络串流"或"订阅"功能
-4. **粘贴链接**：粘贴订阅链接，确定即可
+---
 
-### 推荐播放器
-- **VLC**：跨平台，开源免费，支持良好
-- **PotPlayer**：Windows 平台，功能强大  
-- **TVBox**：Android 平台，专为IPTV设计
-- **IINA**：macOS 平台，界面美观
+## 🏗️ 系统架构
 
-## 🛠️ 开发者指南
+```mermaid
+flowchart TB
+    subgraph Sources["公开 IPTV 源"]
+        S1[iptv-org/iptv]
+        S2[fanmingming/live]
+        S3[YueChan/Live]
+        S4[imDazui 列表]
+        S5[iptv.228088.xyz]
+        S6[epg.pw]
+    end
 
-### 本地开发
+    subgraph GitHubActions["GitHub Actions"]
+        A1[collect-only.yml<br/>每天 08:00 UTC]
+        A2[deploy.yml<br/>push 时触发]
+    end
+
+    subgraph Outputs["生成文件"]
+        O1[iptv.m3u<br/>channels.json<br/>全量]
+        O2[iptv-valid.m3u<br/>channels-valid.json<br/>海外可达]
+    end
+
+    Sources --> A1
+    A1 --> O1
+    A1 --> O2
+    O1 --> A2
+    A2 --> Pages[GitHub Pages]
+```
+
+---
+
+## 🔄 自动化流程
+
+```mermaid
+sequenceDiagram
+    participant User as 用户
+    participant GA as GitHub Actions
+    participant Script as collect-practical.js
+    participant Sources as 公开 IPTV 源
+    participant Git as Git 仓库
+    participant Pages as GitHub Pages
+
+    User->>GA: 每天 08:00 UTC / 手动触发
+    GA->>Sources: 下载多个 M3U 源
+    Sources-->>GA: 返回频道列表
+    GA->>Script: 解析、分类、去重、测试
+    Script-->>GA: 生成 m3u / json / valid 文件
+    alt 文件有变化
+        GA->>Git: git commit & push
+        Git->>Pages: 触发 deploy.yml
+        Pages-->>User: 网页自动更新
+    else 无变化
+        GA-->>User: 结束，不提交
+    end
+```
+
+---
+
+## 📊 频道分类
+
+| 分类 | 关键词示例 | 说明 |
+|------|-----------|------|
+| **央视台** | CCTV、CETV、CGTN | 中央电视台及中国教育频道 |
+| **卫视台** | 湖南卫视、浙江卫视、凤凰卫视 | 全国各大卫星电视台 |
+| **卡通类** | 少儿、卡通、动漫、动画 | 儿童与动画频道 |
+| **新闻类** | 新闻、资讯、NEWS | 新闻资讯类频道 |
+| **体育类** | 体育、足球、篮球、奥运 | 体育赛事频道 |
+| **电影类** | 电影、影院、剧场、影视 | 电影与影视剧场 |
+| **其他台** | 地方台、专业频道等 | 未归入以上分类的频道 |
+
+> 实际频道数量每天会变化，请查看 [`channels.json`](channels.json) 获取最新统计。
+
+---
+
+## 🛠️ 本地开发
+
 ```bash
 # 克隆项目
 git clone https://github.com/Chaniug/IPTV-Collector.git
 cd IPTV-Collector
 
 # 安装依赖
-npm install
+npm ci
 
-# 手动采集源
-npm run collect      # 采集最新源
-npm run test         # 测试频道可用性
-npm run update       # 采集并自动提交到Git
+# 手动采集最新源
+npm run collect
 
-# 本地预览
-npm start           # 访问 http://localhost:8080
+# 测试频道可用性
+npm run test
+
+# 本地预览网页
+npm start
+# 浏览器访问 http://localhost:8080
 ```
-
-### GitHub Actions 自动化
-项目配置了两个自动化工作流：
-
-1. **`deploy.yml`** - 自动化采集、测试、部署到 GitHub Pages
-   - 触发时机：每天 6:00 UTC、手动触发、推送时
-   - 功能：采集 → 测试 → 部署 → 发布
-
-2. **`collect-only.yml`** - 纯采集工作流（每天 8:00 UTC）
-   - 专注采集最新源，更轻量
-   - 检测文件变化，有变化才提交
 
 ### 项目结构
+
 ```
 IPTV-Collector/
-├── .github/workflows/     # GitHub Actions 自动化脚本
-│   ├── deploy.yml         # 完整采集+部署工作流
-│   └── collect-only.yml   # 纯采集工作流
-├── scripts/               # 采集和处理脚本
-│   ├── collect-practical.js  # 主采集脚本（推荐）
-│   ├── collect.js         # 原版采集脚本（备份）
-│   ├── collect-improved.js # 改进版采集脚本
-│   └── test-channels.js   # 频道测试工具
-├── app.js                 # 前端应用逻辑
-├── index.html             # 主页面
-├── styles.css             # 样式表
-├── iptv.m3u              # 生成的 M3U 播放列表
-└── channels.json         # 频道数据（JSON格式）
+├── .github/workflows/
+│   ├── collect-only.yml      # 每天自动采集
+│   └── deploy.yml            # 部署到 GitHub Pages
+├── scripts/
+│   ├── collect-practical.js  # 主采集脚本
+│   └── test-channels.js      # 频道抽样测试
+├── app.js                    # 前端逻辑
+├── index.html                # 网页入口
+├── styles.css                # 样式
+├── iptv.m3u                  # 全量 M3U 输出
+├── channels.json             # 全量 JSON 输出
+├── iptv-valid.m3u            # 海外可达 M3U 输出
+├── channels-valid.json       # 海外可达 JSON 输出
+├── package.json
+└── package-lock.json
 ```
+
+---
+
+## ⚙️ GitHub Actions 工作流
+
+### `collect-only.yml` — 自动采集
+
+| 配置项 | 值 |
+|--------|-----|
+| 触发时间 | 每天 08:00 UTC（北京时间 16:00） |
+| 额外触发 | 手动触发 `workflow_dispatch` |
+| Node 版本 | 20 |
+| 主要输出 | `iptv.m3u`、`channels.json`、`iptv-valid.m3u`、`channels-valid.json` |
+| 提交策略 | 仅当文件发生变化时才 commit & push |
+
+### `deploy.yml` — 部署网页
+
+| 配置项 | 值 |
+|--------|-----|
+| 触发条件 | `master` 分支 push / 手动触发 |
+| 功能 | 将仓库部署到 GitHub Pages |
+
+---
 
 ## 🔍 故障排除
 
-### 常见问题
+### ❓ 频道无法播放
 
-#### ❓ 频道无法播放？
-1. **原因**：直播源时效性很强，可能已失效
-2. **解决**：等待自动化更新（每天 8:00 UTC），或手动运行 `npm run collect`
-3. **建议**：多尝试几个频道，特别是"央视台"和"卫视台"分类
+1. **源已失效**：直播源时效性强，等待下次自动更新或手动运行 `npm run collect`。
+2. **网络限制**：部分国内源在海外无法播放，国内用户建议使用全量源 `iptv.m3u`。
+3. **播放器兼容性**：尝试 VLC、PotPlayer、TVBox 等不同播放器。
 
-#### ❓ 网页无法访问？
-1. **原因**：GitHub Pages 可能尚未部署
-2. **解决**：检查 GitHub Actions 运行状态，或直接下载 `iptv.m3u` 文件使用
-3. **备用**：https://raw.githubusercontent.com/Chaniug/IPTV-Collector/master/iptv.m3u
+### ❓ 网页无法访问
 
-#### ❓ 分类不正确？
-1. **原因**：频道名称不规范导致分类错误
-2. **解决**：打开 issue 报告错误的分类
-3. **改进**：修改 `collect-practical.js` 中的 `categorizeChannel` 函数
+1. 检查 [GitHub Actions](https://github.com/Chaniug/IPTV-Collector/actions) 是否运行成功。
+2. 确认仓库 Settings → Pages 已启用 GitHub Actions 部署源。
+3. 备用地址：`https://raw.githubusercontent.com/Chaniug/IPTV-Collector/master/iptv.m3u`
 
-### 手动更新
-```bash
-# 如果自动化失败，可以手动运行
-npm run collect           # 采集最新源
-npm run test              # 测试可用性
-git add .                 # 添加文件
-git commit -m "更新IPTV源" # 提交更新
-git push                  # 推送仓库
-```
+### ❓ 频道分类不正确
+
+1. 编辑 `scripts/collect-practical.js` 中的 `categorizeChannel` 函数。
+2. 提交 issue 或 pull request 反馈分类错误。
+
+---
 
 ## 🤝 贡献指南
 
+1. Fork 本项目
+2. 在本地运行 `npm run collect` 验证改动
+3. 提交 Pull Request
+
 ### 提交新源
-1. 确保源是公开且稳定的
-2. 运行 `npm run test` 验证源有效性
-3. 通过 Pull Request 提交更改
 
-### 报告问题
-1. 使用 [Issue 模板](.github/ISSUE_TEMPLATE/bug_report.md)
-2. 提供详细的频道信息和播放环境
-3. 分享错误信息或截图
+- 确保源为公开且稳定
+- 优先选择国内可访问、海外也能通的源
+- 在 `collect-practical.js` 的 `STABLE_SOURCES` 中添加
 
-### 改进建议
-1. 使用 [功能请求模板](.github/ISSUE_TEMPLATE/feature_request.md)
-2. 描述功能的价值和实现思路
-3. 讨论技术可行性
+---
 
-## 📊 自动化时间表
+## ⏰ 自动化时间表
 
-| 时间 | 工作流 | 状态 |
-|------|--------|------|
-| **每天 06:00 UTC** | `deploy.yml` | 采集 → 测试 → 部署 |
-| **每天 08:00 UTC** | `collect-only.yml` | 轻量采集 → 有变化才提交 |
-| **推送时** | `deploy.yml` | 立即采集部署 |
-| **手动触发** | 两个工作流均可 | 随时执行 |
+| 时间（UTC） | 时间（北京时间） | 工作流 | 动作 |
+|------------|----------------|--------|------|
+| 08:00 | 16:00 | `collect-only.yml` | 采集、验证、提交 |
+| push 时 | 即时 | `deploy.yml` | 部署 GitHub Pages |
+| 手动触发 | 即时 | 均可 | 立即执行 |
 
-**北京时间换算**：UTC+8，即每天 14:00 和 16:00 自动运行
+---
 
 ## ⚠️ 免责声明
 
 ⚠️ **本项目仅供学习和技术交流使用**
 
-1. 所有直播源均来自互联网公开资源
-2. 请遵守当地法律法规，合理使用
-3. 不得用于商业用途
-4. 使用即表示同意自行承担所有风险
+1. 所有直播源均来自互联网公开资源。
+2. 请遵守当地法律法规，合理使用。
+3. 不得用于商业用途。
+4. 使用即表示同意自行承担所有风险。
 
-## 📞 联系方式
+---
 
-- **GitHub Issues**: [报告问题或请求功能](https://github.com/Chaniug/IPTV-Collector/issues)
-- **自动更新状态**: [查看 GitHub Actions](https://github.com/Chaniug/IPTV-Collector/actions)
-- **网页预览**: [chaniug.github.io/IPTV-Collector](https://chaniug.github.io/IPTV-Collector)
+## 📞 相关链接
+
+- **GitHub 项目**: [Chaniug/IPTV-Collector](https://github.com/Chaniug/IPTV-Collector)
+- **Actions 状态**: [查看运行状态](https://github.com/Chaniug/IPTV-Collector/actions)
+- **网页预览**: [chaniug.github.io/IPTV-Collector](https://chaniug.github.io/IPTV-Collector/)
 
 ---
 
 ## 🔄 更新日志
 
-### v2.0.0 (2026/06/21)
-- ✅ 重构采集系统，解决频道无法播放问题
-- ✅ 增加 GitHub Actions 自动化采集和部署
-- ✅ 改进分类系统，支持7个主要分类
-- ✅ 添加频道测试工具和网页预览功能
-- ✅ 完善故障排除文档和用户指南
-
-### v1.0.0 (2026/05/03)
-- 初始版本发布
-- *注：原版使用的北邮教育网源已全部失效*
-
----
+### 2026-06-21
+- ✅ 修复 GitHub Actions npm 缓存警告
+- ✅ 重构采集脚本，增加多个公开源
+- ✅ 生成全量 + 海外可达双数据源
+- ✅ 网页新增数据源切换功能
+- ✅ 优化 Actions 提交策略，无变化不提交
+- ✅ 重写 README，增加架构图与流程图
 
 **🎉 特别感谢**: [iptv-org/iptv](https://github.com/iptv-org/iptv) 和所有贡献者提供的公开源
 
