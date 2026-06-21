@@ -8,15 +8,23 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-// ========== 稳定的公开源列表 ==========
+// ========== 公开源列表 ==========
 const STABLE_SOURCES = [
-  // 主要来源：GitHub 上的 IPTV 项目
+  // 国际聚合源
   'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u',
-  // 备份源：其他公开的 IPTV 列表
+  'https://iptv-org.github.io/iptv/index.m3u',
+
+  // 国内常用聚合仓库
+  'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/global.m3u',
+  'https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u',
+
+  // 在线 IPTV 服务
+  'https://iptv.228088.xyz/cn.m3u',
+  'https://epg.pw/test_channels.m3u',
+
+  // 其他公开列表
   'https://raw.githubusercontent.com/imDazui/Tvlist-awesome-m3u-m3u8/master/m3u/%E5%85%A8%E5%9B%BD%E4%B8%BB%E6%B5%81%E5%8D%AB%E8%A7%86%E5%8F%B0%E9%AB%98%E6%B8%85.m3u',
   'https://raw.githubusercontent.com/imDazui/Tvlist-awesome-m3u-m3u8/master/m3u/%E4%B8%AD%E5%A4%AE%E7%94%B5%E8%A7%86%E5%8F%B0%E9%AB%98%E6%B8%85.m3u',
-  // 公共 IPTV 源
-  'https://iptv-org.github.io/iptv/index.m3u',
 ];
 
 // ========== 改进的 HTTP 请求 ==========
@@ -214,20 +222,17 @@ async function main() {
 
       if (m3uChannels.length > 0) {
         const sampleSize = Math.min(10, m3uChannels.length);
-        console.log(`   📡 测试 ${sampleSize} 个样本频道...`);
+        console.log(`   📡 抽样测试 ${sampleSize} 个频道...`);
         const testBatch = m3uChannels.slice(0, sampleSize);
         const testResults = await Promise.all(
           testBatch.map(ch => testUrl(ch.url).then(result => ({ ...ch, ...result })))
         );
 
         const validChannels = testResults.filter(ch => ch.valid);
-        console.log(`   ✅ 有效样本: ${validChannels.length}/${testBatch.length}`);
+        console.log(`   ✅ 海外可达: ${validChannels.length}/${testBatch.length}`);
 
-        if (validChannels.length > 0) {
-          allChannels.push(...m3uChannels);
-        } else {
-          console.log('   ⚠️  样本全部无效，跳过该源');
-        }
+        // 国内源在 GitHub Actions 海外节点可能测不通，不再因测试失败丢弃
+        allChannels.push(...m3uChannels);
       }
 
     } catch (error) {
