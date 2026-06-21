@@ -90,6 +90,10 @@ class IPTVApp {
                 ...ch,
                 category: ch.category || ch.group || 'other'
             }));
+            this.currentCategory = 'all';
+            this.currentPage = 1;
+            this.pageSize = 60;
+            this.searchKeyword = '';
             this.renderChannels();
             this.updateStats();
             this.updateLastUpdated(data.update);
@@ -117,21 +121,37 @@ class IPTVApp {
         }
     }
 
-    renderChannels(category = 'all') {
+    getFilteredChannels() {
+        let filtered = this.currentCategory === 'all'
+            ? this.channels
+            : this.channels.filter(ch => ch.category === this.currentCategory);
+
+        if (this.searchKeyword) {
+            const kw = this.searchKeyword.toLowerCase();
+            filtered = filtered.filter(ch => ch.name.toLowerCase().includes(kw));
+        }
+        return filtered;
+    }
+
+    renderChannels() {
         const container = document.getElementById('channelList');
-        const filtered = category === 'all' 
-            ? this.channels 
-            : this.channels.filter(ch => ch.category === category);
+        const filtered = this.getFilteredChannels();
 
         if (filtered.length === 0) {
             container.innerHTML = '<p class="empty">暂无频道</p>';
+            document.getElementById('pagination').innerHTML = '';
             return;
         }
 
-        container.innerHTML = filtered.map(ch => `
+        const totalPages = Math.ceil(filtered.length / this.pageSize);
+        this.currentPage = Math.max(1, Math.min(this.currentPage, totalPages));
+        const start = (this.currentPage - 1) * this.pageSize;
+        const pageChannels = filtered.slice(start, start + this.pageSize);
+
+        container.innerHTML = pageChannels.map(ch => `
             <div class="channel-item" data-url="${this.escapeHtml(ch.url)}" data-name="${this.escapeHtml(ch.name)}">
                 <div class="channel-logo">
-                    <img src="${this.escapeHtml(ch.logo)}" alt="${this.escapeHtml(ch.name)}" 
+                    <img src="${this.escapeHtml(ch.logo)}" alt="${this.escapeHtml(ch.name)}" loading="lazy"
                          onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>📺</text></svg>'">
                 </div>
                 <div class="channel-name">${this.escapeHtml(ch.name)}</div>
@@ -140,6 +160,43 @@ class IPTVApp {
                 <button class="btn-play" data-action="play">播放</button>
             </div>
         `).join('');
+
+        this.renderPagination(totalPages);
+    }
+
+    renderPagination(totalPages) {
+        const container = document.getElementById('pagination');
+        if (totalPages <= 1) {
+            container.innerHTML = '';
+            return;
+        }
+
+        let html = `<span>第 ${this.currentPage}/${totalPages} 页（共 ${this.getFilteredChannels().length} 个）</span>`;
+        html += `<div class="page-buttons">`;
+        html += `<button ${this.currentPage === 1 ? 'disabled' : ''} data-page="prev">上一页</button>`;
+        const maxButtons = 7;
+        let startPage = Math.max(1, this.currentPage - Math.floor(maxButtons / 2));
+        let endPage = Math.min(totalPages, startPage + maxButtons - 1);
+        if (endPage - startPage + 1 < maxButtons) {
+            startPage = Math.max(1, endPage - maxButtons + 1);
+        }
+        for (let i = startPage; i <= endPage; i++) {
+            html += `<button class="${i === this.currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+        }
+        html += `<button ${this.currentPage === totalPages ? 'disabled' : ''} data-page="next">下一页</button>`;
+        html += `</div>`;
+        container.innerHTML = html;
+    }
+
+    goToPage(page) {
+        const filtered = this.getFilteredChannels();
+        const totalPages = Math.ceil(filtered.length / this.pageSize);
+        if (page === 'prev') this.currentPage--;
+        else if (page === 'next') this.currentPage++;
+        else this.currentPage = page;
+        this.currentPage = Math.max(1, Math.min(this.currentPage, totalPages));
+        this.renderChannels();
+        document.getElementById('channelList').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     escapeHtml(text) {
@@ -293,8 +350,24 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        app.renderChannels(btn.dataset.category);
+        app.currentCategory = btn.dataset.category;
+        app.currentPage = 1;
+        app.renderChannels();
     });
+});
+
+// 搜索框事件
+document.getElementById('searchInput').addEventListener('input', (e) => {
+    app.searchKeyword = e.target.value.trim();
+    app.currentPage = 1;
+    app.renderChannels();
+});
+
+// 分页按钮事件
+document.getElementById('pagination').addEventListener('click', (e) => {
+    if (e.target.tagName !== 'BUTTON') return;
+    const page = e.target.dataset.page;
+    if (page) app.goToPage(page);
 });
 
 // 测试按钮事件
