@@ -15,14 +15,14 @@
 ### 方式一：订阅链接（推荐）
 复制以下链接到 IPTV 播放器中订阅：
 ```
-https://chaniug.github.io/IPTV-Collector/iptv.m3u
+https://chaniug.github.io/IPTV-Collector/iptv-cn.m3u
 ```
 
 ### 方式二：下载 M3U 文件
-直接下载 [iptv.m3u](iptv.m3u) 文件，导入播放器即可。
+直接下载 [iptv-cn.m3u](iptv-cn.m3u) 文件（国内源），导入播放器即可。
 
 ### 方式三：JSON 格式数据
-下载 [channels.json](channels.json) 文件用于开发或其他用途。
+下载 [channels-cn.json](channels-cn.json) 文件用于开发或其他用途。
 
 ## 📱 推荐播放器
 

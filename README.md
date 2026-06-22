@@ -14,7 +14,7 @@
 | 特性 | 说明 |
 |------|------|
 | ⏰ **每天自动采集** | 北京时间每天 16:00 自动运行 GitHub Actions 采集最新源 |
-| 📁 **双数据源输出** | 同时生成 `iptv.m3u`（全量）与 `iptv-valid.m3u`（海外可达） |
+| 📁 **多数据源输出** | 同时生成 `iptv.m3u`（全量）、`iptv-cn.m3u`（国内源）、`iptv-valid.m3u`（海外可达） |
 | 🏷️ **智能分类** | 基于频道名称自动归类为央视、卫视、卡通、新闻、体育、电影、其他 |
 | 🧪 **自动验证** | 对频道进行 HEAD 可达性测试，生成有效源子集 |
 | 🌐 **网页预览** | 通过 GitHub Pages 在线查看、筛选、测试频道 |
@@ -43,7 +43,8 @@ https://chaniug.github.io/IPTV-Collector/iptv.m3u
 | jsDelivr | `https://cdn.jsdelivr.net/gh/Chaniug/IPTV-Collector@master/iptv.m3u` |
 | ghproxy | `https://ghproxy.com/https://raw.githubusercontent.com/Chaniug/IPTV-Collector/master/iptv.m3u` |
 
-把对应链接的 `iptv.m3u` 换成 `iptv-valid.m3u` 即可订阅验证版。
+- 把链接里的 `iptv.m3u` 换成 `iptv-cn.m3u` 即可订阅国内源版（推荐国内电视/盒子使用）。
+- 把链接里的 `iptv.m3u` 换成 `iptv-valid.m3u` 即可订阅海外验证版。
 
 ### 方式二：直接下载
 
@@ -51,6 +52,8 @@ https://chaniug.github.io/IPTV-Collector/iptv.m3u
 |------|------|------|
 | `iptv.m3u` | 全量频道列表 | [下载](iptv.m3u) |
 | `channels.json` | 全量频道数据（JSON） | [下载](channels.json) |
+| `iptv-cn.m3u` | 国内源频道列表（电视直连推荐） | [下载](iptv-cn.m3u) |
+| `channels-cn.json` | 国内源频道数据（JSON） | [下载](channels-cn.json) |
 | `iptv-valid.m3u` | 海外可达频道列表 | [下载](iptv-valid.m3u) |
 | `channels-valid.json` | 海外可达频道数据（JSON） | [下载](channels-valid.json) |
 
@@ -82,13 +85,17 @@ flowchart TB
 
     subgraph Outputs["生成文件"]
         O1[iptv.m3u<br/>channels.json<br/>全量]
-        O2[iptv-valid.m3u<br/>channels-valid.json<br/>海外可达]
+        O2[iptv-cn.m3u<br/>channels-cn.json<br/>国内源]
+        O3[iptv-valid.m3u<br/>channels-valid.json<br/>海外可达]
     end
 
     Sources --> A1
     A1 --> O1
     A1 --> O2
+    A1 --> O3
     O1 --> A2
+    O2 --> A2
+    O3 --> A2
     A2 --> Pages[GitHub Pages]
 ```
 
@@ -174,6 +181,8 @@ IPTV-Collector/
 ├── sources.txt               # 自定义采集源（每行一个）
 ├── iptv.m3u                  # 全量 M3U 输出
 ├── channels.json             # 全量 JSON 输出
+├── iptv-cn.m3u               # 国内源 M3U 输出
+├── channels-cn.json          # 国内源 JSON 输出
 ├── iptv-valid.m3u            # 海外可达 M3U 输出
 ├── channels-valid.json       # 海外可达 JSON 输出
 ├── package.json
@@ -191,7 +200,7 @@ IPTV-Collector/
 | 触发时间 | 每天 08:00 UTC（北京时间 16:00） |
 | 额外触发 | 手动触发 `workflow_dispatch` |
 | Node 版本 | 20 |
-| 主要输出 | `iptv.m3u`、`channels.json`、`iptv-valid.m3u`、`channels-valid.json` |
+| 主要输出 | `iptv.m3u`、`channels.json`、`iptv-cn.m3u`、`channels-cn.json`、`iptv-valid.m3u`、`channels-valid.json` |
 | 提交策略 | 仅当文件发生变化时才 commit & push |
 
 ### `deploy.yml` — 部署网页
@@ -208,7 +217,7 @@ IPTV-Collector/
 ### ❓ 频道无法播放
 
 1. **源已失效**：直播源时效性强，等待下次自动更新或手动运行 `npm run collect`。
-2. **网络限制**：部分国内源在海外无法播放，国内用户建议使用全量源 `iptv.m3u`。
+2. **网络限制**：部分国内源在海外无法播放，国内用户建议使用 `iptv-cn.m3u`（国内源），需要最全频道时使用 `iptv.m3u`。
 3. **播放器兼容性**：尝试 VLC、PotPlayer、TVBox 等不同播放器。
 
 ### ❓ 网页无法访问

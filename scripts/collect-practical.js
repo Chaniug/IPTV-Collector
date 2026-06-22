@@ -326,6 +326,38 @@ async function main() {
     console.log(`   ${group}: ${count}个`);
   }
 
+  // 识别国内源
+  function isChinaSource(url) {
+    try {
+      const lower = url.toLowerCase();
+      const hostname = new URL(url).hostname;
+      const chinaKeywords = [
+        'cmvideo', 'cntv', 'cctv', 'wasu', 'bestv', 'iqilu', 'tianmao',
+        'gitv', 'bilibili', 'douyu', 'huya', 'kbs', 'hnol', 'jhcs',
+        'ott', 'cdn5', 'miguvideo', 'migu', 'chinamobile', 'unicom',
+        'epg.pw', '228088', 'fanmingming', 'yuechan'
+      ];
+      if (chinaKeywords.some(kw => hostname.includes(kw))) return true;
+      if (/\.(cn|com\.cn|net\.cn|org\.cn|gov\.cn)$/.test(hostname)) return true;
+      const chinaIpRanges = [
+        /^1\./, /^14\./, /^27\./, /^36\./, /^39\./, /^42\./, /^43\./, /^49\./,
+        /^58\./, /^59\./, /^60\./, /^61\./, /^101\./, /^103\./, /^106\./, /^110\./,
+        /^111\./, /^112\./, /^113\./, /^114\./, /^115\./, /^116\./, /^117\./, /^118\./,
+        /^119\./, /^120\./, /^121\./, /^122\./, /^123\./, /^124\./, /^125\./, /^126\./,
+        /^139\./, /^140\./, /^150\./, /^153\./, /^157\./, /^159\./, /^161\./, /^163\./,
+        /^171\./, /^175\./, /^180\./, /^183\./, /^202\./, /^210\./, /^211\./, /^218\./,
+        /^219\./, /^220\./, /^221\./, /^222\./, /^223\./, /^224\./, /^240\./
+      ];
+      const ipMatch = hostname.match(/^(\d+\.\d+\.\d+\.\d+)/);
+      if (ipMatch && chinaIpRanges.some(r => r.test(ipMatch[1]))) return true;
+      return false;
+    } catch {
+      return false;
+    }
+  }
+
+  const cnChannels = uniqueChannels.filter(ch => isChinaSource(ch.url));
+
   // 测试所有频道在海外节点的可达性（仅用于生成 valid 子集，不丢弃全量）
   console.log('\n🔍 开始验证频道海外可达性...');
   const validChannels = [];
@@ -347,6 +379,8 @@ async function main() {
   const jsonPath = path.join(__dirname, '..', 'channels.json');
   const validM3uPath = path.join(__dirname, '..', 'iptv-valid.m3u');
   const validJsonPath = path.join(__dirname, '..', 'channels-valid.json');
+  const cnM3uPath = path.join(__dirname, '..', 'iptv-cn.m3u');
+  const cnJsonPath = path.join(__dirname, '..', 'channels-cn.json');
 
   const categoryOrder = ['央视台', '卫视台', '卡通类', '新闻类', '体育类', '电影类', '教育台', '其他台'];
 
@@ -386,16 +420,19 @@ async function main() {
   fs.writeFileSync(jsonPath, JSON.stringify(buildJson(uniqueChannels), null, 2), 'utf8');
   fs.writeFileSync(validM3uPath, buildM3u(validChannels), 'utf8');
   fs.writeFileSync(validJsonPath, JSON.stringify(buildJson(validChannels), null, 2), 'utf8');
+  fs.writeFileSync(cnM3uPath, buildM3u(cnChannels), 'utf8');
+  fs.writeFileSync(cnJsonPath, JSON.stringify(buildJson(cnChannels), null, 2), 'utf8');
 
   console.log('\n✅ 采集完成！');
   console.log(`   📁 iptv.m3u / channels.json: ${uniqueChannels.length} 个频道（全量）`);
+  console.log(`   📁 iptv-cn.m3u / channels-cn.json: ${cnChannels.length} 个频道（国内源）`);
   console.log(`   📁 iptv-valid.m3u / channels-valid.json: ${validChannels.length} 个频道（海外可达）`);
   console.log(`\n📅 更新时间: ${new Date().toLocaleString('zh-CN')}`);
 
   console.log('\n💡 使用方法:');
-  console.log('   1. 国内用户优先使用 iptv.m3u（频道最全）');
-  console.log('   2. 海外环境或求稳使用 iptv-valid.m3u');
-  console.log('   3. 将 m3u 导入 VLC、PotPlayer 等播放器播放');
+  console.log('   1. 国内电视/网络优先使用 iptv-cn.m3u（专为国内整理）');
+  console.log('   2. 想要最全频道使用 iptv.m3u');
+  console.log('   3. 海外环境或求稳使用 iptv-valid.m3u');
 }
 
 // 运行主函数

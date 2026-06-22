@@ -39,11 +39,15 @@ class IPTVApp {
     }
 
     getM3uFile() {
-        return this.currentSource === 'channels-valid.json' ? 'iptv-valid.m3u' : 'iptv.m3u';
+        if (this.currentSource === 'channels-valid.json') return 'iptv-valid.m3u';
+        if (this.currentSource === 'channels-cn.json') return 'iptv-cn.m3u';
+        return 'iptv.m3u';
     }
 
     getJsonFile() {
-        return this.currentSource === 'channels-valid.json' ? 'channels-valid.json' : 'channels.json';
+        if (this.currentSource === 'channels-valid.json') return 'channels-valid.json';
+        if (this.currentSource === 'channels-cn.json') return 'channels-cn.json';
+        return 'channels.json';
     }
 
     buildUrl(file) {
@@ -60,7 +64,13 @@ class IPTVApp {
         const jsonBtn = document.getElementById('downloadJson');
         if (m3uBtn) {
             m3uBtn.href = this.buildUrl(m3uFile);
-            m3uBtn.download = this.currentSource === 'channels-valid.json' ? 'IPTV有效直播源.m3u' : 'IPTV直播源.m3u';
+            if (this.currentSource === 'channels-valid.json') {
+                m3uBtn.download = 'IPTV有效直播源.m3u';
+            } else if (this.currentSource === 'channels-cn.json') {
+                m3uBtn.download = 'IPTV国内直播源.m3u';
+            } else {
+                m3uBtn.download = 'IPTV直播源.m3u';
+            }
         }
         if (jsonBtn) {
             jsonBtn.href = this.buildUrl(jsonFile);
@@ -69,9 +79,13 @@ class IPTVApp {
 
         const hint = document.getElementById('subHint');
         if (hint) {
-            hint.textContent = this.currentSource === 'channels-valid.json'
-                ? '仅包含在海外节点验证可通的频道，适合求稳使用'
-                : '包含所有采集到的频道，适合国内网络使用（频道最全）';
+            if (this.currentSource === 'channels-valid.json') {
+                hint.textContent = '仅包含在海外节点验证可通的频道，适合求稳使用';
+            } else if (this.currentSource === 'channels-cn.json') {
+                hint.textContent = '精选国内源，适合在国内电视/盒子直接使用';
+            } else {
+                hint.textContent = '包含所有采集到的频道，适合国内网络使用（频道最全）';
+            }
         }
     }
 

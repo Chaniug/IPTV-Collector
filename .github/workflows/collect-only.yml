@@ -115,7 +115,7 @@ jobs:
           name: iptv-files
           path: |
             iptv.m3u
-            channels.json
-            iptv-valid.m3u
+            channels.json            iptv-cn.m3u
+            channels-cn.json            iptv-valid.m3u
             channels-valid.json
           retention-days: 7
