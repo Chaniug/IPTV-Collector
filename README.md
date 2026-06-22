@@ -1,6 +1,6 @@
 # 📺 IPTV 电视直播源收集器（自动化更新版）
 
-🚀 **自动收集、测试和更新 IPTV 直播源**，每天自动运行，提供全量与验证两种频道列表。
+🚀 **自动收集、测试和更新 IPTV 直播源**，每天自动运行，提供全量、国内源与海外验证三种频道列表。
 
 [![Deploy to GitHub Pages](https://github.com/Chaniug/IPTV-Collector/actions/workflows/deploy.yml/badge.svg)](https://github.com/Chaniug/IPTV-Collector/actions/workflows/deploy.yml)
 [![Auto Collect](https://github.com/Chaniug/IPTV-Collector/actions/workflows/collect-only.yml/badge.svg)](https://github.com/Chaniug/IPTV-Collector/actions/workflows/collect-only.yml)
@@ -27,11 +27,15 @@
 
 ### 方式一：订阅链接（推荐）
 
+国内电视 / 盒子首选 **国内源**：
+
 ```text
-https://chaniug.github.io/IPTV-Collector/iptv.m3u
+https://chaniug.github.io/IPTV-Collector/iptv-cn.m3u
 ```
 
 *复制到 VLC、PotPlayer、TVBox 等播放器中订阅即可。*
+
+> 如需最全频道请使用 `iptv.m3u`；海外或求稳环境请使用 `iptv-valid.m3u`。
 
 #### CDN 加速订阅
 
@@ -39,12 +43,12 @@ https://chaniug.github.io/IPTV-Collector/iptv.m3u
 
 | 线路 | 订阅示例 |
 |------|---------|
-| 官方直连 | `https://chaniug.github.io/IPTV-Collector/iptv.m3u` |
-| jsDelivr | `https://cdn.jsdelivr.net/gh/Chaniug/IPTV-Collector@master/iptv.m3u` |
-| ghproxy | `https://ghproxy.com/https://raw.githubusercontent.com/Chaniug/IPTV-Collector/master/iptv.m3u` |
+| 官方直连 | `https://chaniug.github.io/IPTV-Collector/iptv-cn.m3u` |
+| jsDelivr | `https://cdn.jsdelivr.net/gh/Chaniug/IPTV-Collector@master/iptv-cn.m3u` |
+| ghproxy | `https://ghproxy.com/https://raw.githubusercontent.com/Chaniug/IPTV-Collector/master/iptv-cn.m3u` |
 
-- 把链接里的 `iptv.m3u` 换成 `iptv-cn.m3u` 即可订阅国内源版（推荐国内电视/盒子使用）。
-- 把链接里的 `iptv.m3u` 换成 `iptv-valid.m3u` 即可订阅海外验证版。
+- 把链接里的 `iptv-cn.m3u` 换成 `iptv.m3u` 即可订阅全量源版。
+- 把链接里的 `iptv-cn.m3u` 换成 `iptv-valid.m3u` 即可订阅海外验证版。
 
 ### 方式二：直接下载
 

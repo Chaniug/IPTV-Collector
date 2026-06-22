@@ -10,7 +10,7 @@
     <div class="container">
         <header>
             <h1>📺 IPTV 电视直播源</h1>
-            <p class="subtitle">收集整理国内可用电视频道，直接复制订阅链接即可使用</p>
+            <p class="subtitle">每天自动更新，提供全量、国内源、海外验证三种订阅，复制链接即可使用</p>
         </header>
 
         <main>
@@ -21,8 +21,8 @@
                     <div class="source-selector">
                         <label>选择数据源：</label>
                         <select id="sourceSelect">
-                            <option value="channels.json">📺 全量源（频道最多）</option>
                             <option value="channels-cn.json">🇨🇳 国内源（电视直连推荐）</option>
+                            <option value="channels.json">📺 全量源（频道最多）</option>
                             <option value="channels-valid.json">✅ 有效源（海外可达，更稳定）</option>
                         </select>
                     </div>
@@ -32,26 +32,26 @@
                         <div class="cdn-selector">
                             <label>加速线路：</label>
                             <select id="cdnSelect">
-                                <option value="direct">🌐 官方直连（GitHub Pages）</option>
                                 <option value="jsdelivr">⚡ jsDelivr 加速</option>
                                 <option value="ghproxy">🇨🇳 ghproxy 国内镜像</option>
+                                <option value="direct">🌐 官方直连（GitHub Pages）</option>
                             </select>
                         </div>
                         <div class="copy-box">
-                            <code id="subUrl">https://chaniug.github.io/IPTV-Collector/iptv.m3u</code>
+                            <code id="subUrl">https://cdn.jsdelivr.net/gh/Chaniug/IPTV-Collector@master/iptv-cn.m3u</code>
                             <button class="btn" onclick="copyText('subUrl')">复制</button>
                         </div>
-                        <p class="hint" id="subHint">复制链接到 IPTV 播放器中订阅即可</p>
+                        <p class="hint" id="subHint">精选国内源，适合在国内电视/盒子直接使用</p>
                     </div>
                     
                     <div class="method">
                         <h3>方式二：直接下载 M3U 文件</h3>
-                        <a id="downloadM3u" href="iptv.m3u" download="IPTV直播源.m3u" class="btn btn-download">📥 下载 M3U 文件</a>
+                        <a id="downloadM3u" href="iptv-cn.m3u" download="IPTV国内直播源.m3u" class="btn btn-download">📥 下载 M3U 文件</a>
                     </div>
                     
                     <div class="method">
                         <h3>方式三：JSON 格式数据</h3>
-                        <a id="downloadJson" href="channels.json" download="channels.json" class="btn btn-download">📄 下载 JSON</a>
+                        <a id="downloadJson" href="channels-cn.json" download="channels-cn.json" class="btn btn-download">📄 下载 JSON</a>
                     </div>
                 </div>
             </section>

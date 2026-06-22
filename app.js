@@ -2,8 +2,8 @@
 class IPTVApp {
     constructor() {
         this.channels = [];
-        this.currentSource = localStorage.getItem('iptv-source') || 'channels.json';
-        this.currentCDN = localStorage.getItem('iptv-cdn') || 'direct';
+        this.currentSource = localStorage.getItem('iptv-source') || 'channels-cn.json';
+        this.currentCDN = localStorage.getItem('iptv-cdn') || 'jsdelivr';
         this.cdnBase = {
             direct: 'https://chaniug.github.io/IPTV-Collector',
             jsdelivr: 'https://cdn.jsdelivr.net/gh/Chaniug/IPTV-Collector@master',
