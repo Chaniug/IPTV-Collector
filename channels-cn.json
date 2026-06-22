@@ -1,0 +1,378 @@
+{
+  "update": "2026-06-22T09:21:56.038Z",
+  "count": 53,
+  "sources": 8,
+  "channels": [
+    {
+      "name": "CCTV+ 1",
+      "url": "https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL1.smil/playlist.m3u8",
+      "logo": "https://i.imgur.com/U8d4Is6.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV+ 2",
+      "url": "https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8",
+      "logo": "https://i.imgur.com/qSg862A.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CETV1",
+      "url": "http://117.161.133.51:81/gitv_live/G_CETV-1/G_CETV-1.m3u8?p=GITV",
+      "logo": "https://i.imgur.com/6sOHLq8.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CETV2",
+      "url": "http://117.161.133.51:81/gitv_live/G_CETV-2/G_CETV-2.m3u8?p=GITV",
+      "logo": "https://i.imgur.com/ZD8XPmw.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "东南卫视",
+      "url": "http://118.81.195.79:9003/hls/24/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "东方卫视",
+      "url": "http://118.81.195.79:9003/hls/23/index.m3u8",
+      "logo": "https://i.imgur.com/WqM6xnF.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "兵团卫视",
+      "url": "http://112.25.48.68/live/program/live/btws/1300000/mnf.m3u8",
+      "logo": "https://i.imgur.com/Y4qxDqz.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "内蒙古卫视",
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225667/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "内蒙古卫视",
+      "url": "http://117.169.120.140:8080/live/neimenggustv/.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "内蒙古卫视",
+      "url": "http://183.207.248.71/gitv/live1/G_NEIMENGGU/G_NEIMENGGU",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "内蒙古卫视",
+      "url": "http://223.110.245.173/PLTV/4/224/3221225836/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "凤凰中文",
+      "url": "http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8",
+      "logo": "https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/Phoenix1.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "凤凰资讯",
+      "url": "http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8",
+      "logo": "https://i.imgur.com/mt4h3VO.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "凤凰香港",
+      "url": "http://223.110.245.136/PLTV/3/224/3221226975/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "厦门卫视",
+      "url": "http://223.110.245.159/ott.js.chinamobile.com/PLTV/3/224/3221226996/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "厦门卫视",
+      "url": "http://112.25.48.68/live/program/live/xmws/1300000/mnf.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "吉林卫视",
+      "url": "http://118.81.195.79:9003/hls/34/index.m3u8",
+      "logo": "https://www.tvchinese.net/uploads/tv/jilintv.jpg",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "四川卫视",
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225733/index.m3u8",
+      "logo": "https://i.imgur.com/r5xivih.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "天津卫视",
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225698/index.m3u8",
+      "logo": "https://i.imgur.com/Bg24eaH.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "宁夏卫视",
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225726/index.m3u8",
+      "logo": "https://i.imgur.com/nUQE4Ib.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "山东卫视",
+      "url": "http://125.210.152.18:9090/live/SDWSHD_H265.m3u8",
+      "logo": "https://www.tvchinese.net/uploads/tv/shandongtv.jpg",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "山东卫视",
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225697/index.m3u8",
+      "logo": "https://i.imgur.com/t3ICc4i.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "山西卫视",
+      "url": "http://118.81.195.79:9003/hls/19/index.m3u8",
+      "logo": "https://i.imgur.com/UfKJBWW.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "广东卫视",
+      "url": "http://118.81.195.79:9003/hls/26/index.m3u8",
+      "logo": "https://parco-zh.github.io/demo/guangdong.jpg",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "广西卫视",
+      "url": "http://118.81.195.79:9003/hls/27/index.m3u8",
+      "logo": "https://i.imgur.com/dpre5Qs.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "新疆卫视",
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225725/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "新疆卫视",
+      "url": "http://183.207.248.71/cntv/live1/xinjiangstv/xinjiangstv",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "新疆卫视",
+      "url": "http://183.207.248.71/gitv/live1/G_XINJIANG/G_XINJIANG",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "新疆卫视",
+      "url": "http://183.207.249.15/PLTV/3/224/3221225523/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "新疆卫视",
+      "url": "http://223.110.243.136/PLTV/3/224/3221225523/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "新疆卫视",
+      "url": "http://112.25.48.68/live/program/live/xjws/1300000/mnf.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "江苏卫视",
+      "url": "http://39.134.24.166/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226200/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "江西卫视",
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225705/index.m3u8",
+      "logo": "https://i.imgur.com/RrLthH3.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "河南卫视",
+      "url": "http://118.81.195.79:9003/hls/30/index.m3u8",
+      "logo": "https://i.imgur.com/IBW26kV.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "浙江卫视",
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225703/index.m3u8",
+      "logo": "https://i.imgur.com/NFFQNhq.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "海南卫视",
+      "url": "http://118.81.195.79:9003/hls/28/index.m3u8",
+      "logo": "https://i.imgur.com/j6kY8nh.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "湖北卫视",
+      "url": "http://118.81.195.79:9003/hls/32/index.m3u8",
+      "logo": "https://i.imgur.com/CTRa9BJ.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "甘肃卫视",
+      "url": "http://118.81.195.79:9003/hls/25/index.m3u8",
+      "logo": "https://i.imgur.com/dANSiug.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "西藏卫视",
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225723/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "西藏卫视",
+      "url": "http://117.169.120.140:8080/live/xizangstv/.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "西藏卫视",
+      "url": "http://183.207.249.16/PLTV/3/224/3221225523/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "贵州卫视",
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225728/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "贵州卫视",
+      "url": "http://183.207.248.71/gitv/live1/G_GUIZHOU/G_GUIZHOU",
+      "logo": "https://i.imgur.com/nkcKCdr.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "辽宁卫视",
+      "url": "http://39.134.39.37/PLTV/88888888/224/3221226209/index.m3u8",
+      "logo": "https://i.imgur.com/XRfeNTd.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "重庆卫视",
+      "url": "http://118.81.195.79:9003/hls/22/index.m3u8",
+      "logo": "https://i.imgur.com/ggKci6o.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "陕西卫视",
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225729/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "陕西卫视",
+      "url": "http://223.110.245.139/PLTV/4/224/3221227022/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "陕西卫视",
+      "url": "http://112.25.48.68/live/program/live/sxws/1300000/mnf.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "黑龙卫视",
+      "url": "http://223.110.243.169/PLTV/3/224/3221227252/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "黑龙卫视",
+      "url": "http://223.110.245.139/PLTV/4/224/3221227492/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "黑龙卫视",
+      "url": "http://223.110.245.170/PLTV/3/224/3221227252/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "黑龙卫视",
+      "url": "http://125.210.152.18:9090/live/HLJWSHD_H265.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "黑龙江卫视",
+      "url": "http://118.81.195.79:9003/hls/31/index.m3u8",
+      "logo": "https://i.imgur.com/9fj1uba.png",
+      "group": "卫视台",
+      "category": "satellite"
+    }
+  ]
+}
