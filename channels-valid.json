@@ -1,6 +1,6 @@
 {
-  "update": "2026-06-24T10:54:27.762Z",
-  "count": 306,
+  "update": "2026-06-25T10:46:28.390Z",
+  "count": 308,
   "sources": 8,
   "channels": [
     {
@@ -125,6 +125,13 @@
     {
       "name": "CCTV-12",
       "url": "http://74.91.26.218:82/live/cctv12hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-13",
+      "url": "http://go.bkpcp.top/mg/cctv13",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
@@ -359,6 +366,13 @@
       "logo": "https://i.imgur.com/nDWkCmL.png",
       "group": "央视台",
       "category": "cctv"
+    },
+    {
+      "name": "BRTV 北京卫视",
+      "url": "http://go.bkpcp.top/mg/bjws",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
     },
     {
       "name": "云南卫视",
@@ -608,6 +622,13 @@
     {
       "name": "人间卫视",
       "url": "https://stream1.freetv.fun/1f63ffacdc4c93b5736f59829aac1fccdf3df1e37bf8ba95c258b6e7d946d8a7.m3u8",
+      "logo": "https://epg.pw/media/img/logo/1_164.jpg",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "人间卫视",
+      "url": "https://stream1.freetv.fun/9f76ad62b7ac59970b10e209f250df382971823ed12f12459c11d5ca71e0d7b9.m3u8",
       "logo": "https://epg.pw/media/img/logo/1_164.jpg",
       "group": "卫视台",
       "category": "satellite"
@@ -866,13 +887,6 @@
     },
     {
       "name": "兵团卫视",
-      "url": "https://stream1.freetv.fun/55ceb41b57078ce3ac72d08a6a93733850d3f31c8b2a2e0845d356b6c0ad1667.ctv",
-      "logo": "https://epg.pw/media/images/channel/2025/01/28/large/20250128061107039210_54.png",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "兵团卫视",
       "url": "https://stream1.freetv.fun/d84efa5eb598b5211d873bf4c345d5e25800edcf2b6cea4cc78e5c909b15b625.m3u8",
       "logo": "https://epg.pw/media/images/channel/2025/01/28/large/20250128061107039210_54.png",
       "group": "卫视台",
@@ -909,13 +923,6 @@
     {
       "name": "北京卫视",
       "url": "https://stream1.freetv.fun/5a20fa5ec6a4bf5ba25f3efd6f4521e86065d5cb07ac8cb90b1c4edac73a3265.ctv",
-      "logo": "https://epg.pw/media/images/channel/2024/10/29/large/20241029101351559578_45.png",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "北京卫视",
-      "url": "https://stream1.freetv.fun/09ad86ae6105e1909474775ce2086e303bf2cff6b975cb65ab81dfdd7e7a2f43.ctv",
       "logo": "https://epg.pw/media/images/channel/2024/10/29/large/20241029101351559578_45.png",
       "group": "卫视台",
       "category": "satellite"
@@ -1503,13 +1510,6 @@
     },
     {
       "name": "大湾区卫视高清",
-      "url": "https://stream1.freetv.fun/d5ea0e1f55c87ee51fc1f1a03c3e1a4345db73ba01a2a0a15d13505b457f346a.ctv",
-      "logo": "https://epg.pw/media/images/channel/2024/01/14/large/20240114132000365190_44.png",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "大湾区卫视高清",
       "url": "https://stream1.freetv.fun/b798ad1e07f1c013c0f8cb6e3a90d97b6bd6b9f10adc759693191559f5d69051.ctv",
       "logo": "https://epg.pw/media/images/channel/2024/01/14/large/20240114132000365190_44.png",
       "group": "卫视台",
@@ -1553,13 +1553,6 @@
     {
       "name": "大湾区卫视高清",
       "url": "https://stream1.freetv.fun/fddc800c1b97bed5f28f080504e2559989f2906b771b745a69903512e6250a96.ctv",
-      "logo": "https://epg.pw/media/images/channel/2024/01/14/large/20240114132000365190_44.png",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "大湾区卫视高清",
-      "url": "https://stream1.freetv.fun/682ec22b3929edfe9093d284dedd236c187b2549f47dc0848cade294643e031c.ctv",
       "logo": "https://epg.pw/media/images/channel/2024/01/14/large/20240114132000365190_44.png",
       "group": "卫视台",
       "category": "satellite"
@@ -2141,6 +2134,27 @@
     {
       "name": "山东卫视",
       "url": "https://stream1.freetv.fun/3b97ca6daa3a8451a385b7db783b1c5622e979ec500532a2ff7145e99e78fab5.m3u8",
+      "logo": "https://epg.pw/media/images/channel/2023/07/19/large/20230719112946432101_81.jpg",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "山东卫视",
+      "url": "https://stream1.freetv.fun/6ae72c2ed9e03972d255c19be7f49c4731d8c51bfd1dfc150e73a2d7a132235d.m3u8",
+      "logo": "https://epg.pw/media/images/channel/2023/07/19/large/20230719112946432101_81.jpg",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "山东卫视",
+      "url": "https://stream1.freetv.fun/220190fbb76291005f7129d1553ddad9ecc1d70bceaeca80ca0caef936c06861.m3u8",
+      "logo": "https://epg.pw/media/images/channel/2023/07/19/large/20230719112946432101_81.jpg",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "山东卫视",
+      "url": "https://stream1.freetv.fun/77c364dc1a58ed62d710b1a31406649e63c3dc8fe28baebf8aa19fc2fc67bc41.m3u8",
       "logo": "https://epg.pw/media/images/channel/2023/07/19/large/20230719112946432101_81.jpg",
       "group": "卫视台",
       "category": "satellite"
