@@ -10,18 +10,18 @@ const path = require('path');
 
 // ========== 默认公开源列表 ==========
 const DEFAULT_SOURCES = [
-  // jsdelivr CDN 镜像（国内可访问，优先使用）
-  'https://cdn.jsdelivr.net/gh/iptv-org/iptv@master/streams/cn.m3u',
-  'https://fastly.jsdelivr.net/gh/YueChan/Live@main/IPTV.m3u',
-  'https://fastly.jsdelivr.net/gh/fanmingming/live@main/tv/m3u/global.m3u',
-  'https://fastly.jsdelivr.net/gh/imDazui/Tvlist-awesome-m3u-m3u8@master/m3u/%E5%85%A8%E5%9B%BD%E4%B8%BB%E6%B5%81%E5%8D%AB%E8%A7%86%E5%8F%B0%E9%AB%98%E6%B8%85.m3u',
-  'https://fastly.jsdelivr.net/gh/imDazui/Tvlist-awesome-m3u-m3u8@master/m3u/%E4%B8%AD%E5%A4%AE%E7%94%B5%E8%A7%86%E5%8F%B0%E9%AB%98%E6%B8%85.m3u',
-  // GitHub 原始源（备用）
+  // 主力源（iptv-org 全球频道库）
   'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u',
-  'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/global.m3u',
-  'https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u',
+  // 国内综合源
+  'https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u',
+  'https://raw.githubusercontent.com/joevess/IPTV/main/iptv.m3u8',
+  'https://raw.githubusercontent.com/vbskycn/iptv/master/tv.m3u',
+  // 央视/卫视专用源
+  'https://raw.githubusercontent.com/BurningXiner/IPTV-M3U/main/cctv.m3u',
+  'https://raw.githubusercontent.com/Evil-c/Iptv-List/master/Iptv-List.m3u',
+  // jsdelivr CDN 镜像（备用）
+  'https://cdn.jsdelivr.net/gh/iptv-org/iptv@master/streams/cn.m3u',
   // 在线 IPTV 服务
-  'https://iptv.228088.xyz/cn.m3u',
   'https://epg.pw/test_channels.m3u'
 ];
 
@@ -64,44 +64,81 @@ function loadSources() {
   return DEFAULT_SOURCES;
 }
 
-// ========== 改进的 HTTP 请求 ==========
-function fetchSource(url, timeout = 20000) {
+// ========== 改进的 HTTP 请求（带重试） ==========
+function fetchSource(url, timeout = 30000, retries = 2) {
   return new Promise((resolve, reject) => {
-    const isHttps = url.startsWith('https://');
-    const client = isHttps ? https : http;
+    let attempt = 0;
 
-    const req = client.get(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-        'Accept': '*/*',
-        'Accept-Language': 'zh-CN,zh;q=0.9'
-      },
-      timeout
-    }, (res) => {
-      const statusCode = res.statusCode;
-      if (statusCode >= 200 && statusCode < 400) {
-        const chunks = [];
-        res.on('data', chunk => chunks.push(chunk));
-        res.on('end', () => {
-          const content = Buffer.concat(chunks).toString('utf8');
-          // 必须是有效的 M3U 文件
-          if (content.includes('#EXTM3U')) {
-            resolve(content);
+    function tryFetch() {
+      attempt++;
+      const isHttps = url.startsWith('https://');
+      const client = isHttps ? https : http;
+
+      const req = client.get(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+          'Accept': '*/*',
+          'Accept-Language': 'zh-CN,zh;q=0.9'
+        },
+        timeout
+      }, (res) => {
+        const statusCode = res.statusCode;
+        // 跟随重定向
+        if (statusCode >= 300 && statusCode < 400 && res.headers.location) {
+          res.destroy();
+          tryFetchRedirect(res.headers.location, url, timeout, retries, attempt, resolve, reject);
+          return;
+        }
+        if (statusCode >= 200 && statusCode < 400) {
+          const chunks = [];
+          res.on('data', chunk => chunks.push(chunk));
+          res.on('end', () => {
+            const content = Buffer.concat(chunks).toString('utf8');
+            if (content.includes('#EXTM3U')) {
+              resolve(content);
+            } else {
+              if (attempt < retries + 1) {
+                setTimeout(tryFetch, 1000);
+              } else {
+                reject(new Error('Not a valid M3U file'));
+              }
+            }
+          });
+        } else {
+          if (attempt < retries + 1) {
+            setTimeout(tryFetch, 1000);
           } else {
-            reject(new Error('Not a valid M3U file'));
+            reject(new Error(`HTTP ${statusCode}`));
           }
-        });
-      } else {
-        reject(new Error(`HTTP ${statusCode}`));
-      }
-    });
+        }
+      });
 
-    req.on('error', reject);
-    req.setTimeout(timeout, () => {
-      req.destroy();
-      reject(new Error('Timeout'));
-    });
+      req.on('error', (err) => {
+        if (attempt < retries + 1) {
+          setTimeout(tryFetch, 1000);
+        } else {
+          reject(err);
+        }
+      });
+
+      req.setTimeout(timeout, () => {
+        req.destroy();
+        if (attempt < retries + 1) {
+          setTimeout(tryFetch, 1000);
+        } else {
+          reject(new Error('Timeout'));
+        }
+      });
+    }
+
+    tryFetch();
   });
+}
+
+// 处理重定向
+function tryFetchRedirect(location, originalUrl, timeout, retries, attempt, resolve, reject) {
+  const redirectUrl = location.startsWith('http') ? location : new URL(location, originalUrl).href;
+  fetchSource(redirectUrl, timeout, retries - attempt + 1).then(resolve).catch(reject);
 }
 
 // ========== 频道分类器 ==========
@@ -135,19 +172,26 @@ function categorizeChannel(name, originalGroup = '') {
 function testUrl(url, timeout = 10000) {
   return new Promise((resolve) => {
     try {
+      // rtp/rtsp 协议无法通过 HTTP 测试，直接标记为有效（国内组播源）
+      if (url.startsWith('rtp://') || url.startsWith('rtsp://')) {
+        resolve({ valid: true, statusCode: 0, url: url });
+        return;
+      }
+
       const isHttps = url.startsWith('https://');
       const client = isHttps ? https : http;
 
       const req = client.request(url, {
-        method: 'HEAD',
+        method: 'GET',
         timeout,
         headers: {
           'User-Agent': 'VLC/3.0.18',
-          'Accept': '*/*'
+          'Accept': '*/*',
+          'Range': 'bytes=0-1'
         }
       }, (res) => {
         res.destroy();
-        // 宽松的验证：只要返回200就认为是有效的
+        // 宽松的验证：2xx/3xx 都算有效
         const isValid = res.statusCode >= 200 && res.statusCode < 400;
         resolve({
           valid: isValid,
@@ -180,6 +224,7 @@ async function main() {
   const STABLE_SOURCES = loadSources();
   let allChannels = [];
   const seenUrls = new Set();
+  let failedSources = 0;
 
   // 从每个源采集
   for (let i = 0; i < STABLE_SOURCES.length; i++) {
@@ -191,9 +236,10 @@ async function main() {
 
       let content;
       try {
-        content = await fetchSource(sourceUrl, 30000);
+        content = await fetchSource(sourceUrl, 30000, 2);
       } catch (fetchError) {
         console.log(`   ⚠️  ${sourceName} 获取失败: ${fetchError.message}`);
+        failedSources++;
         continue;
       }
 
@@ -449,6 +495,7 @@ async function main() {
   console.log(`   📁 iptv.m3u / channels.json: ${uniqueChannels.length} 个频道（全量）`);
   console.log(`   📁 iptv-cn.m3u / channels-cn.json: ${cnChannels.length} 个频道（国内源）`);
   console.log(`   📁 iptv-valid.m3u / channels-valid.json: ${validChannels.length} 个频道（海外可达）`);
+  console.log(`   📊 源成功率: ${STABLE_SOURCES.length - failedSources}/${STABLE_SOURCES.length} 个源可用`);
   console.log(`\n📅 更新时间: ${new Date().toLocaleString('zh-CN')}`);
 
   console.log('\n💡 使用方法:');

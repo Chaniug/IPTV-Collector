@@ -32,15 +32,22 @@ console.log('');
 async function testChannel(url, timeout = 10000) {
   return new Promise((resolve) => {
     try {
+      // rtp/rtsp 协议无法通过 HTTP 测试，直接标记为有效
+      if (url.startsWith('rtp://') || url.startsWith('rtsp://')) {
+        resolve({ valid: true, statusCode: 0, contentType: 'rtp' });
+        return;
+      }
+
       const isHttps = url.startsWith('https://');
       const client = isHttps ? https : http;
 
       const req = client.request(url, {
-        method: 'HEAD',
+        method: 'GET',
         timeout,
         headers: {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-          'Accept': '*/*'
+          'Accept': '*/*',
+          'Range': 'bytes=0-1'
         }
       }, (res) => {
         res.destroy();

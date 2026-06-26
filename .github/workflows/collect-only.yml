@@ -1,9 +1,9 @@
 name: IPTV Auto Collector
 
 on:
-  # 每天早上 8 点自动采集更新
+  # 每 6 小时自动采集更新（源更新更及时）
   schedule:
-    - cron: '0 8 * * *'
+    - cron: '0 0,6,12,18 * * *'
   # 手动触发
   workflow_dispatch:
 
@@ -28,10 +28,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
 
       - name: Run IPTV Collector
         run: npm run collect
@@ -39,39 +43,24 @@ jobs:
           NODE_OPTIONS: '--max-old-space-size=4096'
 
       - name: Display collection summary
+        if: always()
         run: |
           echo "=== 采集结果汇总 ==="
-          if [ -f channels.json ]; then
-            echo "📊 channels.json 信息:"
-            COUNT=$(jq -r '.count // 0' channels.json)
-            UPDATE=$(jq -r '.update // "unknown"' channels.json)
-            SOURCES=$(jq -r '.sources // 0' channels.json)
-            echo "   频道总数: $COUNT"
-            echo "   数据来源: $SOURCES 个源"
-            echo "   更新时间: $UPDATE"
-          else
-            echo "❌ channels.json 文件不存在"
-          fi
+          for f in channels.json channels-cn.json channels-valid.json; do
+            if [ -f "$f" ]; then
+              COUNT=$(jq -r '.count // 0' "$f")
+              UPDATE=$(jq -r '.update // "unknown"' "$f")
+              echo "📊 $f: ${COUNT} 个频道, 更新于 $UPDATE"
+            fi
+          done
 
-          if [ -f iptv.m3u ]; then
-            echo "📱 iptv.m3u 信息:"
-            LINES=$(wc -l < iptv.m3u)
-            SIZE=$(ls -lh iptv.m3u | awk '{print $5}')
-            echo "   文件大小: $SIZE"
-            echo "   总行数: $LINES"
-          else
-            echo "❌ iptv.m3u 文件不存在"
-          fi
-
-          if [ -f iptv-valid.m3u ]; then
-            echo "✅ iptv-valid.m3u 信息:"
-            VALID_LINES=$(wc -l < iptv-valid.m3u)
-            VALID_SIZE=$(ls -lh iptv-valid.m3u | awk '{print $5}')
-            echo "   文件大小: $VALID_SIZE"
-            echo "   总行数: $VALID_LINES"
-          else
-            echo "❌ iptv-valid.m3u 文件不存在"
-          fi
+          for f in iptv.m3u iptv-cn.m3u iptv-valid.m3u; do
+            if [ -f "$f" ]; then
+              LINES=$(wc -l < "$f")
+              SIZE=$(ls -lh "$f" | awk '{print $5}')
+              echo "📱 $f: ${LINES} 行, ${SIZE}"
+            fi
+          done
 
       - name: Test channels (optional)
         run: npm run test
@@ -88,8 +77,10 @@ jobs:
             echo "ℹ️ 没有检测到文件变化，无需提交"
           else
             COUNT=$(jq -r '.count // 0' channels.json 2>/dev/null || echo 0)
+            CN_COUNT=$(jq -r '.count // 0' channels-cn.json 2>/dev/null || echo 0)
+            VALID_COUNT=$(jq -r '.count // 0' channels-valid.json 2>/dev/null || echo 0)
             UPDATE_TIME=$(date +'%Y-%m-%d %H:%M')
-            COMMIT_MSG="auto: 更新 IPTV 源 $UPDATE_TIME (共 $COUNT 个频道)"
+            COMMIT_MSG="auto: 更新 IPTV 源 $UPDATE_TIME (全量${COUNT}/国内${CN_COUNT}/有效${VALID_COUNT})"
             git commit -m "$COMMIT_MSG"
             git push
             echo "changed=true" >> $GITHUB_OUTPUT
@@ -115,7 +106,10 @@ jobs:
           name: iptv-files
           path: |
             iptv.m3u
-            channels.json            iptv-cn.m3u
-            channels-cn.json            iptv-valid.m3u
+            iptv-cn.m3u
+            iptv-valid.m3u
+            channels.json
+            channels-cn.json
             channels-valid.json
+            collect.log
           retention-days: 7

@@ -1,18 +1,21 @@
 # IPTV 采集源列表
 # 每行一个源地址，以 # 开头的行为注释
+# GitHub Actions 在海外运行，直接用 raw.githubusercontent.com 即可
 
-# === jsdelivr CDN 镜像（国内可访问） ===
-https://cdn.jsdelivr.net/gh/iptv-org/iptv@master/streams/cn.m3u
-https://fastly.jsdelivr.net/gh/YueChan/Live@main/IPTV.m3u
-https://fastly.jsdelivr.net/gh/fanmingming/live@main/tv/m3u/global.m3u
-https://fastly.jsdelivr.net/gh/imDazui/Tvlist-awesome-m3u-m3u8@master/m3u/%E5%85%A8%E5%9B%BD%E4%B8%BB%E6%B5%81%E5%8D%AB%E8%A7%86%E5%8F%B0%E9%AB%98%E6%B8%85.m3u
-https://fastly.jsdelivr.net/gh/imDazui/Tvlist-awesome-m3u-m3u8@master/m3u/%E4%B8%AD%E5%A4%AE%E7%94%B5%E8%A7%86%E5%8F%B0%E9%AB%98%E6%B8%85.m3u
-
-# === GitHub 原始源（备用） ===
+# === 主力源（iptv-org 全球频道库） ===
 https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u
-https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/global.m3u
-https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u
+
+# === 国内综合源 ===
+https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u
+https://raw.githubusercontent.com/joevess/IPTV/main/iptv.m3u8
+https://raw.githubusercontent.com/vbskycn/iptv/master/tv.m3u
+
+# === 央视/卫视专用源 ===
+https://raw.githubusercontent.com/BurningXiner/IPTV-M3U/main/cctv.m3u
+https://raw.githubusercontent.com/Evil-c/Iptv-List/master/Iptv-List.m3u
+
+# === jsdelivr CDN 镜像（备用，国内访问用） ===
+https://cdn.jsdelivr.net/gh/iptv-org/iptv@master/streams/cn.m3u
 
 # === 在线 IPTV 服务 ===
-https://iptv.228088.xyz/cn.m3u
 https://epg.pw/test_channels.m3u
