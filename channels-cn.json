@@ -1,8 +1,197 @@
 {
-  "update": "2026-06-26T10:33:56.920Z",
-  "count": 150,
+  "update": "2026-06-26T10:48:16.566Z",
+  "count": 232,
   "sources": 10,
   "channels": [
+    {
+      "name": "CCTV-1",
+      "url": "http://69.30.245.50/live/cctv1.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-1",
+      "url": "http://198.204.240.250:82/live/cctv1.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-1",
+      "url": "http://74.91.26.218:82/live/cctv1hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-2",
+      "url": "http://74.91.26.218:82/live/cctv2hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-3",
+      "url": "http://74.91.26.218:82/live/cctv3hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-4 Asia",
+      "url": "http://74.91.26.218:82/live/cctv4hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-4K",
+      "url": "http://198.204.240.250:82/live/cctv4k.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-6",
+      "url": "http://69.30.245.50/live/cctv6.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-6",
+      "url": "http://198.204.240.250:82/live/cctv6.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-7",
+      "url": "http://74.91.26.218:82/live/cctv7hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-8",
+      "url": "http://74.91.26.218:82/live/cctv8hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-8K",
+      "url": "http://192.151.150.154/live/cctv8k.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-8K",
+      "url": "http://198.204.240.250:82/live/cctv8k.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-9",
+      "url": "https://xykt-fix.github.io/Y77.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-10",
+      "url": "http://74.91.26.218:82/live/cctv10hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-10",
+      "url": "https://cdn4.skygo.mn/live/disk1/CCTV-10/HLSv3-FTA/CCTV-10.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-11",
+      "url": "http://74.91.26.218:82/live/cctv11hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-11",
+      "url": "https://xykt-fix.github.io/play/a02b/index.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-12",
+      "url": "http://74.91.26.218:82/live/cctv12hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-13",
+      "url": "http://go.bkpcp.top/mg/cctv13",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-13",
+      "url": "https://cdn3.163189.xyz/163189/cctv13",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-13",
+      "url": "http://74.91.26.218:82/live/cctv13hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-14",
+      "url": "http://74.91.26.218:82/live/cctv14hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-15",
+      "url": "https://xykt-fix.github.io/play/a02e/index.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-15",
+      "url": "http://74.91.26.218:82/live/cctv15hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-16",
+      "url": "http://74.91.26.218:82/live/cctv16hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-17",
+      "url": "http://74.91.26.218:82/live/cctv17hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
     {
       "name": "CETV1",
       "url": "http://117.161.133.51:81/gitv_live/G_CETV-1/G_CETV-1.m3u8?p=GITV",
@@ -30,6 +219,209 @@
       "logo": "",
       "group": "央视台",
       "category": "cctv"
+    },
+    {
+      "name": "CCTV-1 综合",
+      "url": "rtp://239.3.1.129:8008",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-1.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-2 财经",
+      "url": "rtp://239.3.1.60:8084",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-2.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-3 综艺",
+      "url": "rtp://239.3.1.172:8001",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-3.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-4 中文国际",
+      "url": "rtp://239.3.1.105:8092",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-4.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-4 中文国际欧洲",
+      "url": "rtp://239.3.1.213:4220",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-4-EUO.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-4 中文国际美洲",
+      "url": "rtp://239.3.1.214:4220",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-4-AME.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-5 体育",
+      "url": "rtp://239.3.1.173:8001",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-5.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-5+ 体育赛事",
+      "url": "rtp://239.3.1.130:8004",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-5+.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-6 电影",
+      "url": "rtp://239.3.1.174:8001",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-6.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-7 国防军事",
+      "url": "rtp://239.3.1.61:8104",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-7.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-8 电视剧",
+      "url": "rtp://239.3.1.175:8001",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-8.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-9 纪录",
+      "url": "rtp://239.3.1.62:8112",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-9.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-10 科教",
+      "url": "rtp://239.3.1.63:8116",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-10.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-11 戏曲",
+      "url": "rtp://239.3.1.152:8120",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-11.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-12 社会与法",
+      "url": "rtp://239.3.1.64:8124",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-12.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-13 新闻",
+      "url": "rtp://239.3.1.124:8128",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-13.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-14 少儿",
+      "url": "rtp://239.3.1.65:8132",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-14.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-15 音乐",
+      "url": "rtp://239.3.1.153:8136",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-15.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-16 奥林匹克",
+      "url": "rtp://239.3.1.184:8001",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-16.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-17 农业农村",
+      "url": "rtp://239.3.1.151:8144",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-17.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-4K",
+      "url": "rtp://239.3.1.245:2000",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-4K.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CGTN英语",
+      "url": "rtp://239.3.1.215:4220",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CGTN.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CGTN纪录",
+      "url": "rtp://239.3.1.216:4220",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CGTN-Doc.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CGTN西语",
+      "url": "rtp://239.3.1.217:4220",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CGTN-Espanol.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CGTN法语",
+      "url": "rtp://239.3.1.218:4220",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CGTN-Francis.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CGTN阿语",
+      "url": "rtp://239.3.1.219:4220",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CGTN-Arabic.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CGTN俄语",
+      "url": "rtp://239.3.1.220:4220",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CGTN-Russian.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "中国教育",
+      "url": "rtp://239.3.1.57:8152",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/QiTa/CETV-1.png",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "BRTV 北京卫视",
+      "url": "http://go.bkpcp.top/mg/bjws",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
     },
     {
       "name": "BRTV 北京卫视",
@@ -1050,6 +1442,188 @@
       "name": "黑龙江卫视",
       "url": "http://118.81.195.79:9003/hls/31/index.m3u8",
       "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "北京卫视",
+      "url": "rtp://239.3.1.22:8001",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/BeiJing.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "湖南卫视",
+      "url": "rtp://239.3.1.112:3002",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/HuNan.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "江苏卫视",
+      "url": "rtp://239.3.1.113:3003",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/JiangSu.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "东方卫视",
+      "url": "rtp://239.3.1.119:3006",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/DongFang.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "浙江卫视",
+      "url": "rtp://239.3.1.114:3004",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/ZheJiang.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "山东卫视",
+      "url": "rtp://239.3.1.144:3005",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/ShanDong.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "广东卫视",
+      "url": "rtp://239.3.1.27:2000",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/GuangDong.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "深圳卫视",
+      "url": "rtp://239.3.1.28:2000",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/ShenZhen.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "四川卫视",
+      "url": "rtp://239.3.1.131:3001",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/SiChuan.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "江西卫视",
+      "url": "rtp://239.3.1.123:8164",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/JiangXi.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "河北卫视",
+      "url": "rtp://239.3.1.148:8072",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/HeBei.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "河南卫视",
+      "url": "rtp://239.3.1.50:8184",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/HeNan.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "天津卫视",
+      "url": "rtp://239.3.1.141:1234",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/TianJin.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "安徽卫视",
+      "url": "rtp://239.3.1.211:8064",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/AnHui.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "湖北卫视",
+      "url": "rtp://239.3.1.138:8044",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/HuBei.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "东南卫视",
+      "url": "rtp://239.3.1.156:8148",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/DongNan.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "贵州卫视",
+      "url": "rtp://239.3.1.149:8076",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/GuiZhou.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "辽宁卫视",
+      "url": "rtp://239.3.1.210:8056",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/LiaoNing.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "重庆卫视",
+      "url": "rtp://239.3.1.122:8160",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/ChongQing.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "黑龙江卫视",
+      "url": "rtp://239.3.1.133:8016",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/HeiLongJiang.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "吉林卫视",
+      "url": "rtp://239.3.1.240:8172",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/JiLin.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "甘肃卫视",
+      "url": "rtp://239.3.1.201:8180",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/GanSu.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "宁夏卫视",
+      "url": "rtp://239.3.1.169:8212",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/NingXia.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "新疆卫视",
+      "url": "rtp://239.3.1.167:8192",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/XinJiang.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "西藏卫视",
+      "url": "rtp://239.3.1.166:8188",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/XiZang.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "兵团卫视",
+      "url": "rtp://239.3.1.168:8196",
+      "logo": "https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/BingTuan.png",
       "group": "卫视台",
       "category": "satellite"
     }
