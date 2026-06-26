@@ -305,11 +305,11 @@ async function main() {
       console.log(`   ✅ 从 ${sourceName} 解析出 ${m3uChannels.length} 个频道`);
 
       if (m3uChannels.length > 0) {
-        const sampleSize = Math.min(10, m3uChannels.length);
+        const sampleSize = Math.min(5, m3uChannels.length);
         console.log(`   📡 抽样测试 ${sampleSize} 个频道...`);
         const testBatch = m3uChannels.slice(0, sampleSize);
         const testResults = await Promise.all(
-          testBatch.map(ch => testUrl(ch.url).then(result => ({ ...ch, ...result })))
+          testBatch.map(ch => testUrl(ch.url, 5000).then(result => ({ ...ch, ...result })))
         );
 
         const validChannels = testResults.filter(ch => ch.valid);
@@ -426,19 +426,23 @@ async function main() {
 
   const cnChannels = uniqueChannels.filter(ch => isChinaSource(ch.url));
 
-  // 测试所有频道在海外节点的可达性（仅用于生成 valid 子集，不丢弃全量）
-  console.log('\n🔍 开始验证频道海外可达性...');
+  // 抽样测试频道可达性（仅测试部分频道生成 valid 子集，不全测以加速）
+  console.log('\n🔍 抽样验证频道可达性...');
   const validChannels = [];
-  const testConcurrency = 10;
-  for (let i = 0; i < uniqueChannels.length; i += testConcurrency) {
-    const batch = uniqueChannels.slice(i, i + testConcurrency);
+  const testConcurrency = 30;
+  // 只测试前 150 个频道（按分类优先级已排序），避免全测 500 个太慢
+  const channelsToTest = uniqueChannels.slice(0, 150);
+  const testTimeout = 5000; // 缩短超时到 5 秒
+
+  for (let i = 0; i < channelsToTest.length; i += testConcurrency) {
+    const batch = channelsToTest.slice(i, i + testConcurrency);
     const results = await Promise.all(
-      batch.map(ch => testUrl(ch.url, 8000).then(r => ({ ...ch, ...r })))
+      batch.map(ch => testUrl(ch.url, testTimeout).then(r => ({ ...ch, ...r })))
     );
     results.forEach(r => {
       if (r.valid) validChannels.push(r);
     });
-    process.stdout.write(`\r   ${Math.min(i + testConcurrency, uniqueChannels.length)}/${uniqueChannels.length} | ✅ 有效: ${validChannels.length}`);
+    process.stdout.write(`\r   ${Math.min(i + testConcurrency, channelsToTest.length)}/${channelsToTest.length} | ✅ 有效: ${validChannels.length}`);
   }
   console.log('');
 
