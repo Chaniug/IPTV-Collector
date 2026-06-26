@@ -226,12 +226,12 @@ async function main() {
   const seenUrls = new Set();
   let failedSources = 0;
 
-  // 从每个源采集
-  for (let i = 0; i < STABLE_SOURCES.length; i++) {
-    const sourceUrl = STABLE_SOURCES[i];
-    const sourceName = new URL(sourceUrl).hostname;
+  // 并行采集所有源（而非串行），大幅加速
+  console.log(`📡 并行采集 ${STABLE_SOURCES.length} 个源...\n`);
 
-    try {
+  const sourceResults = await Promise.allSettled(
+    STABLE_SOURCES.map(async (sourceUrl, i) => {
+      const sourceName = new URL(sourceUrl).hostname;
       console.log(`🔍 采集源 ${i + 1}/${STABLE_SOURCES.length}: ${sourceName}`);
 
       let content;
@@ -239,37 +239,32 @@ async function main() {
         content = await fetchSource(sourceUrl, 30000, 2);
       } catch (fetchError) {
         console.log(`   ⚠️  ${sourceName} 获取失败: ${fetchError.message}`);
-        failedSources++;
-        continue;
+        return { source: sourceName, channels: [], failed: true };
       }
 
       if (!content || content.length < 100) {
         console.log(`   ⚠️  ${sourceName} 内容过短或无内容`);
-        continue;
+        return { source: sourceName, channels: [], failed: true };
       }
 
       let m3uChannels = [];
       let currentChannel = null;
       const lines = content.split(/\r?\n/);
-      let lineCount = 0;
 
       for (const line of lines) {
-        lineCount++;
         const trimmed = line.trim();
 
         if (trimmed.startsWith('#EXTINF:')) {
-          // 提取频道信息
           const nameMatch = trimmed.match(/,([^,]*)$/);
           let name = nameMatch ? nameMatch[1].trim() : '未知频道';
 
-          // 提取属性
           const attrs = {};
           const attrMatches = trimmed.matchAll(/([a-zA-Z-]+)=\"([^\"]*)\"/g);
           for (const match of attrMatches) {
             attrs[match[1]] = match[2];
           }
 
-          const logo = attrs['tvg-logo'] || attrs['tvg-logo'] || attrs['logo'] || '';
+          const logo = attrs['tvg-logo'] || attrs['logo'] || '';
           const group = attrs['group-title'] || attrs['group'] || '';
 
           currentChannel = {
@@ -279,23 +274,17 @@ async function main() {
             attrs: attrs
           };
         } else if (trimmed && !trimmed.startsWith('#') && currentChannel) {
-          // 这是URL行
           const url = trimmed;
 
           if (!seenUrls.has(url)) {
             seenUrls.add(url);
-
-            // 应用分类
             const categoryInfo = categorizeChannel(currentChannel.originalName, currentChannel.originalGroup);
-
             m3uChannels.push({
               name: categoryInfo.cleanName || currentChannel.originalName,
               url: url,
               logo: currentChannel.logo,
               group: categoryInfo.group,
-              category: categoryInfo.category,
-              originalName: currentChannel.originalName,
-              originalGroup: currentChannel.originalGroup
+              category: categoryInfo.category
             });
           }
           currentChannel = null;
@@ -303,24 +292,19 @@ async function main() {
       }
 
       console.log(`   ✅ 从 ${sourceName} 解析出 ${m3uChannels.length} 个频道`);
+      return { source: sourceName, channels: m3uChannels, failed: false };
+    })
+  );
 
-      if (m3uChannels.length > 0) {
-        const sampleSize = Math.min(5, m3uChannels.length);
-        console.log(`   📡 抽样测试 ${sampleSize} 个频道...`);
-        const testBatch = m3uChannels.slice(0, sampleSize);
-        const testResults = await Promise.all(
-          testBatch.map(ch => testUrl(ch.url, 5000).then(result => ({ ...ch, ...result })))
-        );
-
-        const validChannels = testResults.filter(ch => ch.valid);
-        console.log(`   ✅ 海外可达: ${validChannels.length}/${testBatch.length}`);
-
-        // 国内源在 GitHub Actions 海外节点可能测不通，不再因测试失败丢弃
-        allChannels.push(...m3uChannels);
+  // 合并结果
+  for (const result of sourceResults) {
+    if (result.status === 'fulfilled') {
+      if (result.value.failed) {
+        failedSources++;
       }
-
-    } catch (error) {
-      console.log(`   ❌ ${sourceName} 处理失败: ${error.message}`);
+      allChannels.push(...result.value.channels);
+    } else {
+      failedSources++;
     }
   }
 
@@ -426,25 +410,27 @@ async function main() {
 
   const cnChannels = uniqueChannels.filter(ch => isChinaSource(ch.url));
 
-  // 抽样测试频道可达性（仅测试部分频道生成 valid 子集，不全测以加速）
+  // 抽样测试频道可达性 - 一次性并发全部（不等待分批）
   console.log('\n🔍 抽样验证频道可达性...');
-  const validChannels = [];
-  const testConcurrency = 30;
-  // 只测试前 150 个频道（按分类优先级已排序），避免全测 500 个太慢
   const channelsToTest = uniqueChannels.slice(0, 150);
-  const testTimeout = 5000; // 缩短超时到 5 秒
+  const testTimeout = 5000;
 
-  for (let i = 0; i < channelsToTest.length; i += testConcurrency) {
-    const batch = channelsToTest.slice(i, i + testConcurrency);
-    const results = await Promise.all(
-      batch.map(ch => testUrl(ch.url, testTimeout).then(r => ({ ...ch, ...r })))
-    );
-    results.forEach(r => {
-      if (r.valid) validChannels.push(r);
-    });
-    process.stdout.write(`\r   ${Math.min(i + testConcurrency, channelsToTest.length)}/${channelsToTest.length} | ✅ 有效: ${validChannels.length}`);
-  }
-  console.log('');
+  const testPromises = channelsToTest.map(ch =>
+    testUrl(ch.url, testTimeout).then(r => ({ ...ch, ...r }))
+  );
+
+  // 用计数器跟踪进度
+  let completed = 0;
+  testPromises.forEach(p => p.then(() => {
+    completed++;
+    if (completed % 30 === 0) {
+      process.stdout.write(`\r   ${completed}/${channelsToTest.length} 已完成...`);
+    }
+  }));
+
+  const testResults = await Promise.all(testPromises);
+  const validChannels = testResults.filter(r => r.valid);
+  console.log(`\r   ✅ 测试完成: ${validChannels.length}/${channelsToTest.length} 可用          `);
 
   // 生成最终输出
   const m3uPath = path.join(__dirname, '..', 'iptv.m3u');
