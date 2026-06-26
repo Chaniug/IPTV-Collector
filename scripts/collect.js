@@ -164,7 +164,13 @@ async function main() {
   const failedUrls = new Set(results.filter(r => !r.valid).map(r => r.url));
   
   const externalSources = [
+    // jsdelivr CDN 镜像（国内可访问）
+    'https://cdn.jsdelivr.net/gh/iptv-org/iptv@master/streams/cn.m3u',
+    'https://fastly.jsdelivr.net/gh/vbskycn/iptv@master/tv.m3u',
+    // 原始 GitHub 源（备用）
     'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u',
+    // 国内维护的源
+    'https://live.zbds.top/tv/iptv.m3u',
   ];
   
   for (const src of externalSources) {

@@ -1,7 +1,7 @@
 {
-  "update": "2026-06-22T09:25:20.070Z",
-  "count": 152,
-  "sources": 8,
+  "update": "2026-06-26T10:33:56.920Z",
+  "count": 150,
+  "sources": 10,
   "channels": [
     {
       "name": "CETV1",
@@ -28,20 +28,6 @@
       "name": "CCTV-1",
       "url": "https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8",
       "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CCTV+ 1",
-      "url": "https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL1.smil/playlist.m3u8",
-      "logo": "https://i.imgur.com/U8d4Is6.png",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CCTV+ 2",
-      "url": "https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8",
-      "logo": "https://i.imgur.com/qSg862A.png",
       "group": "央视台",
       "category": "cctv"
     },

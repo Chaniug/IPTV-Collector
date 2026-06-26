@@ -1,7 +1,5 @@
 #EXTM3U
 
-<<<<<<< HEAD
-=======
 #EXTINF:-1 tvg-id="CETV1" tvg-name="CETV1" tvg-logo="" group-title="央视台",CETV1
 http://117.161.133.51:81/gitv_live/G_CETV-1/G_CETV-1.m3u8?p=GITV
 #EXTINF:-1 tvg-id="CETV2" tvg-name="CETV2" tvg-logo="" group-title="央视台",CETV2
@@ -10,23 +8,6 @@ http://117.161.133.51:81/gitv_live/G_CETV-2/G_CETV-2.m3u8?p=GITV
 http://121.19.134.246:808/hls/62/index.m3u8
 #EXTINF:-1 tvg-id="CCTV-1" tvg-name="CCTV-1" tvg-logo="" group-title="央视台",CCTV-1
 https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8
->>>>>>> d57bb09c10714c202f6fd05470415a9af695d678
-#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV+ 1" tvg-logo="https://i.imgur.com/U8d4Is6.png" group-title="央视台",CCTV+ 1
-https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL1.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV+ 2" tvg-logo="https://i.imgur.com/qSg862A.png" group-title="央视台",CCTV+ 2
-https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8
-<<<<<<< HEAD
-#EXTINF:-1 tvg-id="CETV1" tvg-name="CETV1" tvg-logo="https://i.imgur.com/6sOHLq8.png" group-title="央视台",CETV1
-http://117.161.133.51:81/gitv_live/G_CETV-1/G_CETV-1.m3u8?p=GITV
-#EXTINF:-1 tvg-id="CETV2" tvg-name="CETV2" tvg-logo="https://i.imgur.com/ZD8XPmw.png" group-title="央视台",CETV2
-http://117.161.133.51:81/gitv_live/G_CETV-2/G_CETV-2.m3u8?p=GITV
-
-#EXTINF:-1 tvg-id="东南卫视" tvg-name="东南卫视" tvg-logo="" group-title="卫视台",东南卫视
-http://118.81.195.79:9003/hls/24/index.m3u8
-#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://i.imgur.com/WqM6xnF.png" group-title="卫视台",东方卫视
-http://118.81.195.79:9003/hls/23/index.m3u8
-#EXTINF:-1 tvg-id="兵团卫视" tvg-name="兵团卫视" tvg-logo="https://i.imgur.com/Y4qxDqz.png" group-title="卫视台",兵团卫视
-=======
 
 #EXTINF:-1 tvg-id="BRTV北京卫视" tvg-name="BRTV 北京卫视" tvg-logo="" group-title="卫视台",BRTV 北京卫视
 http://ivi.bupt.edu.cn/hls/btv1.m3u8
@@ -51,7 +32,6 @@ http://223.110.245.173/PLTV/4/224/3221225838/index.m3u8
 #EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="" group-title="卫视台",云南卫视
 http://112.25.48.68/live/program/live/ynws/1300000/mnf.m3u8
 #EXTINF:-1 tvg-id="兵团卫视" tvg-name="兵团卫视" tvg-logo="" group-title="卫视台",兵团卫视
->>>>>>> d57bb09c10714c202f6fd05470415a9af695d678
 http://112.25.48.68/live/program/live/btws/1300000/mnf.m3u8
 #EXTINF:-1 tvg-id="内蒙古卫视" tvg-name="内蒙古卫视" tvg-logo="" group-title="卫视台",内蒙古卫视
 http://39.134.115.163:8080/PLTV/88888910/224/3221225667/index.m3u8
@@ -61,12 +41,6 @@ http://117.169.120.140:8080/live/neimenggustv/.m3u8
 http://183.207.248.71/gitv/live1/G_NEIMENGGU/G_NEIMENGGU
 #EXTINF:-1 tvg-id="内蒙古卫视" tvg-name="内蒙古卫视" tvg-logo="" group-title="卫视台",内蒙古卫视
 http://223.110.245.173/PLTV/4/224/3221225836/index.m3u8
-<<<<<<< HEAD
-#EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/Phoenix1.png" group-title="卫视台",凤凰中文
-http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8
-#EXTINF:-1 tvg-id="凤凰资讯" tvg-name="凤凰资讯" tvg-logo="https://i.imgur.com/mt4h3VO.png" group-title="卫视台",凤凰资讯
-http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
-=======
 #EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="" group-title="卫视台",凤凰中文
 http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8
 #EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="" group-title="卫视台",凤凰中文
@@ -79,33 +53,12 @@ http://125.210.152.18:9090/live/FHZW_1200.m3u8
 http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
 #EXTINF:-1 tvg-id="凤凰资讯" tvg-name="凤凰资讯" tvg-logo="" group-title="卫视台",凤凰资讯
 http://125.210.152.18:9090/live/FHZX_1200.m3u8
->>>>>>> d57bb09c10714c202f6fd05470415a9af695d678
 #EXTINF:-1 tvg-id="凤凰香港" tvg-name="凤凰香港" tvg-logo="" group-title="卫视台",凤凰香港
 http://223.110.245.136/PLTV/3/224/3221226975/index.m3u8
 #EXTINF:-1 tvg-id="厦门卫视" tvg-name="厦门卫视" tvg-logo="" group-title="卫视台",厦门卫视
 http://223.110.245.159/ott.js.chinamobile.com/PLTV/3/224/3221226996/index.m3u8
 #EXTINF:-1 tvg-id="厦门卫视" tvg-name="厦门卫视" tvg-logo="" group-title="卫视台",厦门卫视
 http://112.25.48.68/live/program/live/xmws/1300000/mnf.m3u8
-<<<<<<< HEAD
-#EXTINF:-1 tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="https://www.tvchinese.net/uploads/tv/jilintv.jpg" group-title="卫视台",吉林卫视
-http://118.81.195.79:9003/hls/34/index.m3u8
-#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://i.imgur.com/r5xivih.png" group-title="卫视台",四川卫视
-http://39.134.115.163:8080/PLTV/88888910/224/3221225733/index.m3u8
-#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://i.imgur.com/Bg24eaH.png" group-title="卫视台",天津卫视
-http://39.134.115.163:8080/PLTV/88888910/224/3221225698/index.m3u8
-#EXTINF:-1 tvg-id="宁夏卫视" tvg-name="宁夏卫视" tvg-logo="https://i.imgur.com/nUQE4Ib.png" group-title="卫视台",宁夏卫视
-http://39.134.115.163:8080/PLTV/88888910/224/3221225726/index.m3u8
-#EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="https://www.tvchinese.net/uploads/tv/shandongtv.jpg" group-title="卫视台",山东卫视
-http://125.210.152.18:9090/live/SDWSHD_H265.m3u8
-#EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="https://i.imgur.com/t3ICc4i.png" group-title="卫视台",山东卫视
-http://39.134.115.163:8080/PLTV/88888910/224/3221225697/index.m3u8
-#EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="https://i.imgur.com/UfKJBWW.png" group-title="卫视台",山西卫视
-http://118.81.195.79:9003/hls/19/index.m3u8
-#EXTINF:-1 tvg-id="广东卫视" tvg-name="广东卫视" tvg-logo="https://parco-zh.github.io/demo/guangdong.jpg" group-title="卫视台",广东卫视
-http://118.81.195.79:9003/hls/26/index.m3u8
-#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://i.imgur.com/dpre5Qs.png" group-title="卫视台",广西卫视
-http://118.81.195.79:9003/hls/27/index.m3u8
-=======
 #EXTINF:-1 tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="" group-title="卫视台",吉林卫视
 http://118.81.195.79:9003/hls/34/index.m3u8
 #EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="" group-title="卫视台",四川卫视
@@ -184,7 +137,6 @@ http://223.110.245.139/PLTV/4/224/3221227008/index.m3u8
 http://223.110.245.139/PLTV/4/224/3221227002/index.m3u8
 #EXTINF:-1 tvg-id="延边卫视" tvg-name="延边卫视" tvg-logo="" group-title="卫视台",延边卫视
 http://223.110.245.161/ott.js.chinamobile.com/PLTV/3/224/3221227002/index.m3u8
->>>>>>> d57bb09c10714c202f6fd05470415a9af695d678
 #EXTINF:-1 tvg-id="新疆卫视" tvg-name="新疆卫视" tvg-logo="" group-title="卫视台",新疆卫视
 http://39.134.115.163:8080/PLTV/88888910/224/3221225725/index.m3u8
 #EXTINF:-1 tvg-id="新疆卫视" tvg-name="新疆卫视" tvg-logo="" group-title="卫视台",新疆卫视
@@ -198,20 +150,6 @@ http://223.110.243.136/PLTV/3/224/3221225523/index.m3u8
 #EXTINF:-1 tvg-id="新疆卫视" tvg-name="新疆卫视" tvg-logo="" group-title="卫视台",新疆卫视
 http://112.25.48.68/live/program/live/xjws/1300000/mnf.m3u8
 #EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="" group-title="卫视台",江苏卫视
-<<<<<<< HEAD
-http://39.134.24.166/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226200/index.m3u8
-#EXTINF:-1 tvg-id="江西卫视" tvg-name="江西卫视" tvg-logo="https://i.imgur.com/RrLthH3.png" group-title="卫视台",江西卫视
-http://39.134.115.163:8080/PLTV/88888910/224/3221225705/index.m3u8
-#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://i.imgur.com/IBW26kV.png" group-title="卫视台",河南卫视
-http://118.81.195.79:9003/hls/30/index.m3u8
-#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://i.imgur.com/NFFQNhq.png" group-title="卫视台",浙江卫视
-http://39.134.115.163:8080/PLTV/88888910/224/3221225703/index.m3u8
-#EXTINF:-1 tvg-id="海南卫视" tvg-name="海南卫视" tvg-logo="https://i.imgur.com/j6kY8nh.png" group-title="卫视台",海南卫视
-http://118.81.195.79:9003/hls/28/index.m3u8
-#EXTINF:-1 tvg-id="湖北卫视" tvg-name="湖北卫视" tvg-logo="https://i.imgur.com/CTRa9BJ.png" group-title="卫视台",湖北卫视
-http://118.81.195.79:9003/hls/32/index.m3u8
-#EXTINF:-1 tvg-id="甘肃卫视" tvg-name="甘肃卫视" tvg-logo="https://i.imgur.com/dANSiug.png" group-title="卫视台",甘肃卫视
-=======
 http://183.207.248.71/cntv/live1/HD-2500k-1080P-jiangsustv/HD-2500k-1080P-jiangsustv
 #EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="" group-title="卫视台",江苏卫视
 http://39.134.24.166/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226200/index.m3u8
@@ -308,7 +246,6 @@ http://223.110.245.139/PLTV/4/224/3221227307/index.m3u8
 #EXTINF:-1 tvg-id="湖北卫视" tvg-name="湖北卫视" tvg-logo="" group-title="卫视台",湖北卫视
 http://118.81.195.79:9003/hls/32/index.m3u8
 #EXTINF:-1 tvg-id="甘肃卫视" tvg-name="甘肃卫视" tvg-logo="" group-title="卫视台",甘肃卫视
->>>>>>> d57bb09c10714c202f6fd05470415a9af695d678
 http://118.81.195.79:9003/hls/25/index.m3u8
 #EXTINF:-1 tvg-id="西藏卫视" tvg-name="西藏卫视" tvg-logo="" group-title="卫视台",西藏卫视
 http://39.134.115.163:8080/PLTV/88888910/224/3221225723/index.m3u8
@@ -318,13 +255,6 @@ http://117.169.120.140:8080/live/xizangstv/.m3u8
 http://183.207.249.16/PLTV/3/224/3221225523/index.m3u8
 #EXTINF:-1 tvg-id="贵州卫视" tvg-name="贵州卫视" tvg-logo="" group-title="卫视台",贵州卫视
 http://39.134.115.163:8080/PLTV/88888910/224/3221225728/index.m3u8
-<<<<<<< HEAD
-#EXTINF:-1 tvg-id="贵州卫视" tvg-name="贵州卫视" tvg-logo="https://i.imgur.com/nkcKCdr.png" group-title="卫视台",贵州卫视
-http://183.207.248.71/gitv/live1/G_GUIZHOU/G_GUIZHOU
-#EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="https://i.imgur.com/XRfeNTd.png" group-title="卫视台",辽宁卫视
-http://39.134.39.37/PLTV/88888888/224/3221226209/index.m3u8
-#EXTINF:-1 tvg-id="重庆卫视" tvg-name="重庆卫视" tvg-logo="https://i.imgur.com/ggKci6o.png" group-title="卫视台",重庆卫视
-=======
 #EXTINF:-1 tvg-id="贵州卫视" tvg-name="贵州卫视" tvg-logo="" group-title="卫视台",贵州卫视
 http://183.207.248.71/gitv/live1/G_GUIZHOU/G_GUIZHOU
 #EXTINF:-1 tvg-id="贵州卫视" tvg-name="贵州卫视" tvg-logo="" group-title="卫视台",贵州卫视
@@ -350,7 +280,6 @@ http://183.207.249.12/PLTV/4/224/3221225802/index.m3u8
 #EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="" group-title="卫视台",辽宁卫视
 http://183.207.249.71/PLTV/3/224/3221225566/index.m3u8
 #EXTINF:-1 tvg-id="重庆卫视" tvg-name="重庆卫视" tvg-logo="" group-title="卫视台",重庆卫视
->>>>>>> d57bb09c10714c202f6fd05470415a9af695d678
 http://118.81.195.79:9003/hls/22/index.m3u8
 #EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" tvg-logo="" group-title="卫视台",陕西卫视
 http://39.134.115.163:8080/PLTV/88888910/224/3221225729/index.m3u8
@@ -358,13 +287,10 @@ http://39.134.115.163:8080/PLTV/88888910/224/3221225729/index.m3u8
 http://223.110.245.139/PLTV/4/224/3221227022/index.m3u8
 #EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" tvg-logo="" group-title="卫视台",陕西卫视
 http://112.25.48.68/live/program/live/sxws/1300000/mnf.m3u8
-<<<<<<< HEAD
-=======
 #EXTINF:-1 tvg-id="青海卫视" tvg-name="青海卫视" tvg-logo="" group-title="卫视台",青海卫视
 http://39.134.115.163:8080/PLTV/88888910/224/3221225727/index.m3u8
 #EXTINF:-1 tvg-id="青海卫视" tvg-name="青海卫视" tvg-logo="" group-title="卫视台",青海卫视
 http://112.25.48.68/live/program/live/qhws/1300000/mnf.m3u8
->>>>>>> d57bb09c10714c202f6fd05470415a9af695d678
 #EXTINF:-1 tvg-id="黑龙卫视" tvg-name="黑龙卫视" tvg-logo="" group-title="卫视台",黑龙卫视
 http://223.110.243.169/PLTV/3/224/3221227252/index.m3u8
 #EXTINF:-1 tvg-id="黑龙卫视" tvg-name="黑龙卫视" tvg-logo="" group-title="卫视台",黑龙卫视
@@ -373,10 +299,6 @@ http://223.110.245.139/PLTV/4/224/3221227492/index.m3u8
 http://223.110.245.170/PLTV/3/224/3221227252/index.m3u8
 #EXTINF:-1 tvg-id="黑龙卫视" tvg-name="黑龙卫视" tvg-logo="" group-title="卫视台",黑龙卫视
 http://125.210.152.18:9090/live/HLJWSHD_H265.m3u8
-<<<<<<< HEAD
-#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" tvg-logo="https://i.imgur.com/9fj1uba.png" group-title="卫视台",黑龙江卫视
-=======
 #EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" tvg-logo="" group-title="卫视台",黑龙江卫视
->>>>>>> d57bb09c10714c202f6fd05470415a9af695d678
 http://118.81.195.79:9003/hls/31/index.m3u8
 

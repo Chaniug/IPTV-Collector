@@ -10,14 +10,19 @@ const path = require('path');
 
 // ========== 默认公开源列表 ==========
 const DEFAULT_SOURCES = [
+  // jsdelivr CDN 镜像（国内可访问，优先使用）
+  'https://cdn.jsdelivr.net/gh/iptv-org/iptv@master/streams/cn.m3u',
+  'https://fastly.jsdelivr.net/gh/YueChan/Live@main/IPTV.m3u',
+  'https://fastly.jsdelivr.net/gh/fanmingming/live@main/tv/m3u/global.m3u',
+  'https://fastly.jsdelivr.net/gh/imDazui/Tvlist-awesome-m3u-m3u8@master/m3u/%E5%85%A8%E5%9B%BD%E4%B8%BB%E6%B5%81%E5%8D%AB%E8%A7%86%E5%8F%B0%E9%AB%98%E6%B8%85.m3u',
+  'https://fastly.jsdelivr.net/gh/imDazui/Tvlist-awesome-m3u-m3u8@master/m3u/%E4%B8%AD%E5%A4%AE%E7%94%B5%E8%A7%86%E5%8F%B0%E9%AB%98%E6%B8%85.m3u',
+  // GitHub 原始源（备用）
   'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u',
-  'https://iptv-org.github.io/iptv/index.m3u',
   'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/global.m3u',
   'https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u',
+  // 在线 IPTV 服务
   'https://iptv.228088.xyz/cn.m3u',
-  'https://epg.pw/test_channels.m3u',
-  'https://raw.githubusercontent.com/imDazui/Tvlist-awesome-m3u-m3u8/master/m3u/%E5%85%A8%E5%9B%BD%E4%B8%BB%E6%B5%81%E5%8D%AB%E8%A7%86%E5%8F%B0%E9%AB%98%E6%B8%85.m3u',
-  'https://raw.githubusercontent.com/imDazui/Tvlist-awesome-m3u-m3u8/master/m3u/%E4%B8%AD%E5%A4%AE%E7%94%B5%E8%A7%86%E5%8F%B0%E9%AB%98%E6%B8%85.m3u'
+  'https://epg.pw/test_channels.m3u'
 ];
 
 function loadSources() {
@@ -330,15 +335,30 @@ async function main() {
   function isChinaSource(url) {
     try {
       const lower = url.toLowerCase();
+      
+      // rtp/rtsp 组播地址视为国内源
+      if (lower.startsWith('rtp://') || lower.startsWith('rtsp://')) return true;
+      
+      // IPv6 源（通常是国内运营商地址）
+      if (lower.includes('[2409:') || lower.includes('[240e:') || lower.includes('[240f:')) return true;
+      
       const hostname = new URL(url).hostname;
+      
+      // 国内域名后缀
+      if (/\.(cn|com\.cn|net\.cn|org\.cn|gov\.cn)$/.test(hostname)) return true;
+      
+      // 国内常见 CDN/服务商关键词
       const chinaKeywords = [
         'cmvideo', 'cntv', 'cctv', 'wasu', 'bestv', 'iqilu', 'tianmao',
         'gitv', 'bilibili', 'douyu', 'huya', 'kbs', 'hnol', 'jhcs',
         'ott', 'cdn5', 'miguvideo', 'migu', 'chinamobile', 'unicom',
-        'epg.pw', '228088', 'fanmingming', 'yuechan'
+        'epg.pw', '228088', 'fanmingming', 'yuechan',
+        'voc.com', 'liveplay', 'srs', 'skygo', '163189', 'bkpcp',
+        'xykt', '117.161', '121.19', '39.134', '111.20'
       ];
-      if (chinaKeywords.some(kw => hostname.includes(kw))) return true;
-      if (/\.(cn|com\.cn|net\.cn|org\.cn|gov\.cn)$/.test(hostname)) return true;
+      if (chinaKeywords.some(kw => hostname.includes(kw) || lower.includes(kw))) return true;
+      
+      // 中国大陆 IPv4 段
       const chinaIpRanges = [
         /^1\./, /^14\./, /^27\./, /^36\./, /^39\./, /^42\./, /^43\./, /^49\./,
         /^58\./, /^59\./, /^60\./, /^61\./, /^101\./, /^103\./, /^106\./, /^110\./,
@@ -346,13 +366,15 @@ async function main() {
         /^119\./, /^120\./, /^121\./, /^122\./, /^123\./, /^124\./, /^125\./, /^126\./,
         /^139\./, /^140\./, /^150\./, /^153\./, /^157\./, /^159\./, /^161\./, /^163\./,
         /^171\./, /^175\./, /^180\./, /^183\./, /^202\./, /^210\./, /^211\./, /^218\./,
-        /^219\./, /^220\./, /^221\./, /^222\./, /^223\./, /^224\./, /^240\./
+        /^219\./, /^220\./, /^221\./, /^222\./, /^223\./
       ];
       const ipMatch = hostname.match(/^(\d+\.\d+\.\d+\.\d+)/);
       if (ipMatch && chinaIpRanges.some(r => r.test(ipMatch[1]))) return true;
+      
       return false;
     } catch {
-      return false;
+      // URL 解析失败，但如果是 rtp/组播地址，仍视为国内源
+      return url.toLowerCase().startsWith('rtp://');
     }
   }
 
