@@ -65,42 +65,4 @@ http://217.20.112.199:8080/cgtn/index.m3u8
 
 #EXTINF:-1 tvg-id="BRTV北京卫视" tvg-name="BRTV 北京卫视" tvg-logo="" group-title="卫视台",BRTV 北京卫视
 http://go.bkpcp.top/mg/bjws
-#EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="" group-title="卫视台",云南卫视
-http://183.207.248.71/cntv/live1/yunnanstv/yunnanstv
-#EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="" group-title="卫视台",云南卫视
-http://183.207.248.71/gitv/live1/G_YUNNAN/G_YUNNAN
-#EXTINF:-1 tvg-id="内蒙古卫视" tvg-name="内蒙古卫视" tvg-logo="" group-title="卫视台",内蒙古卫视
-http://183.207.248.71/gitv/live1/G_NEIMENGGU/G_NEIMENGGU
-#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="" group-title="卫视台",四川卫视
-http://183.207.248.71/gitv/live1/SCWS/SCWS
-#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="" group-title="卫视台",天津卫视
-http://183.207.248.71/cntv/live1/HD-2500k-1080P-tianjinstv/HD-2500k-1080P-tianjinstv
-#EXTINF:-1 tvg-id="宁夏卫视" tvg-name="宁夏卫视" tvg-logo="" group-title="卫视台",宁夏卫视
-http://183.207.248.71/gitv/live1/G_NINGXIA/G_NINGXIA
-#EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="" group-title="卫视台",山东卫视
-http://183.207.248.71/cntv/live1/HD-2500k-1080P-shandongstv/HD-2500k-1080P-shandongstv
-#EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="" group-title="卫视台",山东卫视
-http://183.207.248.71/gitv/live1/SDWS/SDWS
-#EXTINF:-1 tvg-id="新疆卫视" tvg-name="新疆卫视" tvg-logo="" group-title="卫视台",新疆卫视
-http://183.207.248.71/cntv/live1/xinjiangstv/xinjiangstv
-#EXTINF:-1 tvg-id="新疆卫视" tvg-name="新疆卫视" tvg-logo="" group-title="卫视台",新疆卫视
-http://183.207.248.71/gitv/live1/G_XINJIANG/G_XINJIANG
-#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="" group-title="卫视台",江苏卫视
-http://183.207.248.71/cntv/live1/HD-2500k-1080P-jiangsustv/HD-2500k-1080P-jiangsustv
-#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="" group-title="卫视台",江苏卫视
-http://183.207.248.71/cntv/live1/jiangsustv/jiangsustv
-#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="" group-title="卫视台",江苏卫视
-http://183.207.248.71/gitv/live1/JSWS-HD/JSWS-HD
-#EXTINF:-1 tvg-id="江西卫视" tvg-name="江西卫视" tvg-logo="" group-title="卫视台",江西卫视
-http://183.207.248.71/cntv/live1/jiangxistv/jiangxistv
-#EXTINF:-1 tvg-id="江西卫视" tvg-name="江西卫视" tvg-logo="" group-title="卫视台",江西卫视
-http://183.207.248.71/gitv/live1/JXWS/JXWS
-#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="" group-title="卫视台",浙江卫视
-http://183.207.248.71/cntv/live1/HD-2500k-1080P-zhejiangstv/HD-2500k-1080P-zhejiangstv
-#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="" group-title="卫视台",浙江卫视
-http://183.207.248.71/cntv/live1/zhejiangstv/zhejiangstv
-#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="" group-title="卫视台",浙江卫视
-http://183.207.248.71/gitv/live1/G_ZHEJIANG/G_ZHEJIANG
-#EXTINF:-1 tvg-id="深圳卫视" tvg-name="深圳卫视" tvg-logo="" group-title="卫视台",深圳卫视
-http://183.207.248.71/cntv/live1/HD-2500k-1080P-shenzhenstv/HD-2500k-1080P-shenzhenstv
 
