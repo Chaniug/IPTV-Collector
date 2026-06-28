@@ -1,5 +1,5 @@
 {
-  "update": "2026-06-27T04:10:04.743Z",
+  "update": "2026-06-28T04:42:56.770Z",
   "count": 32,
   "sources": 8,
   "channels": [
@@ -131,13 +131,6 @@
     },
     {
       "name": "CCTV-13",
-      "url": "http://go.bkpcp.top/mg/cctv13",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CCTV-13",
       "url": "http://74.91.26.218:82/live/cctv13hd.m3u8",
       "logo": "",
       "group": "央视台",
@@ -221,8 +214,15 @@
       "category": "cctv"
     },
     {
-      "name": "BRTV 北京卫视",
-      "url": "http://go.bkpcp.top/mg/bjws",
+      "name": "天津卫视",
+      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-tianjinstv/HD-2500k-1080P-tianjinstv",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "江西卫视",
+      "url": "http://183.207.248.71/gitv/live1/JXWS/JXWS",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
