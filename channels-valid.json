@@ -1,6 +1,6 @@
 {
-  "update": "2026-06-29T04:51:38.562Z",
-  "count": 49,
+  "update": "2026-06-30T04:18:13.480Z",
+  "count": 29,
   "sources": 8,
   "channels": [
     {
@@ -193,13 +193,6 @@
       "category": "cctv"
     },
     {
-      "name": "CCTV-1",
-      "url": "https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
       "name": "CGTN",
       "url": "https://0472.org/hls/cgtn.m3u8",
       "logo": "",
@@ -212,139 +205,6 @@
       "logo": "",
       "group": "央视台",
       "category": "cctv"
-    },
-    {
-      "name": "云南卫视",
-      "url": "http://183.207.248.71/cntv/live1/yunnanstv/yunnanstv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "云南卫视",
-      "url": "http://183.207.248.71/gitv/live1/G_YUNNAN/G_YUNNAN",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "内蒙古卫视",
-      "url": "http://183.207.248.71/gitv/live1/G_NEIMENGGU/G_NEIMENGGU",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "四川卫视",
-      "url": "http://183.207.248.71/gitv/live1/SCWS/SCWS",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "天津卫视",
-      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-tianjinstv/HD-2500k-1080P-tianjinstv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "宁夏卫视",
-      "url": "http://183.207.248.71/gitv/live1/G_NINGXIA/G_NINGXIA",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "山东卫视",
-      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-shandongstv/HD-2500k-1080P-shandongstv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "山东卫视",
-      "url": "http://183.207.248.71/gitv/live1/SDWS/SDWS",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "新疆卫视",
-      "url": "http://183.207.248.71/cntv/live1/xinjiangstv/xinjiangstv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "新疆卫视",
-      "url": "http://183.207.248.71/gitv/live1/G_XINJIANG/G_XINJIANG",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "江苏卫视",
-      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-jiangsustv/HD-2500k-1080P-jiangsustv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "江苏卫视",
-      "url": "http://183.207.248.71/cntv/live1/jiangsustv/jiangsustv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "江苏卫视",
-      "url": "http://183.207.248.71/gitv/live1/JSWS-HD/JSWS-HD",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "江西卫视",
-      "url": "http://183.207.248.71/cntv/live1/jiangxistv/jiangxistv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "江西卫视",
-      "url": "http://183.207.248.71/gitv/live1/JXWS/JXWS",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "浙江卫视",
-      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-zhejiangstv/HD-2500k-1080P-zhejiangstv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "浙江卫视",
-      "url": "http://183.207.248.71/cntv/live1/zhejiangstv/zhejiangstv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "浙江卫视",
-      "url": "http://183.207.248.71/gitv/live1/G_ZHEJIANG/G_ZHEJIANG",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "深圳卫视",
-      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-shenzhenstv/HD-2500k-1080P-shenzhenstv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
     }
   ]
 }
