@@ -1,6 +1,6 @@
 {
-  "update": "2026-07-01T04:46:35.182Z",
-  "count": 35,
+  "update": "2026-07-02T04:13:37.613Z",
+  "count": 30,
   "sources": 8,
   "channels": [
     {
@@ -212,41 +212,6 @@
       "logo": "",
       "group": "央视台",
       "category": "cctv"
-    },
-    {
-      "name": "云南卫视",
-      "url": "http://183.207.248.71/gitv/live1/G_YUNNAN/G_YUNNAN",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "天津卫视",
-      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-tianjinstv/HD-2500k-1080P-tianjinstv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "山东卫视",
-      "url": "http://183.207.248.71/gitv/live1/SDWS/SDWS",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "江苏卫视",
-      "url": "http://183.207.248.71/gitv/live1/JSWS-HD/JSWS-HD",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "浙江卫视",
-      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-zhejiangstv/HD-2500k-1080P-zhejiangstv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
     }
   ]
 }
