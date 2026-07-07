@@ -1,6 +1,6 @@
 {
-  "update": "2026-07-06T04:20:27.281Z",
-  "count": 30,
+  "update": "2026-07-07T04:09:54.205Z",
+  "count": 31,
   "sources": 8,
   "channels": [
     {
@@ -212,6 +212,13 @@
       "logo": "",
       "group": "央视台",
       "category": "cctv"
+    },
+    {
+      "name": "浙江卫视",
+      "url": "http://183.207.248.71/gitv/live1/G_ZHEJIANG/G_ZHEJIANG",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
     }
   ]
 }

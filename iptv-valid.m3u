@@ -61,3 +61,6 @@ https://0472.org/hls/cgtn.m3u8
 #EXTINF:-1 tvg-id="CGTN" tvg-name="CGTN" tvg-logo="" group-title="央视台",CGTN
 http://217.20.112.199:8080/cgtn/index.m3u8
 
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="" group-title="卫视台",浙江卫视
+http://183.207.248.71/gitv/live1/G_ZHEJIANG/G_ZHEJIANG
+
