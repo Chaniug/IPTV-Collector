@@ -37,6 +37,8 @@ https://xykt-fix.github.io/play/a02b/index.m3u8
 #EXTINF:-1 tvg-id="CCTV-12" tvg-name="CCTV-12" tvg-logo="" group-title="央视台",CCTV-12
 http://74.91.26.218:82/live/cctv12hd.m3u8
 #EXTINF:-1 tvg-id="CCTV-13" tvg-name="CCTV-13" tvg-logo="" group-title="央视台",CCTV-13
+http://go.bkpcp.top/mg/cctv13
+#EXTINF:-1 tvg-id="CCTV-13" tvg-name="CCTV-13" tvg-logo="" group-title="央视台",CCTV-13
 http://74.91.26.218:82/live/cctv13hd.m3u8
 #EXTINF:-1 tvg-id="CCTV-14" tvg-name="CCTV-14" tvg-logo="" group-title="央视台",CCTV-14
 http://74.91.26.218:82/live/cctv14hd.m3u8
@@ -60,7 +62,19 @@ https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8
 https://0472.org/hls/cgtn.m3u8
 #EXTINF:-1 tvg-id="CGTN" tvg-name="CGTN" tvg-logo="" group-title="央视台",CGTN
 http://217.20.112.199:8080/cgtn/index.m3u8
+#EXTINF:-1 tvg-id="CGTNSpanish" tvg-name="CGTN Spanish" tvg-logo="" group-title="央视台",CGTN Spanish
+http://45.6.4.35/CGTN/index.m3u8
 
+#EXTINF:-1 tvg-id="BRTV北京卫视" tvg-name="BRTV 北京卫视" tvg-logo="" group-title="卫视台",BRTV 北京卫视
+http://go.bkpcp.top/mg/bjws
+#EXTINF:-1 tvg-id="内蒙古卫视" tvg-name="内蒙古卫视" tvg-logo="" group-title="卫视台",内蒙古卫视
+http://183.207.248.71/gitv/live1/G_NEIMENGGU/G_NEIMENGGU
+#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="" group-title="卫视台",天津卫视
+http://183.207.248.71/cntv/live1/HD-2500k-1080P-tianjinstv/HD-2500k-1080P-tianjinstv
+#EXTINF:-1 tvg-id="新疆卫视" tvg-name="新疆卫视" tvg-logo="" group-title="卫视台",新疆卫视
+http://183.207.248.71/gitv/live1/G_XINJIANG/G_XINJIANG
+#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="" group-title="卫视台",江苏卫视
+http://183.207.248.71/gitv/live1/JSWS-HD/JSWS-HD
 #EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="" group-title="卫视台",浙江卫视
-http://183.207.248.71/gitv/live1/G_ZHEJIANG/G_ZHEJIANG
+http://183.207.248.71/cntv/live1/zhejiangstv/zhejiangstv
 

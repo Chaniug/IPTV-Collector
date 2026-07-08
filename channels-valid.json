@@ -1,6 +1,6 @@
 {
-  "update": "2026-07-07T04:09:54.205Z",
-  "count": 31,
+  "update": "2026-07-08T03:34:24.832Z",
+  "count": 38,
   "sources": 8,
   "channels": [
     {
@@ -131,6 +131,13 @@
     },
     {
       "name": "CCTV-13",
+      "url": "http://go.bkpcp.top/mg/cctv13",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-13",
       "url": "http://74.91.26.218:82/live/cctv13hd.m3u8",
       "logo": "",
       "group": "央视台",
@@ -214,8 +221,50 @@
       "category": "cctv"
     },
     {
+      "name": "CGTN Spanish",
+      "url": "http://45.6.4.35/CGTN/index.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "BRTV 北京卫视",
+      "url": "http://go.bkpcp.top/mg/bjws",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "内蒙古卫视",
+      "url": "http://183.207.248.71/gitv/live1/G_NEIMENGGU/G_NEIMENGGU",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "天津卫视",
+      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-tianjinstv/HD-2500k-1080P-tianjinstv",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "新疆卫视",
+      "url": "http://183.207.248.71/gitv/live1/G_XINJIANG/G_XINJIANG",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "江苏卫视",
+      "url": "http://183.207.248.71/gitv/live1/JSWS-HD/JSWS-HD",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
       "name": "浙江卫视",
-      "url": "http://183.207.248.71/gitv/live1/G_ZHEJIANG/G_ZHEJIANG",
+      "url": "http://183.207.248.71/cntv/live1/zhejiangstv/zhejiangstv",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
