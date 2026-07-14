@@ -1,6 +1,6 @@
 {
-  "update": "2026-07-13T03:44:33.734Z",
-  "count": 47,
+  "update": "2026-07-14T03:19:07.984Z",
+  "count": 48,
   "sources": 8,
   "channels": [
     {
@@ -20,6 +20,13 @@
     {
       "name": "CCTV-1",
       "url": "http://74.91.26.218:82/live/cctv1hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-1",
+      "url": "https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
@@ -186,22 +193,15 @@
       "category": "cctv"
     },
     {
-      "name": "CGTN Documentary",
-      "url": "https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CCTV-1",
-      "url": "https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
       "name": "CGTN",
       "url": "https://0472.org/hls/cgtn.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CGTN Documentary",
+      "url": "https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
@@ -272,6 +272,13 @@
     {
       "name": "新疆卫视",
       "url": "http://183.207.248.71/gitv/live1/G_XINJIANG/G_XINJIANG",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "江苏卫视",
+      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-jiangsustv/HD-2500k-1080P-jiangsustv",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"

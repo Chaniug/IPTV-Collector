@@ -1,5 +1,5 @@
 {
-  "update": "2026-07-13T03:44:33.735Z",
+  "update": "2026-07-14T03:19:07.984Z",
   "count": 178,
   "sources": 8,
   "channels": [
@@ -20,6 +20,13 @@
     {
       "name": "CCTV-1",
       "url": "http://74.91.26.218:82/live/cctv1hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-1",
+      "url": "https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
@@ -209,13 +216,6 @@
     {
       "name": "CETV-1",
       "url": "http://121.19.134.246:808/hls/62/index.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CCTV-1",
-      "url": "https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
