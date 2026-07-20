@@ -1,6 +1,6 @@
 {
-  "update": "2026-07-19T03:38:31.194Z",
-  "count": 46,
+  "update": "2026-07-20T03:52:34.990Z",
+  "count": 51,
   "sources": 8,
   "channels": [
     {
@@ -256,8 +256,22 @@
       "category": "satellite"
     },
     {
+      "name": "天津卫视",
+      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-tianjinstv/HD-2500k-1080P-tianjinstv",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
       "name": "宁夏卫视",
       "url": "http://183.207.248.71/gitv/live1/G_NINGXIA/G_NINGXIA",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "山东卫视",
+      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-shandongstv/HD-2500k-1080P-shandongstv",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
@@ -298,6 +312,13 @@
       "category": "satellite"
     },
     {
+      "name": "江苏卫视",
+      "url": "http://183.207.248.71/gitv/live1/JSWS-HD/JSWS-HD",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
       "name": "江西卫视",
       "url": "http://183.207.248.71/cntv/live1/jiangxistv/jiangxistv",
       "logo": "",
@@ -320,7 +341,21 @@
     },
     {
       "name": "浙江卫视",
+      "url": "http://183.207.248.71/cntv/live1/zhejiangstv/zhejiangstv",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "浙江卫视",
       "url": "http://183.207.248.71/gitv/live1/G_ZHEJIANG/G_ZHEJIANG",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "深圳卫视",
+      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-shenzhenstv/HD-2500k-1080P-shenzhenstv",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
