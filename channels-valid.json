@@ -1,6 +1,6 @@
 {
-  "update": "2026-07-22T03:31:00.139Z",
-  "count": 51,
+  "update": "2026-07-23T03:35:42.713Z",
+  "count": 50,
   "sources": 8,
   "channels": [
     {
@@ -321,13 +321,6 @@
     {
       "name": "江西卫视",
       "url": "http://183.207.248.71/cntv/live1/jiangxistv/jiangxistv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "江西卫视",
-      "url": "http://183.207.248.71/gitv/live1/JXWS/JXWS",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
