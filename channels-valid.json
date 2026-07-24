@@ -1,6 +1,6 @@
 {
-  "update": "2026-07-23T03:35:42.713Z",
-  "count": 50,
+  "update": "2026-07-24T03:32:16.429Z",
+  "count": 48,
   "sources": 8,
   "channels": [
     {
@@ -242,13 +242,6 @@
       "category": "satellite"
     },
     {
-      "name": "内蒙古卫视",
-      "url": "http://183.207.248.71/gitv/live1/G_NEIMENGGU/G_NEIMENGGU",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
       "name": "四川卫视",
       "url": "http://183.207.248.71/gitv/live1/SCWS/SCWS",
       "logo": "",
@@ -258,13 +251,6 @@
     {
       "name": "天津卫视",
       "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-tianjinstv/HD-2500k-1080P-tianjinstv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "宁夏卫视",
-      "url": "http://183.207.248.71/gitv/live1/G_NINGXIA/G_NINGXIA",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
