@@ -1,6 +1,6 @@
 {
-  "update": "2026-08-04T03:27:30.816Z",
-  "count": 51,
+  "update": "2026-08-05T03:22:15.391Z",
+  "count": 52,
   "sources": 8,
   "channels": [
     {
@@ -216,6 +216,13 @@
     {
       "name": "CGTN French",
       "url": "http://145.239.5.177/214/index.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-5+",
+      "url": "https://myip.pdtvhd.com/Sports/streams/CCTV5pul.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
