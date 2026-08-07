@@ -1,5 +1,5 @@
 {
-  "update": "2026-08-06T03:25:17.134Z",
+  "update": "2026-08-07T03:10:49.811Z",
   "count": 52,
   "sources": 8,
   "channels": [
@@ -20,6 +20,13 @@
     {
       "name": "CCTV-1",
       "url": "http://74.91.26.218:82/live/cctv1hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-1",
+      "url": "https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
@@ -209,13 +216,6 @@
     {
       "name": "CGTN French",
       "url": "http://145.239.5.177/214/index.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CCTV-6",
-      "url": "https://live.eac-news.com/CCTV/streams/cctv6.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
