@@ -1,6 +1,6 @@
 {
-  "update": "2026-08-09T02:20:21.641Z",
-  "count": 52,
+  "update": "2026-08-10T02:24:54.857Z",
+  "count": 53,
   "sources": 8,
   "channels": [
     {
@@ -216,6 +216,13 @@
     {
       "name": "CGTN French",
       "url": "http://145.239.5.177/214/index.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-6",
+      "url": "https://live.eac-news.com/CCTV/streams/cctv6.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
