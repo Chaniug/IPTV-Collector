@@ -1,6 +1,6 @@
 {
-  "update": "2026-08-11T02:18:32.381Z",
-  "count": 180,
+  "update": "2026-08-12T02:33:39.380Z",
+  "count": 179,
   "sources": 8,
   "channels": [
     {
@@ -60,6 +60,13 @@
       "category": "cctv"
     },
     {
+      "name": "CCTV-5+",
+      "url": "https://myip.pdtvhd.com/Sports/streams/CCTV5pul.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
       "name": "CCTV-6",
       "url": "http://69.30.245.50/live/cctv6.m3u8",
       "logo": "",
@@ -69,6 +76,13 @@
     {
       "name": "CCTV-6",
       "url": "http://198.204.240.250:82/live/cctv6.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-6",
+      "url": "https://live.eac-news.com/CCTV/streams/cctv6.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
@@ -152,13 +166,6 @@
     },
     {
       "name": "CCTV-13",
-      "url": "https://cdn3.163189.xyz/163189/cctv13",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CCTV-13",
       "url": "http://74.91.26.218:82/live/cctv13hd.m3u8",
       "logo": "",
       "group": "央视台",
@@ -216,20 +223,6 @@
     {
       "name": "CETV-1",
       "url": "http://121.19.134.246:808/hls/62/index.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CCTV-6",
-      "url": "https://live.eac-news.com/CCTV/streams/cctv6.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CCTV-5+",
-      "url": "https://myip.pdtvhd.com/Sports/streams/CCTV5pul.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
