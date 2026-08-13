@@ -1,6 +1,6 @@
 {
-  "update": "2026-08-12T02:33:39.380Z",
-  "count": 53,
+  "update": "2026-08-13T02:35:10.684Z",
+  "count": 54,
   "sources": 8,
   "channels": [
     {
@@ -230,6 +230,13 @@
     {
       "name": "CGTN French",
       "url": "http://145.239.5.177/214/index.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CGTN Global Biz",
+      "url": "https://fastlive.cctvplus.com/out/v1/2b3d8a0c805d437f9dc85b764c2ac599/index.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
