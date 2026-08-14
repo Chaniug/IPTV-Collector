@@ -71,12 +71,6 @@ https://fastlive.cctvplus.com/out/v1/2b3d8a0c805d437f9dc85b764c2ac599/index.m3u8
 http://go.bkpcp.top/mg/bjws
 #EXTINF:-1 tvg-id="BRTV北京卫视" tvg-name="BRTV 北京卫视" tvg-logo="" group-title="卫视台",BRTV 北京卫视
 http://ivi.bupt.edu.cn/hls/btv1.m3u8
-#EXTINF:-1 tvg-id="BRTV北京卫视" tvg-name="BRTV 北京卫视" tvg-logo="" group-title="卫视台",BRTV 北京卫视
-http://118.81.195.79:9003/hls/20/index.m3u8
-#EXTINF:-1 tvg-id="东南卫视" tvg-name="东南卫视" tvg-logo="" group-title="卫视台",东南卫视
-http://118.81.195.79:9003/hls/24/index.m3u8
-#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="" group-title="卫视台",东方卫视
-http://118.81.195.79:9003/hls/23/index.m3u8
 #EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="" group-title="卫视台",云南卫视
 http://183.207.248.71/cntv/live1/yunnanstv/yunnanstv
 #EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="" group-title="卫视台",云南卫视
@@ -119,8 +113,6 @@ http://223.110.245.136/PLTV/3/224/3221226975/index.m3u8
 http://223.110.245.159/ott.js.chinamobile.com/PLTV/3/224/3221226996/index.m3u8
 #EXTINF:-1 tvg-id="厦门卫视" tvg-name="厦门卫视" tvg-logo="" group-title="卫视台",厦门卫视
 http://112.25.48.68/live/program/live/xmws/1300000/mnf.m3u8
-#EXTINF:-1 tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="" group-title="卫视台",吉林卫视
-http://118.81.195.79:9003/hls/34/index.m3u8
 #EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="" group-title="卫视台",四川卫视
 http://39.134.115.163:8080/PLTV/88888910/224/3221225733/index.m3u8
 #EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="" group-title="卫视台",四川卫视
@@ -185,12 +177,6 @@ http://125.210.152.18:9090/live/SDWSHD_H265.m3u8
 http://183.207.248.71/gitv/live1/SDWS/SDWS
 #EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="" group-title="卫视台",山东卫视
 http://223.110.245.149/ott.js.chinamobile.com/PLTV/3/224/3221225804/index.m3u8
-#EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="" group-title="卫视台",山西卫视
-http://118.81.195.79:9003/hls/19/index.m3u8
-#EXTINF:-1 tvg-id="广东卫视" tvg-name="广东卫视" tvg-logo="" group-title="卫视台",广东卫视
-http://118.81.195.79:9003/hls/26/index.m3u8
-#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="" group-title="卫视台",广西卫视
-http://118.81.195.79:9003/hls/27/index.m3u8
 #EXTINF:-1 tvg-id="康巴卫视" tvg-name="康巴卫视" tvg-logo="" group-title="卫视台",康巴卫视
 http://223.110.245.139/PLTV/4/224/3221227008/index.m3u8
 #EXTINF:-1 tvg-id="延边卫视" tvg-name="延边卫视" tvg-logo="" group-title="卫视台",延边卫视
@@ -253,10 +239,6 @@ http://183.207.248.71/gitv/live1/JXWS/JXWS
 http://183.207.249.15/PLTV/4/224/3221225798/index.m3u8
 #EXTINF:-1 tvg-id="江西卫视" tvg-name="江西卫视" tvg-logo="" group-title="卫视台",江西卫视
 http://125.210.152.18:9090/live/JXWSHD_H265.m3u8
-#EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="" group-title="卫视台",河北卫视
-http://118.81.195.79:9003/hls/29/index.m3u8
-#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="" group-title="卫视台",河南卫视
-http://118.81.195.79:9003/hls/30/index.m3u8
 #EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="" group-title="卫视台",浙江卫视
 http://39.134.115.163:8080/PLTV/88888910/224/3221225703/index.m3u8
 #EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="" group-title="卫视台",浙江卫视
@@ -279,8 +261,6 @@ http://223.110.245.159/ott.js.chinamobile.com/PLTV/3/224/3221227393/index.m3u8
 http://223.110.254.210:6610/cntv/live1/zhejiangstv/zhejiangstv/1.m3u8
 #EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="" group-title="卫视台",浙江卫视
 http://183.207.248.71/gitv/live1/G_ZHEJIANG/G_ZHEJIANG
-#EXTINF:-1 tvg-id="海南卫视" tvg-name="海南卫视" tvg-logo="" group-title="卫视台",海南卫视
-http://118.81.195.79:9003/hls/28/index.m3u8
 #EXTINF:-1 tvg-id="深圳卫视" tvg-name="深圳卫视" tvg-logo="" group-title="卫视台",深圳卫视
 http://183.207.248.71/cntv/live1/HD-2500k-1080P-shenzhenstv/HD-2500k-1080P-shenzhenstv
 #EXTINF:-1 tvg-id="深圳卫视" tvg-name="深圳卫视" tvg-logo="" group-title="卫视台",深圳卫视
@@ -303,8 +283,6 @@ http://183.207.249.37/PLTV/4/224/3221227307/index.m3u8
 http://223.110.243.171/PLTV/3/224/3221227217/index.m3u8
 #EXTINF:-1 tvg-id="深圳卫视" tvg-name="深圳卫视" tvg-logo="" group-title="卫视台",深圳卫视
 http://223.110.245.139/PLTV/4/224/3221227307/index.m3u8
-#EXTINF:-1 tvg-id="湖北卫视" tvg-name="湖北卫视" tvg-logo="" group-title="卫视台",湖北卫视
-http://118.81.195.79:9003/hls/32/index.m3u8
 #EXTINF:-1 tvg-id="西藏卫视" tvg-name="西藏卫视" tvg-logo="" group-title="卫视台",西藏卫视
 http://39.134.115.163:8080/PLTV/88888910/224/3221225723/index.m3u8
 #EXTINF:-1 tvg-id="西藏卫视" tvg-name="西藏卫视" tvg-logo="" group-title="卫视台",西藏卫视
@@ -337,8 +315,6 @@ http://183.207.248.71/cntv/live1/liaoningstv/liaoningstv
 http://183.207.249.12/PLTV/4/224/3221225802/index.m3u8
 #EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="" group-title="卫视台",辽宁卫视
 http://183.207.249.71/PLTV/3/224/3221225566/index.m3u8
-#EXTINF:-1 tvg-id="重庆卫视" tvg-name="重庆卫视" tvg-logo="" group-title="卫视台",重庆卫视
-http://118.81.195.79:9003/hls/22/index.m3u8
 #EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" tvg-logo="" group-title="卫视台",陕西卫视
 http://39.134.115.163:8080/PLTV/88888910/224/3221225729/index.m3u8
 #EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" tvg-logo="" group-title="卫视台",陕西卫视
@@ -357,8 +333,30 @@ http://223.110.245.139/PLTV/4/224/3221227492/index.m3u8
 http://223.110.245.170/PLTV/3/224/3221227252/index.m3u8
 #EXTINF:-1 tvg-id="黑龙卫视" tvg-name="黑龙卫视" tvg-logo="" group-title="卫视台",黑龙卫视
 http://125.210.152.18:9090/live/HLJWSHD_H265.m3u8
+#EXTINF:-1 tvg-id="BRTV北京卫视" tvg-name="BRTV 北京卫视" tvg-logo="" group-title="卫视台",BRTV 北京卫视
+http://118.81.195.79:9003/hls/20/index.m3u8
+#EXTINF:-1 tvg-id="东南卫视" tvg-name="东南卫视" tvg-logo="" group-title="卫视台",东南卫视
+http://118.81.195.79:9003/hls/24/index.m3u8
+#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="" group-title="卫视台",东方卫视
+http://118.81.195.79:9003/hls/23/index.m3u8
+#EXTINF:-1 tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="" group-title="卫视台",吉林卫视
+http://118.81.195.79:9003/hls/34/index.m3u8
+#EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="" group-title="卫视台",山西卫视
+http://118.81.195.79:9003/hls/19/index.m3u8
+#EXTINF:-1 tvg-id="广东卫视" tvg-name="广东卫视" tvg-logo="" group-title="卫视台",广东卫视
+http://118.81.195.79:9003/hls/26/index.m3u8
+#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="" group-title="卫视台",广西卫视
+http://118.81.195.79:9003/hls/27/index.m3u8
+#EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="" group-title="卫视台",河北卫视
+http://118.81.195.79:9003/hls/29/index.m3u8
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="" group-title="卫视台",河南卫视
+http://118.81.195.79:9003/hls/30/index.m3u8
+#EXTINF:-1 tvg-id="海南卫视" tvg-name="海南卫视" tvg-logo="" group-title="卫视台",海南卫视
+http://118.81.195.79:9003/hls/28/index.m3u8
+#EXTINF:-1 tvg-id="湖北卫视" tvg-name="湖北卫视" tvg-logo="" group-title="卫视台",湖北卫视
+http://118.81.195.79:9003/hls/32/index.m3u8
+#EXTINF:-1 tvg-id="重庆卫视" tvg-name="重庆卫视" tvg-logo="" group-title="卫视台",重庆卫视
+http://118.81.195.79:9003/hls/22/index.m3u8
 #EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" tvg-logo="" group-title="卫视台",黑龙江卫视
 http://118.81.195.79:9003/hls/31/index.m3u8
-#EXTINF:-1 tvg-id="甘肃卫视" tvg-name="甘肃卫视" tvg-logo="" group-title="卫视台",甘肃卫视
-http://118.81.195.79:9003/hls/25/index.m3u8
 

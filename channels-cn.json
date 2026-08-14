@@ -1,6 +1,6 @@
 {
-  "update": "2026-08-13T02:35:10.685Z",
-  "count": 180,
+  "update": "2026-08-14T02:33:22.014Z",
+  "count": 179,
   "sources": 8,
   "channels": [
     {
@@ -249,27 +249,6 @@
       "category": "satellite"
     },
     {
-      "name": "BRTV 北京卫视",
-      "url": "http://118.81.195.79:9003/hls/20/index.m3u8",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "东南卫视",
-      "url": "http://118.81.195.79:9003/hls/24/index.m3u8",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "东方卫视",
-      "url": "http://118.81.195.79:9003/hls/23/index.m3u8",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
       "name": "云南卫视",
       "url": "http://183.207.248.71/cntv/live1/yunnanstv/yunnanstv",
       "logo": "",
@@ -412,13 +391,6 @@
     {
       "name": "厦门卫视",
       "url": "http://112.25.48.68/live/program/live/xmws/1300000/mnf.m3u8",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "吉林卫视",
-      "url": "http://118.81.195.79:9003/hls/34/index.m3u8",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
@@ -648,27 +620,6 @@
       "category": "satellite"
     },
     {
-      "name": "山西卫视",
-      "url": "http://118.81.195.79:9003/hls/19/index.m3u8",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "广东卫视",
-      "url": "http://118.81.195.79:9003/hls/26/index.m3u8",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "广西卫视",
-      "url": "http://118.81.195.79:9003/hls/27/index.m3u8",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
       "name": "康巴卫视",
       "url": "http://223.110.245.139/PLTV/4/224/3221227008/index.m3u8",
       "logo": "",
@@ -886,20 +837,6 @@
       "category": "satellite"
     },
     {
-      "name": "河北卫视",
-      "url": "http://118.81.195.79:9003/hls/29/index.m3u8",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "河南卫视",
-      "url": "http://118.81.195.79:9003/hls/30/index.m3u8",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
       "name": "浙江卫视",
       "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225703/index.m3u8",
       "logo": "",
@@ -977,13 +914,6 @@
       "category": "satellite"
     },
     {
-      "name": "海南卫视",
-      "url": "http://118.81.195.79:9003/hls/28/index.m3u8",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
       "name": "深圳卫视",
       "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-shenzhenstv/HD-2500k-1080P-shenzhenstv",
       "logo": "",
@@ -1056,13 +986,6 @@
     {
       "name": "深圳卫视",
       "url": "http://223.110.245.139/PLTV/4/224/3221227307/index.m3u8",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "湖北卫视",
-      "url": "http://118.81.195.79:9003/hls/32/index.m3u8",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
@@ -1180,13 +1103,6 @@
       "category": "satellite"
     },
     {
-      "name": "重庆卫视",
-      "url": "http://118.81.195.79:9003/hls/22/index.m3u8",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
       "name": "陕西卫视",
       "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225729/index.m3u8",
       "logo": "",
@@ -1250,15 +1166,92 @@
       "category": "satellite"
     },
     {
-      "name": "黑龙江卫视",
-      "url": "http://118.81.195.79:9003/hls/31/index.m3u8",
+      "name": "BRTV 北京卫视",
+      "url": "http://118.81.195.79:9003/hls/20/index.m3u8",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
     },
     {
-      "name": "甘肃卫视",
-      "url": "http://118.81.195.79:9003/hls/25/index.m3u8",
+      "name": "东南卫视",
+      "url": "http://118.81.195.79:9003/hls/24/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "东方卫视",
+      "url": "http://118.81.195.79:9003/hls/23/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "吉林卫视",
+      "url": "http://118.81.195.79:9003/hls/34/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "山西卫视",
+      "url": "http://118.81.195.79:9003/hls/19/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "广东卫视",
+      "url": "http://118.81.195.79:9003/hls/26/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "广西卫视",
+      "url": "http://118.81.195.79:9003/hls/27/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "河北卫视",
+      "url": "http://118.81.195.79:9003/hls/29/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "河南卫视",
+      "url": "http://118.81.195.79:9003/hls/30/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "海南卫视",
+      "url": "http://118.81.195.79:9003/hls/28/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "湖北卫视",
+      "url": "http://118.81.195.79:9003/hls/32/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "重庆卫视",
+      "url": "http://118.81.195.79:9003/hls/22/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "黑龙江卫视",
+      "url": "http://118.81.195.79:9003/hls/31/index.m3u8",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
