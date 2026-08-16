@@ -1,6 +1,6 @@
 {
-  "update": "2026-08-15T01:42:55.493Z",
-  "count": 166,
+  "update": "2026-08-16T01:50:12.220Z",
+  "count": 165,
   "sources": 8,
   "channels": [
     {
@@ -223,13 +223,6 @@
     {
       "name": "CGTN Global Biz",
       "url": "https://fastlive.cctvplus.com/out/v1/2b3d8a0c805d437f9dc85b764c2ac599/index.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CETV-1",
-      "url": "http://121.19.134.246:808/hls/62/index.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
