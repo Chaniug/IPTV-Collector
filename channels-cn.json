@@ -1,6 +1,6 @@
 {
-  "update": "2026-08-16T01:50:12.220Z",
-  "count": 165,
+  "update": "2026-08-17T01:47:40.494Z",
+  "count": 164,
   "sources": 8,
   "channels": [
     {
@@ -279,13 +279,6 @@
     {
       "name": "云南卫视",
       "url": "http://223.110.245.173/PLTV/4/224/3221225838/index.m3u8",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "云南卫视",
-      "url": "http://112.25.48.68/live/program/live/ynws/1300000/mnf.m3u8",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
