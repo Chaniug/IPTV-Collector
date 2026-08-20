@@ -1,6 +1,6 @@
 {
-  "update": "2026-08-19T01:44:53.500Z",
-  "count": 164,
+  "update": "2026-08-20T01:43:37.042Z",
+  "count": 166,
   "sources": 8,
   "channels": [
     {
@@ -1148,6 +1148,20 @@
       "name": "黑龙卫视",
       "url": "http://125.210.152.18:9090/live/HLJWSHD_H265.m3u8",
       "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "山东卫视",
+      "url": "rtmp://yftv-wshls.yzbtv.cn/live/1bd5d",
+      "logo": "https://epg.pw/media/images/channel/2023/07/19/large/20230719112946432101_81.jpg",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "广东卫视",
+      "url": "rtmp://yftv-wshls.yzbtv.cn/live/1bd69",
+      "logo": "https://epg.pw/media/images/channel/2024/01/11/large/20240111225144968877_94.png",
       "group": "卫视台",
       "category": "satellite"
     }
