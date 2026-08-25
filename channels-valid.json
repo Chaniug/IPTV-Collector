@@ -1,6 +1,6 @@
 {
-  "update": "2026-08-24T01:49:28.795Z",
-  "count": 53,
+  "update": "2026-08-25T01:43:43.912Z",
+  "count": 54,
   "sources": 8,
   "channels": [
     {
@@ -221,15 +221,22 @@
       "category": "cctv"
     },
     {
-      "name": "CGTN French",
-      "url": "http://145.239.5.177/214/index.m3u8",
+      "name": "CGTN Global Biz",
+      "url": "https://fastlive.cctvplus.com/out/v1/2b3d8a0c805d437f9dc85b764c2ac599/index.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
     },
     {
-      "name": "CGTN Global Biz",
-      "url": "https://fastlive.cctvplus.com/out/v1/2b3d8a0c805d437f9dc85b764c2ac599/index.m3u8",
+      "name": "CGTN",
+      "url": "https://hlspackager.akamaized.net/live/DB/CGTN_ENGLISH/HLS/CGTN_ENGLISH.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CGTN Documentary",
+      "url": "https://hlspackager.akamaized.net/live/DB/CGTN_DOCUMENTARY/HLS/CGTN_DOCUMENTARY.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
