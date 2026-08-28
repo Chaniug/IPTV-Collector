@@ -1,6 +1,6 @@
 {
-  "update": "2026-08-27T09:20:04.343Z",
-  "count": 167,
+  "update": "2026-08-28T11:09:42.918Z",
+  "count": 169,
   "sources": 8,
   "channels": [
     {
@@ -1169,6 +1169,20 @@
       "name": "东方卫视",
       "url": "rtmp://yftv-wshls.yzbtv.cn/live/1bd7d",
       "logo": "https://epg.pw/media/images/channel/2023/06/05/large/20230605010227137581_33.jpg",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "江苏卫视",
+      "url": "rtmp://yftv-wshls.yzbtv.cn/live/1bd81",
+      "logo": "https://epg.pw/media/images/channel/2022/05/30/large/20220530225651709500_84.jpg",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "浙江卫视",
+      "url": "rtmp://yftv-wshls.yzbtv.cn/live/1bd75",
+      "logo": "https://epg.pw/media/images/channel/2024/03/11/large/20240311112431672505_47.png",
       "group": "卫视台",
       "category": "satellite"
     }
