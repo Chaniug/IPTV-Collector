@@ -339,4 +339,6 @@ rtmp://yftv-wshls.yzbtv.cn/live/1bd7d
 rtmp://yftv-wshls.yzbtv.cn/live/1bd81
 #EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://epg.pw/media/images/channel/2024/03/11/large/20240311112431672505_47.png" group-title="卫视台",浙江卫视
 rtmp://yftv-wshls.yzbtv.cn/live/1bd75
+#EXTINF:-1 tvg-id="深圳卫视" tvg-name="深圳卫视" tvg-logo="https://epg.pw/media/images/channel/2024/03/11/large/20240311112310613998_63.png" group-title="卫视台",深圳卫视
+rtmp://yftv-wshls.yzbtv.cn/live/1bd61
 
