@@ -1,6 +1,6 @@
 {
-  "update": "2026-08-29T06:53:56.644Z",
-  "count": 55,
+  "update": "2026-08-30T05:08:55.261Z",
+  "count": 54,
   "sources": 8,
   "channels": [
     {
@@ -216,13 +216,6 @@
     {
       "name": "CGTN Documentary",
       "url": "https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CGTN French",
-      "url": "http://145.239.5.177/214/index.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
