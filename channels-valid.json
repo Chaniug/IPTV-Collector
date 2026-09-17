@@ -1,6 +1,6 @@
 {
-  "update": "2026-09-16T04:35:55.000Z",
-  "count": 56,
+  "update": "2026-09-17T04:40:54.905Z",
+  "count": 55,
   "sources": 8,
   "channels": [
     {
@@ -230,13 +230,6 @@
     {
       "name": "CGTN Global Biz",
       "url": "https://fastlive.cctvplus.com/out/v1/2b3d8a0c805d437f9dc85b764c2ac599/index.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CGTN",
-      "url": "https://hlspackager.akamaized.net/live/DB/CGTN_ENGLISH/HLS/CGTN_ENGLISH.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
