@@ -330,6 +330,45 @@ http://223.110.245.170/PLTV/3/224/3221227252/index.m3u8
 #EXTINF:-1 tvg-id="黑龙卫视" tvg-name="黑龙卫视" tvg-logo="" group-title="卫视台",黑龙卫视
 http://125.210.152.18:9090/live/HLJWSHD_H265.m3u8
 
+#EXTINF:-1 tvg-id="农安新闻综合" tvg-name="农安新闻综合" tvg-logo="" group-title="新闻类",农安新闻综合
+https://stream2.jlntv.cn/naxw/sd/live.m3u8
+#EXTINF:-1 tvg-id="吉林市新闻综合" tvg-name="吉林市新闻综合" tvg-logo="" group-title="新闻类",吉林市新闻综合
+https://stream2.jlntv.cn/jilin1/sd/live.m3u8
+#EXTINF:-1 tvg-id="四平新闻综合" tvg-name="四平新闻综合" tvg-logo="" group-title="新闻类",四平新闻综合
+https://stream2.jlntv.cn/sptv/sd/live.m3u8
+#EXTINF:-1 tvg-id="山东新闻" tvg-name="山东新闻" tvg-logo="" group-title="新闻类",山东新闻
+http://livealone302.iqilu.com/iqilu/ggpd.m3u8
+#EXTINF:-1 tvg-id="延边新闻综合" tvg-name="延边新闻综合" tvg-logo="" group-title="新闻类",延边新闻综合
+https://stream2.jlntv.cn/jlyb/sd/live.m3u8
+#EXTINF:-1 tvg-id="松原新闻综合" tvg-name="松原新闻综合" tvg-logo="" group-title="新闻类",松原新闻综合
+https://stream2.jlntv.cn/sytv/sd/live.m3u8
+#EXTINF:-1 tvg-id="江津新闻综合" tvg-name="江津新闻综合" tvg-logo="" group-title="新闻类",江津新闻综合
+http://222.179.155.21:1935/ch1.m3u8
+#EXTINF:-1 tvg-id="涡阳新闻综合" tvg-name="涡阳新闻综合" tvg-logo="" group-title="新闻类",涡阳新闻综合
+http://220.180.110.101:8083/videos/live/36/57/hwEHU4UVQ1Iv5/hwEHU4UVQ1Iv5.m3u8
+#EXTINF:-1 tvg-id="滨海新闻" tvg-name="滨海新闻" tvg-logo="" group-title="新闻类",滨海新闻
+http://60.30.52.41/live/bhtv1/playlist.m3u8
+#EXTINF:-1 tvg-id="灵台新闻综合" tvg-name="灵台新闻综合" tvg-logo="" group-title="新闻类",灵台新闻综合
+http://117.156.28.119/270000001111/1110000145/index.m3u8
+#EXTINF:-1 tvg-id="白城新闻综合" tvg-name="白城新闻综合" tvg-logo="" group-title="新闻类",白城新闻综合
+https://stream2.jlntv.cn/baicheng1/sd/live.m3u8
+#EXTINF:-1 tvg-id="白山新闻综合" tvg-name="白山新闻综合" tvg-logo="" group-title="新闻类",白山新闻综合
+https://stream2.jlntv.cn/baishan1/sd/live.m3u8
+#EXTINF:-1 tvg-id="篮球资讯" tvg-name="篮球资讯" tvg-logo="" group-title="新闻类",篮球资讯
+http://223.110.245.139/PLTV/4/224/3221227023/index.m3u8
+#EXTINF:-1 tvg-id="西安商务资讯" tvg-name="西安商务资讯" tvg-logo="" group-title="新闻类",西安商务资讯
+http://stream2.xiancity.cn/xatv3/playlist.m3u8
+#EXTINF:-1 tvg-id="西安新闻" tvg-name="西安新闻" tvg-logo="" group-title="新闻类",西安新闻
+http://stream2.xiancity.cn/xatv1/playlist.m3u8
+#EXTINF:-1 tvg-id="辽源新闻综合" tvg-name="辽源新闻综合" tvg-logo="" group-title="新闻类",辽源新闻综合
+https://stream2.jlntv.cn/liaoyuan1/sd/live.m3u8
+#EXTINF:-1 tvg-id="通化新闻" tvg-name="通化新闻" tvg-logo="" group-title="新闻类",通化新闻
+https://stream2.jlntv.cn/tonghua1/sd/live.m3u8
+#EXTINF:-1 tvg-id="邗江资讯" tvg-name="邗江资讯" tvg-logo="" group-title="新闻类",邗江资讯
+http://223.110.245.139/PLTV/4/224/3221227154/index.m3u8
+#EXTINF:-1 tvg-id="酒泉新闻综合" tvg-name="酒泉新闻综合" tvg-logo="" group-title="新闻类",酒泉新闻综合
+http://117.156.28.119/270000001111/1110000001/index.m3u8
+
 #EXTINF:-1 tvg-id="睛彩篮球移动" tvg-name="睛彩篮球「移动」" tvg-logo="https://iptv.yang-1989.xyz/logo/睛彩篮球.webp" group-title="体育类",睛彩篮球「移动」
 http://gslbserv.itv.cmvideo.cn/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011529&livemode=1&stbId=YanG-1989
 #EXTINF:-1 tvg-id="五星体育" tvg-name="五星体育" tvg-logo="" group-title="体育类",五星体育

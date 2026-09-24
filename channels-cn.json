@@ -1,6 +1,6 @@
 {
-  "update": "2026-09-23T04:32:35.644Z",
-  "count": 191,
+  "update": "2026-09-24T04:29:52.771Z",
+  "count": 210,
   "sources": 8,
   "channels": [
     {
@@ -1339,6 +1339,139 @@
       "logo": "",
       "group": "电影类",
       "category": "movie"
+    },
+    {
+      "name": "农安新闻综合",
+      "url": "https://stream2.jlntv.cn/naxw/sd/live.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "吉林市新闻综合",
+      "url": "https://stream2.jlntv.cn/jilin1/sd/live.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "四平新闻综合",
+      "url": "https://stream2.jlntv.cn/sptv/sd/live.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "山东新闻",
+      "url": "http://livealone302.iqilu.com/iqilu/ggpd.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "延边新闻综合",
+      "url": "https://stream2.jlntv.cn/jlyb/sd/live.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "松原新闻综合",
+      "url": "https://stream2.jlntv.cn/sytv/sd/live.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "江津新闻综合",
+      "url": "http://222.179.155.21:1935/ch1.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "涡阳新闻综合",
+      "url": "http://220.180.110.101:8083/videos/live/36/57/hwEHU4UVQ1Iv5/hwEHU4UVQ1Iv5.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "滨海新闻",
+      "url": "http://60.30.52.41/live/bhtv1/playlist.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "灵台新闻综合",
+      "url": "http://117.156.28.119/270000001111/1110000145/index.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "白城新闻综合",
+      "url": "https://stream2.jlntv.cn/baicheng1/sd/live.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "白山新闻综合",
+      "url": "https://stream2.jlntv.cn/baishan1/sd/live.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "篮球资讯",
+      "url": "http://223.110.245.139/PLTV/4/224/3221227023/index.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "西安商务资讯",
+      "url": "http://stream2.xiancity.cn/xatv3/playlist.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "西安新闻",
+      "url": "http://stream2.xiancity.cn/xatv1/playlist.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "辽源新闻综合",
+      "url": "https://stream2.jlntv.cn/liaoyuan1/sd/live.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "通化新闻",
+      "url": "https://stream2.jlntv.cn/tonghua1/sd/live.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "邗江资讯",
+      "url": "http://223.110.245.139/PLTV/4/224/3221227154/index.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "酒泉新闻综合",
+      "url": "http://117.156.28.119/270000001111/1110000001/index.m3u8",
+      "logo": "",
+      "group": "新闻类",
+      "category": "news"
     }
   ]
 }
