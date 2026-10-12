@@ -70,6 +70,8 @@ https://hlspackager.akamaized.net/live/DB/CGTN_ENGLISH/HLS/CGTN_ENGLISH.m3u8
 https://hlspackager.akamaized.net/live/DB/CGTN_DOCUMENTARY/HLS/CGTN_DOCUMENTARY.m3u8
 #EXTINF:-1 tvg-id="CGTN" tvg-name="CGTN" tvg-logo="" group-title="央视台",CGTN
 https://dai.google.com/linear/hls/event/r4sa-f6GSN2XIvzKv5jVng/master.m3u8
+#EXTINF:-1 tvg-id="CGTNSpanish" tvg-name="CGTN Spanish" tvg-logo="" group-title="央视台",CGTN Spanish
+http://45.186.106.147:8880/play/a06f/index.m3u8
 
 #EXTINF:-1 tvg-id="BRTV北京卫视" tvg-name="BRTV 北京卫视" tvg-logo="" group-title="卫视台",BRTV 北京卫视
 http://go.bkpcp.top/mg/bjws
