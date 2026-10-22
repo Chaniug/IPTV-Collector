@@ -1,6 +1,6 @@
 {
-  "update": "2026-10-21T04:26:54.130Z",
-  "count": 164,
+  "update": "2026-10-22T04:25:08.848Z",
+  "count": 162,
   "sources": 8,
   "channels": [
     {
@@ -144,13 +144,6 @@
       "category": "cctv"
     },
     {
-      "name": "CCTV-11",
-      "url": "https://xykt-fix.github.io/play/a02b/index.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
       "name": "CCTV-12",
       "url": "http://74.91.26.218:82/live/cctv12hd.m3u8",
       "logo": "",
@@ -174,13 +167,6 @@
     {
       "name": "CCTV-14",
       "url": "http://74.91.26.218:82/live/cctv14hd.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CCTV-15",
-      "url": "https://xykt-fix.github.io/play/a02e/index.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
