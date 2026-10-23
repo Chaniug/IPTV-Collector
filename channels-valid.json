@@ -1,5 +1,5 @@
 {
-  "update": "2026-10-22T04:25:08.848Z",
+  "update": "2026-10-23T04:30:16.396Z",
   "count": 54,
   "sources": 8,
   "channels": [
@@ -200,13 +200,6 @@
       "category": "cctv"
     },
     {
-      "name": "CGTN French",
-      "url": "http://145.239.5.177/214/index.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
       "name": "CGTN Global Biz",
       "url": "https://fastlive.cctvplus.com/out/v1/2b3d8a0c805d437f9dc85b764c2ac599/index.m3u8",
       "logo": "",
@@ -237,6 +230,13 @@
     {
       "name": "CGTN Spanish",
       "url": "http://45.186.106.147:8880/play/a06f/index.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CGTN French",
+      "url": "http://145.239.5.177/214/index.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"

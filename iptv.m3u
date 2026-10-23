@@ -66,8 +66,6 @@ https://english-livebkali.cgtn.com/live/encgtn.m3u8
 https://0472.org/hls/cgtn.m3u8
 #EXTINF:-1 tvg-id="CGTNDocumentary" tvg-name="CGTN Documentary" tvg-logo="" group-title="央视台",CGTN Documentary
 https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8
-#EXTINF:-1 tvg-id="CGTNFrench" tvg-name="CGTN French" tvg-logo="" group-title="央视台",CGTN French
-http://145.239.5.177/214/index.m3u8
 #EXTINF:-1 tvg-id="CGTNSpanish" tvg-name="CGTN Spanish" tvg-logo="" group-title="央视台",CGTN Spanish
 http://45.165.82.19/test/index.m3u8
 #EXTINF:-1 tvg-id="CGTNGlobalBiz" tvg-name="CGTN Global Biz" tvg-logo="" group-title="央视台",CGTN Global Biz
@@ -80,6 +78,10 @@ https://hlspackager.akamaized.net/live/DB/CGTN_DOCUMENTARY/HLS/CGTN_DOCUMENTARY.
 https://dai.google.com/linear/hls/event/r4sa-f6GSN2XIvzKv5jVng/master.m3u8
 #EXTINF:-1 tvg-id="CGTNSpanish" tvg-name="CGTN Spanish" tvg-logo="" group-title="央视台",CGTN Spanish
 http://45.186.106.147:8880/play/a06f/index.m3u8
+#EXTINF:-1 tvg-id="CGTNFrench" tvg-name="CGTN French" tvg-logo="" group-title="央视台",CGTN French
+http://145.239.5.177/214/index.m3u8
+#EXTINF:-1 tvg-id="CGTN" tvg-name="CGTN" tvg-logo="https://epg.pw/media/images/channel/2020/03/22/large/20200322211010158445_97.png" group-title="央视台",CGTN
+https://stream1.freetv.fun/55753c8210aaae5ed4ef33faa9bc3b911195bc2cfd933ed22f868743c9c5fbf7.m3u8
 
 #EXTINF:-1 tvg-id="BRTV北京卫视" tvg-name="BRTV 北京卫视" tvg-logo="" group-title="卫视台",BRTV 北京卫视
 http://go.bkpcp.top/mg/bjws
@@ -369,8 +371,6 @@ https://stream1.freetv.fun/c1f3df568a120fa0e1243e0abac5976106c22fe63cc32b6f6a7ef
 https://stream1.freetv.fun/2f29bdf337cfd1004d4deb54a8f7ab4476ca8a0d740651bb6e9f8b71fdbdb60e.ctv
 #EXTINF:-1 tvg-id="三沙卫视" tvg-name="三沙卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/14/large/20220514162237808392_17.jpg" group-title="卫视台",三沙卫视
 https://stream1.freetv.fun/9a24d5626c1295681409db87c99ccda8bb4050632bce3025c4a72ab57b3dd623.m3u8
-#EXTINF:-1 tvg-id="三沙卫视" tvg-name="三沙卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/14/large/20220514162237808392_17.jpg" group-title="卫视台",三沙卫视
-https://stream1.freetv.fun/039dfef60560b3de2b57edc4976c77a817905d1fc0e3c8e1fc1a9230efd52078.ctv
 #EXTINF:-1 tvg-id="内蒙古卫视" tvg-name="内蒙古卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/31/large/20220531160914023715_85.jpg" group-title="卫视台",内蒙古卫视
 https://stream1.freetv.fun/1e5dc1f802d7775ea9cde7b7b874b914365797c6718c5e95448aa26648e136e6.m3u8
 #EXTINF:-1 tvg-id="内蒙古卫视" tvg-name="内蒙古卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/31/large/20220531160914023715_85.jpg" group-title="卫视台",内蒙古卫视
@@ -452,15 +452,13 @@ https://stream1.freetv.fun/27a50db071b32eae87fc13857e23da71ca5c5555df42b6be4d816
 #EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://epg.pw/media/images/channel/2024/10/29/large/20241029101351559578_45.png" group-title="卫视台",北京卫视
 https://stream1.freetv.fun/5a939859d4e350e23783c91459920f92b4f39662adc7a1fb651a0659de76284e.m3u8
 #EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://epg.pw/media/images/channel/2024/10/29/large/20241029101351559578_45.png" group-title="卫视台",北京卫视
-https://stream1.freetv.fun/cda7c4b88dacb6176794416673b481491e36101e865efc5c29b972fcded01773.m3u8
-#EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://epg.pw/media/images/channel/2024/10/29/large/20241029101351559578_45.png" group-title="卫视台",北京卫视
 https://stream1.freetv.fun/58ada9296c1cd8c98929d12386749a6748a6ed09bda28980e0909fff792e95fc.ctv
+#EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://epg.pw/media/images/channel/2024/10/29/large/20241029101351559578_45.png" group-title="卫视台",北京卫视
+https://stream1.freetv.fun/5a20fa5ec6a4bf5ba25f3efd6f4521e86065d5cb07ac8cb90b1c4edac73a3265.m3u8
 #EXTINF:-1 tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="https://epg.pw/media/images/channel/2024/07/28/large/20240728163659540434_96.png" group-title="卫视台",吉林卫视
-https://stream1.freetv.fun/20ec706dec67b36d8bd933921ddc77d953bdbb5db85ceb51b4235469b7fa23b2.ctv
+https://stream1.freetv.fun/657b3cc8f2106d0e0b52d0bc7f0e15db544b37b3e86bf5f486f351b9db61fa2e.m3u8
 #EXTINF:-1 tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="https://epg.pw/media/images/channel/2024/07/28/large/20240728163659540434_96.png" group-title="卫视台",吉林卫视
 https://stream1.freetv.fun/f845c6ed628a3f947bccdcffba4f8384f1d72236bebee05710123de7850c62b7.ctv
-#EXTINF:-1 tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="https://epg.pw/media/images/channel/2024/07/28/large/20240728163659540434_96.png" group-title="卫视台",吉林卫视
-https://stream1.freetv.fun/fb031764e293980976ef33a163b16e69a0bc10761f6ddf8e45f9ea9506f41eb0.m3u8
 #EXTINF:-1 tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="https://epg.pw/media/images/channel/2024/07/28/large/20240728163659540434_96.png" group-title="卫视台",吉林卫视
 https://stream1.freetv.fun/f60559ff6312c1abdb5eedf1a7ff7912163336297eb6de0879410f13e1160914.m3u8
 #EXTINF:-1 tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="https://epg.pw/media/images/channel/2024/07/28/large/20240728163659540434_96.png" group-title="卫视台",吉林卫视
@@ -484,11 +482,11 @@ https://stream1.freetv.fun/9cead2f6eaf1f7c0e928b6b4f3835a03201d146a8c8efa465daf4
 #EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/28/large/20220528220452110808_30.jpg" group-title="卫视台",四川卫视
 https://stream1.freetv.fun/3c264c25b1f8debffea48cd474ef8b830ced737528778624f006949a84930657.m3u8
 #EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/28/large/20220528220452110808_30.jpg" group-title="卫视台",四川卫视
-https://stream1.freetv.fun/b6824b72fbee9e42fac87484354cec553eb769a71a6536f94eacb50743dcfd1b.m3u8
-#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/28/large/20220528220452110808_30.jpg" group-title="卫视台",四川卫视
 https://stream1.freetv.fun/4d012cc6d0cf9ec1b6101aa7351bb3b038d5a231ef437f62ea6908ff02667ffb.m3u8
 #EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/28/large/20220528220452110808_30.jpg" group-title="卫视台",四川卫视
 https://stream1.freetv.fun/c2d9619f6b152dda29c27b52aa3e4efac5781fa677715d66a8a6ba9f0a7f3571.m3u8
+#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/28/large/20220528220452110808_30.jpg" group-title="卫视台",四川卫视
+https://stream1.freetv.fun/1f6ac7d82233ee734e6065f5c7b52d01bc04dcbbb40447cdd9d9509dc36318d6.m3u8
 #EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/28/large/20220528220452110808_30.jpg" group-title="卫视台",四川卫视
 https://stream1.freetv.fun/64d9e2da7d8a741bd8a55e13aea54b40aec70dd713c72fbbabad32a89f432cfa.m3u8
 #EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/28/large/20220528220452110808_30.jpg" group-title="卫视台",四川卫视
@@ -526,8 +524,6 @@ https://stream1.freetv.fun/82160ee286a20eff74df58a4659718f86df735b25a635c5265ba3
 #EXTINF:-1 tvg-id="大湾区卫视" tvg-name="大湾区卫视" tvg-logo="https://epg.pw/media/images/channel/2024/01/14/large/20240114132000365190_44.png" group-title="卫视台",大湾区卫视
 https://stream1.freetv.fun/ad4547ba46a36e199985818349f8aded97d8bb18ae6c4a8c37bb71830fa517fb.m3u8
 #EXTINF:-1 tvg-id="大湾区卫视高清" tvg-name="大湾区卫视高清" tvg-logo="https://epg.pw/media/images/channel/2024/01/14/large/20240114132000365190_44.png" group-title="卫视台",大湾区卫视高清
-https://stream1.freetv.fun/d5ea0e1f55c87ee51fc1f1a03c3e1a4345db73ba01a2a0a15d13505b457f346a.ctv
-#EXTINF:-1 tvg-id="大湾区卫视高清" tvg-name="大湾区卫视高清" tvg-logo="https://epg.pw/media/images/channel/2024/01/14/large/20240114132000365190_44.png" group-title="卫视台",大湾区卫视高清
 https://stream1.freetv.fun/b798ad1e07f1c013c0f8cb6e3a90d97b6bd6b9f10adc759693191559f5d69051.ctv
 #EXTINF:-1 tvg-id="大湾区卫视高清" tvg-name="大湾区卫视高清" tvg-logo="https://epg.pw/media/images/channel/2024/01/14/large/20240114132000365190_44.png" group-title="卫视台",大湾区卫视高清
 https://stream1.freetv.fun/338d696897a91a15c5bf4459bfa02176bc294acc01d228795feb5c440a29398a.ctv
@@ -559,8 +555,6 @@ https://stream1.freetv.fun/fe79d7a8485997d43fdd6ce15234c8e9f1c4e4b6d8fc1acbdf2a3
 https://stream1.freetv.fun/e40f325e511643af909a848aeff3d929151e6e26b8d92c21effe6cfb5e6b9efa.m3u8
 #EXTINF:-1 tvg-id="大湾区卫视" tvg-name="大湾区卫视" tvg-logo="https://epg.pw/media/images/channel/2024/01/14/large/20240114132000365190_44.png" group-title="卫视台",大湾区卫视
 https://stream1.freetv.fun/0af51ab29fdb0f76538421dc8d0837d36afd397d60a8a09b6b341826a31df68f.m3u8
-#EXTINF:-1 tvg-id="大湾区卫视高清" tvg-name="大湾区卫视高清" tvg-logo="https://epg.pw/media/images/channel/2024/01/14/large/20240114132000365190_44.png" group-title="卫视台",大湾区卫视高清
-https://stream1.freetv.fun/12bb47f0d0e67430c2f2e564d15c4794c8f28cce868b100b3353a32e40d07c8d.ctv
 #EXTINF:-1 tvg-id="大湾区卫视" tvg-name="大湾区卫视" tvg-logo="https://epg.pw/media/images/channel/2024/01/14/large/20240114132000365190_44.png" group-title="卫视台",大湾区卫视
 https://stream1.freetv.fun/c079dca70700c8feb4f52998795bbdb5dc4b21508edc7b98e99429c0492694f3.m3u8
 #EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://epg.pw/media/images/channel/2026/02/26/large/20260226025419139967_11.jpg" group-title="卫视台",天津卫视
@@ -568,15 +562,17 @@ https://stream1.freetv.fun/c38103fa730bdc04dcfb532eda5212f459715542248468a180c58
 #EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://epg.pw/media/images/channel/2026/02/26/large/20260226025419139967_11.jpg" group-title="卫视台",天津卫视
 https://stream1.freetv.fun/12bd529a4a4c275fc29906844719e95cac5107e284e27b33671bcf2f3c0a0ee6.m3u8
 #EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://epg.pw/media/images/channel/2026/02/26/large/20260226025419139967_11.jpg" group-title="卫视台",天津卫视
+https://stream1.freetv.fun/bd982d0df8a512e59cf3ec145f179752510c2d5717237a175beaa7f548147059.ctv
+#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://epg.pw/media/images/channel/2026/02/26/large/20260226025419139967_11.jpg" group-title="卫视台",天津卫视
 https://stream1.freetv.fun/e7bc8916d500f0d6e0818c0a3fb5dfc4658e8245bc79e4c4cf35ac9dab436fec.m3u8
+#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://epg.pw/media/images/channel/2026/02/26/large/20260226025419139967_11.jpg" group-title="卫视台",天津卫视
+https://stream1.freetv.fun/f222f3958ea857ac01bdceb54d347d2a059b9ac3114ed39c837280bdad93b9ab.m3u8
 #EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://epg.pw/media/images/channel/2026/02/26/large/20260226025419139967_11.jpg" group-title="卫视台",天津卫视
 https://stream1.freetv.fun/ad6116f0606efa966076ed15f4dcaf3237764e218835fc4428df75937e12f783.m3u8
 #EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://epg.pw/media/images/channel/2026/02/26/large/20260226025419139967_11.jpg" group-title="卫视台",天津卫视
 https://stream1.freetv.fun/463ce56e18ad6622b86e0f74226f34eb71672dd9d4f641b9d54ad5217eb2febf.m3u8
 #EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://epg.pw/media/images/channel/2026/02/26/large/20260226025419139967_11.jpg" group-title="卫视台",天津卫视
 https://stream1.freetv.fun/2f6a1e8978e205359f62bc1bce793316a47a3e8de56bca3b69a320a38dee3dd7.m3u8
-#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://epg.pw/media/images/channel/2026/02/26/large/20260226025419139967_11.jpg" group-title="卫视台",天津卫视
-https://stream1.freetv.fun/69f879f9f7ea92667bf4f6d50b0debbb8132c5710110d1da0ccf902efc02aee9.m3u8
 #EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://epg.pw/media/images/channel/2026/02/26/large/20260226025419139967_11.jpg" group-title="卫视台",天津卫视
 https://stream1.freetv.fun/dace5e802bec556a3677f4c9e14830b7fcc5789bab9b05fea2393ae3aced97f6.m3u8
 #EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://epg.pw/media/images/channel/2026/02/26/large/20260226025419139967_11.jpg" group-title="卫视台",天津卫视
@@ -611,8 +607,6 @@ https://stream1.freetv.fun/50937b9cf5f75d682e70183d873d91f835743c6c7b7139bdb804d
 https://stream1.freetv.fun/5f74144a1976a37b71cd1389694e22e96f629e1f167a2d7a138af75976d8b00a.m3u8
 #EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://epg.pw/media/images/channel/2023/07/19/large/20230719113027191823_22.jpg" group-title="卫视台",安徽卫视
 https://stream1.freetv.fun/30b63433b5f28577cba95a96a431244d0cdf7f8871329bdadb1c7a7c8441f40b.m3u8
-#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://epg.pw/media/images/channel/2023/07/19/large/20230719113027191823_22.jpg" group-title="卫视台",安徽卫视
-https://stream1.freetv.fun/80d1988862ff0162fdab6745b126a3a69d563855cbc5df750cd96b6424ea16a1.ctv
 #EXTINF:-1 tvg-id="宁夏卫视" tvg-name="宁夏卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/31/large/20220531153504056322_25.jpg" group-title="卫视台",宁夏卫视
 https://stream1.freetv.fun/c3a22585493b5fbb62ab4b873bbf60ce767e779781bf178117fcf0918e2de201.m3u8
 #EXTINF:-1 tvg-id="宁夏卫视" tvg-name="宁夏卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/31/large/20220531153504056322_25.jpg" group-title="卫视台",宁夏卫视
@@ -742,8 +736,6 @@ https://stream1.freetv.fun/db38f4892a810feb9529b9aecd225322dc057d7020b5697d8ce52
 #EXTINF:-1 tvg-id="广东卫视高清" tvg-name="广东卫视高清" tvg-logo="https://epg.pw/media/images/channel/2023/12/26/large/20231226204115695252_96.png" group-title="卫视台",广东卫视高清
 https://stream1.freetv.fun/6b38e825eb21ba9b51a54d71ae487a3d63c33ac720a5292894ffc91315427021.ctv
 #EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://epg.pw/media/images/channel/2025/01/28/large/20250128055652623222_35.jpg" group-title="卫视台",广西卫视
-https://stream1.freetv.fun/3899ee96bfc51a8e53baa9d48c86b9b9a52907112fffcb33e94df2c05cc02d3c.m3u8
-#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://epg.pw/media/images/channel/2025/01/28/large/20250128055652623222_35.jpg" group-title="卫视台",广西卫视
 https://stream1.freetv.fun/f91f789a07a2843f5f2ecc56a83737340fca354c28776008a87eab04a681d75a.m3u8
 #EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://epg.pw/media/images/channel/2025/01/28/large/20250128055652623222_35.jpg" group-title="卫视台",广西卫视
 https://stream1.freetv.fun/9786e0b8a3285cf7004eb732dbbf4b30a6fd60876ead1fb2581875b86471f122.ctv
@@ -860,8 +852,6 @@ https://stream1.freetv.fun/fd333185a8b0bdd029bed01118d1ecf02ea1a9877c63aade0b4ef
 #EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/30/large/20220530225651709500_84.jpg" group-title="卫视台",江苏卫视
 https://stream1.freetv.fun/d603dff9bd97cd0af111d22f7e7559d5811119df07427c3896440285361868da.m3u8
 #EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/30/large/20220530225651709500_84.jpg" group-title="卫视台",江苏卫视
-https://stream1.freetv.fun/4f24c45e978db16f03f9526a99b66684f76c164081454f9fb06fb75f3909339d.m3u8
-#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/30/large/20220530225651709500_84.jpg" group-title="卫视台",江苏卫视
 https://stream1.freetv.fun/f1b9c03bc28584fffeb40229e136d1fd81ca13091647867411de131eb3f8962a.m3u8
 #EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/30/large/20220530225651709500_84.jpg" group-title="卫视台",江苏卫视
 https://stream1.freetv.fun/53214d261ed41d49872c97bde06c1b2a6fe620fb91a7cb3aed41fa303b502eac.ctv
@@ -903,8 +893,6 @@ https://stream1.freetv.fun/4b3a79c01c9ae45646cd792c7c7818c22a58ed5cb47262cfd65e9
 https://stream1.freetv.fun/b484249faa35740c98c20dd599a41e18135fa7626edd0489fbe28a00ec2652b8.m3u8
 #EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/30/large/20220530225651709500_84.jpg" group-title="卫视台",江苏卫视
 https://stream1.freetv.fun/8fb562eaef33558c822d19687735f691ccd260e9d4ebaf9fe6d046574191ea3e.m3u8
-#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/30/large/20220530225651709500_84.jpg" group-title="卫视台",江苏卫视
-https://stream1.freetv.fun/3c400e138a465843c4649277da9e6ae4b996405d5c3421d1009bed70012d3b24.m3u8
 #EXTINF:-1 tvg-id="江西卫视" tvg-name="江西卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/31/large/20220531144408646863_42.jpg" group-title="卫视台",江西卫视
 https://stream1.freetv.fun/bc4d49bde015fc24aafb924423536d9ec2f09ad3d55313e4a482ba85ae48b175.ctv
 #EXTINF:-1 tvg-id="江西卫视" tvg-name="江西卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/31/large/20220531144408646863_42.jpg" group-title="卫视台",江西卫视
@@ -946,8 +934,6 @@ https://stream1.freetv.fun/50a5410e1d04d5d14187b7b663c633977b51e860cf4e7046b1915
 #EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/31/large/20220531145616881844_72.jpg" group-title="卫视台",河北卫视
 https://stream1.freetv.fun/70b1d8f766223c1109fdf1ff863031abf2d441af5f88bc078aa4b10efb868f20.ctv
 #EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/31/large/20220531145616881844_72.jpg" group-title="卫视台",河北卫视
-https://stream1.freetv.fun/d9c47a738ab05cd8518cef64817c3ae9f6fd7def079d78c6aa28ee6fb84da028.m3u8
-#EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/31/large/20220531145616881844_72.jpg" group-title="卫视台",河北卫视
 https://stream1.freetv.fun/e8ce72af0be8d31919c9bbcf99a5aa8ce037ffbefb5d47a2811e2011204b2b28.m3u8
 #EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/31/large/20220531145616881844_72.jpg" group-title="卫视台",河北卫视
 https://stream1.freetv.fun/72a6d2b63d9c0dd03c83c4ede890ba0a0977dffc36c51584c8cd5a24c95e861c.m3u8
@@ -957,8 +943,6 @@ https://stream1.freetv.fun/c57a43c8a87e275a57f3140d8695cf36bcd05488c653f26d16594
 https://stream1.freetv.fun/e61c0d8b6667111dbf351f301877dc65ad441d53a332ed7e6e1cc096122401aa.m3u8
 #EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/31/large/20220531145616881844_72.jpg" group-title="卫视台",河北卫视
 https://stream1.freetv.fun/707c4e9c057f6db662e306f7dd6621b587654edac63c6b4d420bf05d63076aee.ctv
-#EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/31/large/20220531145616881844_72.jpg" group-title="卫视台",河北卫视
-https://stream1.freetv.fun/b6d7e54d6c1e48b22b610cdd9db9d9c1e209cfabadd2bc08c0a4c2717db86af4.m3u8
 #EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/31/large/20220531145616881844_72.jpg" group-title="卫视台",河北卫视
 https://stream1.freetv.fun/441e07b9165c678a056128e4482a7ef746ebdd1dcc0f5b6cbf391c3ccc6852fc.m3u8
 #EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/31/large/20220531145616881844_72.jpg" group-title="卫视台",河北卫视
@@ -993,6 +977,8 @@ https://stream1.freetv.fun/6725cbfc8b48e39a9e353ee9da258c0dfb61c25b056e00548e693
 https://stream1.freetv.fun/5fc8d2a2893373b690de43d403f65df7df081587057377c8043f76e594ef3e6e.m3u8
 #EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/30/large/20220530233814283449_10.jpg" group-title="卫视台",河南卫视
 https://stream1.freetv.fun/0b83429accbb5e7cabfb97b00c8748a5606237decccf6e738e3da423ff20fc4c.m3u8
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://epg.pw/media/images/channel/2022/05/30/large/20220530233814283449_10.jpg" group-title="卫视台",河南卫视
+https://stream1.freetv.fun/ea842ab34e6da31e0eae5bd8be6c4b7d67f0b0c214efaca7ff2c5a1718f7fe55.ctv
 #EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://epg.pw/media/images/channel/2024/03/11/large/20240311112431672505_47.png" group-title="卫视台",浙江卫视
 https://stream1.freetv.fun/7f280c90c0c7647b6816a25c4b4ec1732c7d84bd85d08cdd5f60489b14d7e33f.m3u8
 #EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://epg.pw/media/images/channel/2024/03/11/large/20240311112431672505_47.png" group-title="卫视台",浙江卫视
@@ -1001,4 +987,18 @@ https://stream1.freetv.fun/5f2d3db823bd9266adb6b94cb50965bafd24c4a29eec10e1cc3d7
 https://stream1.freetv.fun/d9a1b492bfe8ec9d5d9daeb61db5c2966aaa2dff1d41702447be179f00df7b51.m3u8
 #EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://epg.pw/media/images/channel/2024/03/11/large/20240311112431672505_47.png" group-title="卫视台",浙江卫视
 https://stream1.freetv.fun/8ae4105b374e16112c2c2c3185000d4c4e7c7b1aeabc1967c9cd333d60ad5a9c.m3u8
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://epg.pw/media/images/channel/2024/03/11/large/20240311112431672505_47.png" group-title="卫视台",浙江卫视
+https://stream1.freetv.fun/0f56a254bdeb1e7363b9f45a843d64348f90431b4a7a02726014c395f6a4abcc.m3u8
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://epg.pw/media/images/channel/2024/03/11/large/20240311112431672505_47.png" group-title="卫视台",浙江卫视
+https://stream1.freetv.fun/caf627a996b38e02a60b287dfdfe0dcefc0f9745a2671f1bf32372e15b32635e.m3u8
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://epg.pw/media/images/channel/2024/03/11/large/20240311112431672505_47.png" group-title="卫视台",浙江卫视
+https://stream1.freetv.fun/ba959dabad9d99bf7f65509f2656d479739085231a10f09b40a6b6e2f7b330a0.ctv
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://epg.pw/media/images/channel/2024/03/11/large/20240311112431672505_47.png" group-title="卫视台",浙江卫视
+https://stream1.freetv.fun/8b4a55028be7ac7311d530c92ac4de1dd81d58bb514304db0ed6fff8a96bc41e.m3u8
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://epg.pw/media/images/channel/2024/03/11/large/20240311112431672505_47.png" group-title="卫视台",浙江卫视
+https://stream1.freetv.fun/fb3e3d8531ace68913572c3808ae2ead3ad67d9ae2a091edbcd4c9af0590a867.m3u8
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://epg.pw/media/images/channel/2024/03/11/large/20240311112431672505_47.png" group-title="卫视台",浙江卫视
+https://stream1.freetv.fun/c3445f71ab03dfbec38f46a40778b536475e5736996834655bb0d636a001204d.m3u8
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://epg.pw/media/images/channel/2024/03/11/large/20240311112431672505_47.png" group-title="卫视台",浙江卫视
+https://stream1.freetv.fun/2eac76f94e371b3232d1a70b5631018d731a00722c07060769616c64c702a6a5.m3u8
 
