@@ -1,6 +1,6 @@
 {
-  "update": "2026-10-23T04:30:16.396Z",
-  "count": 54,
+  "update": "2026-10-24T04:20:58.244Z",
+  "count": 53,
   "sources": 8,
   "channels": [
     {
@@ -230,13 +230,6 @@
     {
       "name": "CGTN Spanish",
       "url": "http://45.186.106.147:8880/play/a06f/index.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CGTN French",
-      "url": "http://145.239.5.177/214/index.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
