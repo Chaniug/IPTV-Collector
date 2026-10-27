@@ -1,8 +1,15 @@
 {
-  "update": "2026-10-26T04:27:20.182Z",
-  "count": 162,
+  "update": "2026-10-27T04:46:33.540Z",
+  "count": 163,
   "sources": 8,
   "channels": [
+    {
+      "name": "CCTV-5+",
+      "url": "https://php.jdshipin.com/TVOD/iptv.php?id=cctv5p",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
     {
       "name": "CCTV-1",
       "url": "http://69.30.245.50/live/cctv1.m3u8",
