@@ -1,7 +1,5 @@
 #EXTM3U
 
-#EXTINF:-1 tvg-id="CCTV-5" tvg-name="CCTV-5+" tvg-logo="" group-title="央视台",CCTV-5+
-https://php.jdshipin.com/TVOD/iptv.php?id=cctv5p
 #EXTINF:-1 tvg-id="CCTV-1" tvg-name="CCTV-1" tvg-logo="" group-title="央视台",CCTV-1
 http://69.30.245.50/live/cctv1.m3u8
 #EXTINF:-1 tvg-id="CCTV-1" tvg-name="CCTV-1" tvg-logo="" group-title="央视台",CCTV-1
@@ -68,6 +66,8 @@ https://hlspackager.akamaized.net/live/DB/CGTN_DOCUMENTARY/HLS/CGTN_DOCUMENTARY.
 https://dai.google.com/linear/hls/event/r4sa-f6GSN2XIvzKv5jVng/master.m3u8
 #EXTINF:-1 tvg-id="CGTNSpanish" tvg-name="CGTN Spanish" tvg-logo="" group-title="央视台",CGTN Spanish
 http://45.186.106.147:8880/play/a06f/index.m3u8
+#EXTINF:-1 tvg-id="CCTV-5" tvg-name="CCTV-5+" tvg-logo="" group-title="央视台",CCTV-5+
+https://php.jdshipin.com/TVOD/iptv.php?id=cctv5p
 
 #EXTINF:-1 tvg-id="BRTV北京卫视" tvg-name="BRTV 北京卫视" tvg-logo="" group-title="卫视台",BRTV 北京卫视
 http://go.bkpcp.top/mg/bjws
