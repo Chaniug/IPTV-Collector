@@ -1,5 +1,5 @@
 {
-  "update": "2026-10-28T05:20:52.794Z",
+  "update": "2026-10-29T05:31:08.263Z",
   "count": 500,
   "sources": 8,
   "channels": [
@@ -1636,13 +1636,6 @@
     },
     {
       "name": "广东卫视高清",
-      "url": "https://stream1.freetv.fun/8f11f386c12ed2b20d1fa1746c2b43794c474b9e78f6f1ffc8c5d06531d83b23.ctv",
-      "logo": "https://epg.pw/media/images/channel/2023/12/26/large/20231226204115695252_96.png",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "广东卫视高清",
       "url": "https://stream1.freetv.fun/6b38e825eb21ba9b51a54d71ae487a3d63c33ac720a5292894ffc91315427021.ctv",
       "logo": "https://epg.pw/media/images/channel/2023/12/26/large/20231226204115695252_96.png",
       "group": "卫视台",
@@ -2098,13 +2091,6 @@
     },
     {
       "name": "深圳卫视",
-      "url": "https://stream1.freetv.fun/0779d9959e86d4ea7c1c316e929c57da7a6245591584ef1de6c4281380c0822a.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2024/03/11/large/20240311112310613998_63.png",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "深圳卫视",
       "url": "https://stream1.freetv.fun/d1764ed08d177d9223de570901e019c8531556198c671c130711727d41724c9a.m3u8",
       "logo": "https://epg.pw/media/images/channel/2024/03/11/large/20240311112310613998_63.png",
       "group": "卫视台",
@@ -2188,13 +2174,6 @@
       "category": "satellite"
     },
     {
-      "name": "湖南卫视",
-      "url": "https://stream1.freetv.fun/7078982583a62d6c9e7ec75ad1fd1e3599bad72af0e3f4d7c3fdb52c39a526d0.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2024/03/11/large/20240311111749846409_90.png",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
       "name": "甘肃卫视",
       "url": "https://stream1.freetv.fun/61f3c51f5803f37a6ea081e3e5d94df955fd2bcc591583685545052de4ffded7.m3u8",
       "logo": "https://epg.pw/media/images/channel/2022/05/31/large/20220531224357857126_28.jpg",
@@ -2261,13 +2240,6 @@
       "name": "西藏卫视",
       "url": "https://stream1.freetv.fun/d0dea518e03380212f173ec71ee7aa7a3efc6ee2cbc498e9177f919e0b6af500.m3u8",
       "logo": "https://epg.pw/media/images/channel/2022/05/31/large/20220531231110733151_44.jpg",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "贵州卫视",
-      "url": "https://stream1.freetv.fun/4246e947623686b0725145a4651f8a8776c77515d00eed1add3f5e36f8a7a56e.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2022/05/31/large/20220531144236171971_20.jpg",
       "group": "卫视台",
       "category": "satellite"
     },
@@ -2358,13 +2330,6 @@
     {
       "name": "陕西卫视",
       "url": "https://stream1.freetv.fun/871a47698ab331b58861b25f028f40587602ea02b336853cb105edd68f78b022.ctv",
-      "logo": "https://epg.pw/media/images/channel/2022/05/31/large/20220531150903888489_91.jpg",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "陕西卫视",
-      "url": "https://stream1.freetv.fun/d59e5ab5b2c7ea39896a560fece948c93a2512bffc9e32ce17c5d178f02bb326.m3u8",
       "logo": "https://epg.pw/media/images/channel/2022/05/31/large/20220531150903888489_91.jpg",
       "group": "卫视台",
       "category": "satellite"
@@ -2489,6 +2454,13 @@
       "category": "satellite"
     },
     {
+      "name": "睛彩篮球「移动」",
+      "url": "http://gslbserv.itv.cmvideo.cn/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011529&livemode=1&stbId=YanG-1989",
+      "logo": "https://iptv.yang-1989.xyz/logo/睛彩篮球.webp",
+      "group": "体育类",
+      "category": "sports"
+    },
+    {
       "name": "五星体育",
       "url": "http://223.110.245.147/ott.js.chinamobile.com/PLTV/3/224/3221226799/index.m3u8",
       "logo": "",
@@ -2555,13 +2527,6 @@
       "name": "百事通体育7",
       "url": "http://112.25.48.68/live/program/live/hdnba7/4000000/mnf.m3u8",
       "logo": "",
-      "group": "体育类",
-      "category": "sports"
-    },
-    {
-      "name": "睛彩篮球「移动」",
-      "url": "http://gslbserv.itv.cmvideo.cn/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011529&livemode=1&stbId=YanG-1989",
-      "logo": "https://iptv.yang-1989.xyz/logo/睛彩篮球.webp",
       "group": "体育类",
       "category": "sports"
     },
@@ -2657,13 +2622,6 @@
       "category": "sports"
     },
     {
-      "name": "广东体育高清",
-      "url": "https://stream1.freetv.fun/71563164231d4733177ee91d9a01f4f257c4247a819f43ff78b20840022dfc3c.ctv",
-      "logo": "https://epg.pw/media/images/channel/2024/01/14/large/20240114130358843013_66.png",
-      "group": "体育类",
-      "category": "sports"
-    },
-    {
       "name": "纬来体育",
       "url": "rtmp://f13h.mine.nu/sat/tv721",
       "logo": "https://epg.pw/media/images/channel/2023/07/22/large/20230722105618864183_26.png",
@@ -2676,6 +2634,41 @@
       "logo": "https://epg.pw/media/images/channel/2022/05/31/large/20220531151408095945_53.jpg",
       "group": "体育类",
       "category": "sports"
+    },
+    {
+      "name": "电影•1「解说」",
+      "url": "https://cdn.ttvb.eu.org/huya/20289754",
+      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
+      "group": "电影类",
+      "category": "movie"
+    },
+    {
+      "name": "电影•2「解说」",
+      "url": "https://cdn.ttvb.eu.org/huya/24983280",
+      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
+      "group": "电影类",
+      "category": "movie"
+    },
+    {
+      "name": "电影•3「解说」",
+      "url": "https://cdn.ttvb.eu.org/huya/24396428",
+      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
+      "group": "电影类",
+      "category": "movie"
+    },
+    {
+      "name": "恐怖电影「解说」",
+      "url": "https://cdn.ttvb.eu.org/huya/23419131",
+      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
+      "group": "电影类",
+      "category": "movie"
+    },
+    {
+      "name": "止戈电影「解说」",
+      "url": "https://cdn.ttvb.eu.org/huya/19863777",
+      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
+      "group": "电影类",
+      "category": "movie"
     },
     {
       "name": "万州影视",
@@ -2769,41 +2762,6 @@
       "category": "movie"
     },
     {
-      "name": "电影•1「解说」",
-      "url": "https://cdn.ttvb.eu.org/huya/20289754",
-      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "电影•2「解说」",
-      "url": "https://cdn.ttvb.eu.org/huya/24983280",
-      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "电影•3「解说」",
-      "url": "https://cdn.ttvb.eu.org/huya/24396428",
-      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "恐怖电影「解说」",
-      "url": "https://cdn.ttvb.eu.org/huya/23419131",
-      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "止戈电影「解说」",
-      "url": "https://cdn.ttvb.eu.org/huya/19863777",
-      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
       "name": "cctv6电影",
       "url": "https://stream1.freetv.fun/7a1dc11a2bf4ce08615018fa19b4fdd3d0a1b6e7c3201c10afb1c4b7e2fbaa48.ctv",
       "logo": "https://epg.pw/media/images/channel/2025/01/25/large/20250125001735955364_69.png",
@@ -2883,13 +2841,6 @@
     {
       "name": "广东影视高清",
       "url": "https://stream1.freetv.fun/6bebaac90570df001f0cdefe9391601e6d109033ab27618c4d82efb1eb7a88e4.ctv",
-      "logo": "https://epg.pw/media/images/channel/2023/12/26/large/20231226205507462932_79.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "广东影视高清",
-      "url": "https://stream1.freetv.fun/39d742b92d34f6369dacb66ca0ed55cc8d0dd8871cb1fc7003009f119bf67ab8.ctv",
       "logo": "https://epg.pw/media/images/channel/2023/12/26/large/20231226205507462932_79.png",
       "group": "电影类",
       "category": "movie"
@@ -3500,6 +3451,55 @@
       "name": "寰宇新闻 *$",
       "url": "https://stream1.freetv.fun/366a3588d09381efa33ffe4e332191e6a8d7d507fb293f2109acc3e1586b1f39.m3u8",
       "logo": "https://epg.pw/media/images/channel/2023/07/24/large/20230724134652233694_13.png",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "寰宇新闻",
+      "url": "https://stream1.freetv.fun/d9e077d94c5ba3a10f9d1a26d5c1f3aa5d4d3f811e1f85120c5b742aaa506157.m3u8",
+      "logo": "https://epg.pw/media/images/channel/2023/07/24/large/20230724134652233694_13.png",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "寰宇新闻",
+      "url": "https://stream1.freetv.fun/cc3ac399d86099e5a3206d38ac3738ad97285b606895947d3786fbcd544081fd.m3u8",
+      "logo": "https://epg.pw/media/images/channel/2023/07/24/large/20230724134652233694_13.png",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "广州新闻",
+      "url": "https://stream1.freetv.fun/ed61829ac0bb1a28d5b4b48fc44b922c449965f788f0366b085dbe80185d915b.m3u8",
+      "logo": "https://epg.pw/media/images/channel/2023/07/21/large/20230721135410645686_37.png",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "广州新闻",
+      "url": "https://stream1.freetv.fun/8613e6dd0b4860b93e2792ada333c0bf7f3d84c6f6773eefd5d9ca5f08bb8787.m3u8",
+      "logo": "https://epg.pw/media/images/channel/2023/07/21/large/20230721135410645686_37.png",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "广州新闻",
+      "url": "https://stream1.freetv.fun/34003b8748136eb630e4eed3e26cf513630bd520371ecf4fdfdc0649c1a8707e.ctv",
+      "logo": "https://epg.pw/media/images/channel/2023/07/21/large/20230721135410645686_37.png",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "广东新闻高清",
+      "url": "https://stream1.freetv.fun/39ab3ae3ed28f9820adb3df173f784af647e03121c7dba0fd9b3f2da1cb36ae6.ctv",
+      "logo": "https://epg.pw/media/images/channel/2023/12/26/large/20231226205535927295_17.png",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "广东新闻高清",
+      "url": "https://stream1.freetv.fun/2275c4907736ba06a60b1f0b580e3bc11afa7074a37348b523743c4aaba1b0c8.ctv",
+      "logo": "https://epg.pw/media/images/channel/2023/12/26/large/20231226205535927295_17.png",
       "group": "新闻类",
       "category": "news"
     }
