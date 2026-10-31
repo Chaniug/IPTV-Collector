@@ -1,5 +1,5 @@
 {
-  "update": "2026-10-30T05:31:09.847Z",
+  "update": "2026-10-31T05:16:55.670Z",
   "count": 500,
   "sources": 8,
   "channels": [
@@ -2468,13 +2468,6 @@
       "category": "satellite"
     },
     {
-      "name": "睛彩篮球「移动」",
-      "url": "http://gslbserv.itv.cmvideo.cn/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011529&livemode=1&stbId=YanG-1989",
-      "logo": "https://iptv.yang-1989.xyz/logo/睛彩篮球.webp",
-      "group": "体育类",
-      "category": "sports"
-    },
-    {
       "name": "五星体育",
       "url": "http://223.110.245.147/ott.js.chinamobile.com/PLTV/3/224/3221226799/index.m3u8",
       "logo": "",
@@ -2541,6 +2534,13 @@
       "name": "百事通体育7",
       "url": "http://112.25.48.68/live/program/live/hdnba7/4000000/mnf.m3u8",
       "logo": "",
+      "group": "体育类",
+      "category": "sports"
+    },
+    {
+      "name": "睛彩篮球「移动」",
+      "url": "http://gslbserv.itv.cmvideo.cn/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011529&livemode=1&stbId=YanG-1989",
+      "logo": "https://iptv.yang-1989.xyz/logo/睛彩篮球.webp",
       "group": "体育类",
       "category": "sports"
     },
@@ -2650,41 +2650,6 @@
       "category": "sports"
     },
     {
-      "name": "电影•1「解说」",
-      "url": "https://cdn.ttvb.eu.org/huya/20289754",
-      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "电影•2「解说」",
-      "url": "https://cdn.ttvb.eu.org/huya/24983280",
-      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "电影•3「解说」",
-      "url": "https://cdn.ttvb.eu.org/huya/24396428",
-      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "恐怖电影「解说」",
-      "url": "https://cdn.ttvb.eu.org/huya/23419131",
-      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "止戈电影「解说」",
-      "url": "https://cdn.ttvb.eu.org/huya/19863777",
-      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
       "name": "万州影视",
       "url": "http://123.146.162.24:8013/tslslive/vWlnEzU/hls/live_sd.m3u8",
       "logo": "",
@@ -2776,6 +2741,41 @@
       "category": "movie"
     },
     {
+      "name": "电影•1「解说」",
+      "url": "https://cdn.ttvb.eu.org/huya/20289754",
+      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
+      "group": "电影类",
+      "category": "movie"
+    },
+    {
+      "name": "电影•2「解说」",
+      "url": "https://cdn.ttvb.eu.org/huya/24983280",
+      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
+      "group": "电影类",
+      "category": "movie"
+    },
+    {
+      "name": "电影•3「解说」",
+      "url": "https://cdn.ttvb.eu.org/huya/24396428",
+      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
+      "group": "电影类",
+      "category": "movie"
+    },
+    {
+      "name": "恐怖电影「解说」",
+      "url": "https://cdn.ttvb.eu.org/huya/23419131",
+      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
+      "group": "电影类",
+      "category": "movie"
+    },
+    {
+      "name": "止戈电影「解说」",
+      "url": "https://cdn.ttvb.eu.org/huya/19863777",
+      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
+      "group": "电影类",
+      "category": "movie"
+    },
+    {
       "name": "cctv6电影",
       "url": "https://stream1.freetv.fun/7a1dc11a2bf4ce08615018fa19b4fdd3d0a1b6e7c3201c10afb1c4b7e2fbaa48.ctv",
       "logo": "https://epg.pw/media/images/channel/2025/01/25/large/20250125001735955364_69.png",
@@ -2855,13 +2855,6 @@
     {
       "name": "广东影视",
       "url": "https://stream1.freetv.fun/14aee7ac3331e19df1a911e1d6290415ee8a6c46ec11668fc100a9f7d58d42a1.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2024/01/14/large/20240114130217262909_90.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "广东影视",
-      "url": "https://stream1.freetv.fun/71e5da706bbb26461d666f16dfe819c08859461e705e79cb6ec7d5bf3642052e.m3u8",
       "logo": "https://epg.pw/media/images/channel/2024/01/14/large/20240114130217262909_90.png",
       "group": "电影类",
       "category": "movie"
@@ -3402,6 +3395,13 @@
       "name": "嘉兴新闻综合",
       "url": "https://stream1.freetv.fun/25aff028541e1b2c096f6df8a2277c518262c6c1b89e017ccc0c1967708e288e.m3u8",
       "logo": "https://epg.pw/media/img/logo/3_102.jpg",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "太谷新闻综合",
+      "url": "https://stream1.freetv.fun/63a19973d726fe3a5047df542074d4f01d156e4756dfc656240239aee1433dc1.m3u8",
+      "logo": "https://epg.pw/media/images/channel/2022/10/23/large/20221023010857799299_19.jpg",
       "group": "新闻类",
       "category": "news"
     },
