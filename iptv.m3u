@@ -587,6 +587,8 @@ https://stream1.freetv.fun/dbca62818851739e3644da5dc0e9bd335d78256c242d371149dcb
 https://stream1.freetv.fun/f3e2be09d78572108f0dc1fae78ea5f728f20a9ffb6ff0afc4835d2fded6a23e.ctv
 #EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://epg.pw/media/images/channel/2024/03/11/large/20240311112431672505_47.png" group-title="卫视台",浙江卫视
 https://stream1.freetv.fun/cfe6c386aeda1787f606df629248faf407b2351852e3ea6994357836a1643f5c.m3u8
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://epg.pw/media/images/channel/2024/03/11/large/20240311112431672505_47.png" group-title="卫视台",浙江卫视
+https://stream1.freetv.fun/0e8019a32c95521b041392cfec51450e6603e9b67a0b6f0b0a078303d76f5a45.m3u8
 #EXTINF:-1 tvg-id="海南卫视" tvg-name="海南卫视" tvg-logo="https://epg.pw/media/images/channel/2021/09/13/large/20210913004059839717_73.png" group-title="卫视台",海南卫视
 https://stream1.freetv.fun/4976d4d4adc40dea6818cd00c88f573f89241aa55da491202c4383813aa6bde6.m3u8
 #EXTINF:-1 tvg-id="海南卫视" tvg-name="海南卫视" tvg-logo="https://epg.pw/media/images/channel/2021/09/13/large/20210913004059839717_73.png" group-title="卫视台",海南卫视
@@ -871,6 +873,8 @@ https://stream1.freetv.fun/54f9fa1dce001670dd44bbee398c87cff56bef15c46b93dc94f8f
 #EXTINF:-1 tvg-id="大安新闻综合" tvg-name="大安新闻综合" tvg-logo="https://epg.pw/media/images/channel/2022/10/31/large/20221031232831325255_59.jpg" group-title="新闻类",大安新闻综合
 https://stream1.freetv.fun/4e3c60a7236120c2bee70b13b5947036e26e1f25ca4bcc5e68297675eb9a284b.m3u8
 
+#EXTINF:-1 tvg-id="睛彩篮球移动" tvg-name="睛彩篮球「移动」" tvg-logo="https://iptv.yang-1989.xyz/logo/睛彩篮球.webp" group-title="体育类",睛彩篮球「移动」
+http://gslbserv.itv.cmvideo.cn/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011529&livemode=1&stbId=YanG-1989
 #EXTINF:-1 tvg-id="五星体育" tvg-name="五星体育" tvg-logo="" group-title="体育类",五星体育
 http://223.110.245.147/ott.js.chinamobile.com/PLTV/3/224/3221226799/index.m3u8
 #EXTINF:-1 tvg-id="山东体育" tvg-name="山东体育" tvg-logo="" group-title="体育类",山东体育
@@ -891,8 +895,6 @@ http://112.25.48.68/live/program/live/hdnba3/4000000/mnf.m3u8
 http://112.25.48.68/live/program/live/hdnba5/4000000/mnf.m3u8
 #EXTINF:-1 tvg-id="百事通体育7" tvg-name="百事通体育7" tvg-logo="" group-title="体育类",百事通体育7
 http://112.25.48.68/live/program/live/hdnba7/4000000/mnf.m3u8
-#EXTINF:-1 tvg-id="睛彩篮球移动" tvg-name="睛彩篮球「移动」" tvg-logo="https://iptv.yang-1989.xyz/logo/睛彩篮球.webp" group-title="体育类",睛彩篮球「移动」
-http://gslbserv.itv.cmvideo.cn/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011529&livemode=1&stbId=YanG-1989
 #EXTINF:-1 tvg-id="cctv5体育" tvg-name="cctv5体育" tvg-logo="https://epg.pw/media/images/channel/2026/06/20/large/20260620062513574080_73.jpg" group-title="体育类",cctv5体育
 https://stream1.freetv.fun/3f6e79cd5be5e0d908f9ff62967e7b7dd8d2466d75ae3691404613eb3000bb85.ctv
 #EXTINF:-1 tvg-id="cctv5plus体育赛事" tvg-name="cctv5 plus体育赛事" tvg-logo="https://epg.pw/media/images/channel/2026/06/20/large/20260620062554137493_74.png" group-title="体育类",cctv5 plus体育赛事
@@ -922,6 +924,16 @@ rtmp://f13h.mine.nu/sat/tv721
 #EXTINF:-1 tvg-id="陕西体育休闲" tvg-name="陕西体育休闲" tvg-logo="https://epg.pw/media/images/channel/2022/05/31/large/20220531151408095945_53.jpg" group-title="体育类",陕西体育休闲
 https://stream1.freetv.fun/f4072ecf32e98c8565716070d14999b84fe47ae08e91245bab5fe299d624af37.ctv
 
+#EXTINF:-1 tvg-id="电影1解说" tvg-name="电影•1「解说」" tvg-logo="https://epg.yang-1989.xyz/logo/虎牙.png" group-title="电影类",电影•1「解说」
+https://cdn.ttvb.eu.org/huya/20289754
+#EXTINF:-1 tvg-id="电影2解说" tvg-name="电影•2「解说」" tvg-logo="https://epg.yang-1989.xyz/logo/虎牙.png" group-title="电影类",电影•2「解说」
+https://cdn.ttvb.eu.org/huya/24983280
+#EXTINF:-1 tvg-id="电影3解说" tvg-name="电影•3「解说」" tvg-logo="https://epg.yang-1989.xyz/logo/虎牙.png" group-title="电影类",电影•3「解说」
+https://cdn.ttvb.eu.org/huya/24396428
+#EXTINF:-1 tvg-id="恐怖电影解说" tvg-name="恐怖电影「解说」" tvg-logo="https://epg.yang-1989.xyz/logo/虎牙.png" group-title="电影类",恐怖电影「解说」
+https://cdn.ttvb.eu.org/huya/23419131
+#EXTINF:-1 tvg-id="止戈电影解说" tvg-name="止戈电影「解说」" tvg-logo="https://epg.yang-1989.xyz/logo/虎牙.png" group-title="电影类",止戈电影「解说」
+https://cdn.ttvb.eu.org/huya/19863777
 #EXTINF:-1 tvg-id="万州影视" tvg-name="万州影视" tvg-logo="" group-title="电影类",万州影视
 http://123.146.162.24:8013/tslslive/vWlnEzU/hls/live_sd.m3u8
 #EXTINF:-1 tvg-id="京视剧场" tvg-name="京视剧场" tvg-logo="" group-title="电影类",京视剧场
@@ -948,16 +960,6 @@ http://183.207.248.71/cntv/live1/jdianying/jdianying
 http://stream2.xiancity.cn/xatv4/playlist.m3u8
 #EXTINF:-1 tvg-id="高清电影" tvg-name="高清电影" tvg-logo="" group-title="电影类",高清电影
 http://39.134.19.76/dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226463/index.m3u8
-#EXTINF:-1 tvg-id="电影1解说" tvg-name="电影•1「解说」" tvg-logo="https://epg.yang-1989.xyz/logo/虎牙.png" group-title="电影类",电影•1「解说」
-https://cdn.ttvb.eu.org/huya/20289754
-#EXTINF:-1 tvg-id="电影2解说" tvg-name="电影•2「解说」" tvg-logo="https://epg.yang-1989.xyz/logo/虎牙.png" group-title="电影类",电影•2「解说」
-https://cdn.ttvb.eu.org/huya/24983280
-#EXTINF:-1 tvg-id="电影3解说" tvg-name="电影•3「解说」" tvg-logo="https://epg.yang-1989.xyz/logo/虎牙.png" group-title="电影类",电影•3「解说」
-https://cdn.ttvb.eu.org/huya/24396428
-#EXTINF:-1 tvg-id="恐怖电影解说" tvg-name="恐怖电影「解说」" tvg-logo="https://epg.yang-1989.xyz/logo/虎牙.png" group-title="电影类",恐怖电影「解说」
-https://cdn.ttvb.eu.org/huya/23419131
-#EXTINF:-1 tvg-id="止戈电影解说" tvg-name="止戈电影「解说」" tvg-logo="https://epg.yang-1989.xyz/logo/虎牙.png" group-title="电影类",止戈电影「解说」
-https://cdn.ttvb.eu.org/huya/19863777
 #EXTINF:-1 tvg-id="cctv6电影" tvg-name="cctv6电影" tvg-logo="https://epg.pw/media/images/channel/2025/01/25/large/20250125001735955364_69.png" group-title="电影类",cctv6电影
 https://stream1.freetv.fun/7a1dc11a2bf4ce08615018fa19b4fdd3d0a1b6e7c3201c10afb1c4b7e2fbaa48.ctv
 #EXTINF:-1 tvg-id="chc动作电影" tvg-name="chc动作电影" tvg-logo="https://epg.pw/media/images/channel/2023/07/20/large/20230720204146046493_74.png" group-title="电影类",chc动作电影
@@ -992,8 +994,6 @@ https://stream1.freetv.fun/befb766cccc3f4aea99c123080b37aaadd09e409aaad63a496f1e
 https://stream1.freetv.fun/6bebaac90570df001f0cdefe9391601e6d109033ab27618c4d82efb1eb7a88e4.ctv
 #EXTINF:-1 tvg-id="广东影视高清" tvg-name="广东影视高清" tvg-logo="https://epg.pw/media/images/channel/2023/12/26/large/20231226205507462932_79.png" group-title="电影类",广东影视高清
 https://stream1.freetv.fun/b9c5e3662009b09da2855287e88635ca7e0ea7513b166fe64d9d0fd18bef8899.ctv
-#EXTINF:-1 tvg-id="广东影视高清" tvg-name="广东影视高清" tvg-logo="https://epg.pw/media/images/channel/2023/12/26/large/20231226205507462932_79.png" group-title="电影类",广东影视高清
-https://stream1.freetv.fun/742d44a90d0b7c108b1b93c2b92ccf75287629ce292186ee54a2a24c931184fc.ctv
 #EXTINF:-1 tvg-id="广东影视高清" tvg-name="广东影视高清" tvg-logo="https://epg.pw/media/images/channel/2023/12/26/large/20231226205507462932_79.png" group-title="电影类",广东影视高清
 https://stream1.freetv.fun/e441e7bd00436bc0033da990ab5978c4f96fa463cb160326386a0d5f841014e7.ctv
 #EXTINF:-1 tvg-id="江苏影视" tvg-name="江苏影视" tvg-logo="https://epg.pw/media/images/channel/2022/05/30/large/20220530230645676753_16.jpg" group-title="电影类",江苏影视

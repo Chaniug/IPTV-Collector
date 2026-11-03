@@ -1,5 +1,5 @@
 {
-  "update": "2026-11-02T05:44:28.932Z",
+  "update": "2026-11-03T06:25:46.414Z",
   "count": 500,
   "sources": 8,
   "channels": [
@@ -2055,6 +2055,13 @@
       "category": "satellite"
     },
     {
+      "name": "浙江卫视",
+      "url": "https://stream1.freetv.fun/0e8019a32c95521b041392cfec51450e6603e9b67a0b6f0b0a078303d76f5a45.m3u8",
+      "logo": "https://epg.pw/media/images/channel/2024/03/11/large/20240311112431672505_47.png",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
       "name": "海南卫视",
       "url": "https://stream1.freetv.fun/4976d4d4adc40dea6818cd00c88f573f89241aa55da491202c4383813aa6bde6.m3u8",
       "logo": "https://epg.pw/media/images/channel/2021/09/13/large/20210913004059839717_73.png",
@@ -2517,6 +2524,13 @@
       "category": "satellite"
     },
     {
+      "name": "睛彩篮球「移动」",
+      "url": "http://gslbserv.itv.cmvideo.cn/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011529&livemode=1&stbId=YanG-1989",
+      "logo": "https://iptv.yang-1989.xyz/logo/睛彩篮球.webp",
+      "group": "体育类",
+      "category": "sports"
+    },
+    {
       "name": "五星体育",
       "url": "http://223.110.245.147/ott.js.chinamobile.com/PLTV/3/224/3221226799/index.m3u8",
       "logo": "",
@@ -2583,13 +2597,6 @@
       "name": "百事通体育7",
       "url": "http://112.25.48.68/live/program/live/hdnba7/4000000/mnf.m3u8",
       "logo": "",
-      "group": "体育类",
-      "category": "sports"
-    },
-    {
-      "name": "睛彩篮球「移动」",
-      "url": "http://gslbserv.itv.cmvideo.cn/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011529&livemode=1&stbId=YanG-1989",
-      "logo": "https://iptv.yang-1989.xyz/logo/睛彩篮球.webp",
       "group": "体育类",
       "category": "sports"
     },
@@ -2692,6 +2699,41 @@
       "category": "sports"
     },
     {
+      "name": "电影•1「解说」",
+      "url": "https://cdn.ttvb.eu.org/huya/20289754",
+      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
+      "group": "电影类",
+      "category": "movie"
+    },
+    {
+      "name": "电影•2「解说」",
+      "url": "https://cdn.ttvb.eu.org/huya/24983280",
+      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
+      "group": "电影类",
+      "category": "movie"
+    },
+    {
+      "name": "电影•3「解说」",
+      "url": "https://cdn.ttvb.eu.org/huya/24396428",
+      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
+      "group": "电影类",
+      "category": "movie"
+    },
+    {
+      "name": "恐怖电影「解说」",
+      "url": "https://cdn.ttvb.eu.org/huya/23419131",
+      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
+      "group": "电影类",
+      "category": "movie"
+    },
+    {
+      "name": "止戈电影「解说」",
+      "url": "https://cdn.ttvb.eu.org/huya/19863777",
+      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
+      "group": "电影类",
+      "category": "movie"
+    },
+    {
       "name": "万州影视",
       "url": "http://123.146.162.24:8013/tslslive/vWlnEzU/hls/live_sd.m3u8",
       "logo": "",
@@ -2779,41 +2821,6 @@
       "name": "高清电影",
       "url": "http://39.134.19.76/dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226463/index.m3u8",
       "logo": "",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "电影•1「解说」",
-      "url": "https://cdn.ttvb.eu.org/huya/20289754",
-      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "电影•2「解说」",
-      "url": "https://cdn.ttvb.eu.org/huya/24983280",
-      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "电影•3「解说」",
-      "url": "https://cdn.ttvb.eu.org/huya/24396428",
-      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "恐怖电影「解说」",
-      "url": "https://cdn.ttvb.eu.org/huya/23419131",
-      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "止戈电影「解说」",
-      "url": "https://cdn.ttvb.eu.org/huya/19863777",
-      "logo": "https://epg.yang-1989.xyz/logo/虎牙.png",
       "group": "电影类",
       "category": "movie"
     },
@@ -2932,13 +2939,6 @@
     {
       "name": "广东影视高清",
       "url": "https://stream1.freetv.fun/b9c5e3662009b09da2855287e88635ca7e0ea7513b166fe64d9d0fd18bef8899.ctv",
-      "logo": "https://epg.pw/media/images/channel/2023/12/26/large/20231226205507462932_79.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "广东影视高清",
-      "url": "https://stream1.freetv.fun/742d44a90d0b7c108b1b93c2b92ccf75287629ce292186ee54a2a24c931184fc.ctv",
       "logo": "https://epg.pw/media/images/channel/2023/12/26/large/20231226205507462932_79.png",
       "group": "电影类",
       "category": "movie"
