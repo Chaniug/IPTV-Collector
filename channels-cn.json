@@ -1,5 +1,5 @@
 {
-  "update": "2026-11-04T05:58:14.752Z",
+  "update": "2026-11-05T06:23:05.252Z",
   "count": 209,
   "sources": 8,
   "channels": [
@@ -55,6 +55,13 @@
     {
       "name": "CCTV-4K",
       "url": "http://198.204.240.250:82/live/cctv4k.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-5+",
+      "url": "https://php.jdshipin.com/TVOD/iptv.php?id=cctv5p",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
@@ -214,13 +221,6 @@
       "category": "cctv"
     },
     {
-      "name": "CCTV-5+",
-      "url": "https://php.jdshipin.com/TVOD/iptv.php?id=cctv5p",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
       "name": "BRTV 北京卫视",
       "url": "http://go.bkpcp.top/mg/bjws",
       "logo": "",
@@ -230,13 +230,6 @@
     {
       "name": "BRTV 北京卫视",
       "url": "http://ivi.bupt.edu.cn/hls/btv1.m3u8",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "云南卫视",
-      "url": "http://183.207.248.71/cntv/live1/yunnanstv/yunnanstv",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
@@ -272,6 +265,13 @@
     {
       "name": "云南卫视",
       "url": "http://223.110.245.173/PLTV/4/224/3221225838/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "云南卫视",
+      "url": "http://183.207.248.71/cntv/live1/yunnanstv/yunnanstv",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
@@ -488,13 +488,6 @@
     },
     {
       "name": "宁夏卫视",
-      "url": "http://183.207.248.71/gitv/live1/G_NINGXIA/G_NINGXIA",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "宁夏卫视",
       "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225726/index.m3u8",
       "logo": "",
       "group": "卫视台",
@@ -524,6 +517,13 @@
     {
       "name": "宁夏卫视",
       "url": "http://112.25.48.68/live/program/live/nxws/1300000/mnf.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "宁夏卫视",
+      "url": "http://183.207.248.71/gitv/live1/G_NINGXIA/G_NINGXIA",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
@@ -663,13 +663,6 @@
     },
     {
       "name": "江苏卫视",
-      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-jiangsustv/HD-2500k-1080P-jiangsustv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "江苏卫视",
       "url": "http://39.134.24.166/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226200/index.m3u8",
       "logo": "",
       "group": "卫视台",
@@ -734,6 +727,13 @@
     {
       "name": "江苏卫视",
       "url": "http://183.207.248.71/gitv/live1/JSWS-HD/JSWS-HD",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "江苏卫视",
+      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-jiangsustv/HD-2500k-1080P-jiangsustv",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
@@ -894,13 +894,6 @@
     },
     {
       "name": "深圳卫视",
-      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-shenzhenstv/HD-2500k-1080P-shenzhenstv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "深圳卫视",
       "url": "http://39.134.24.166/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226205/index.m3u8",
       "logo": "",
       "group": "卫视台",
@@ -965,6 +958,13 @@
     {
       "name": "深圳卫视",
       "url": "http://223.110.245.139/PLTV/4/224/3221227307/index.m3u8",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "深圳卫视",
+      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-shenzhenstv/HD-2500k-1080P-shenzhenstv",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
@@ -1258,14 +1258,14 @@
     },
     {
       "name": "江苏影视",
-      "url": "http://183.207.248.71/gitv/live1/G_JSYS/G_JSYS",
+      "url": "http://223.110.243.134/PLTV/4/224/3221225937/index.m3u8",
       "logo": "",
       "group": "电影类",
       "category": "movie"
     },
     {
       "name": "江苏影视",
-      "url": "http://223.110.243.134/PLTV/4/224/3221225937/index.m3u8",
+      "url": "http://183.207.248.71/gitv/live1/G_JSYS/G_JSYS",
       "logo": "",
       "group": "电影类",
       "category": "movie"

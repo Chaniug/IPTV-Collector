@@ -1,5 +1,5 @@
 {
-  "update": "2026-11-04T05:58:14.752Z",
+  "update": "2026-11-05T06:23:05.252Z",
   "count": 54,
   "sources": 8,
   "channels": [
@@ -55,6 +55,13 @@
     {
       "name": "CCTV-4K",
       "url": "http://198.204.240.250:82/live/cctv4k.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-5+",
+      "url": "https://php.jdshipin.com/TVOD/iptv.php?id=cctv5p",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
@@ -187,35 +194,14 @@
     },
     {
       "name": "CGTN",
-      "url": "https://0472.org/hls/cgtn.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CGTN Documentary",
-      "url": "https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CGTN Global Biz",
-      "url": "https://fastlive.cctvplus.com/out/v1/2b3d8a0c805d437f9dc85b764c2ac599/index.m3u8",
-      "logo": "",
-      "group": "央视台",
-      "category": "cctv"
-    },
-    {
-      "name": "CGTN",
       "url": "https://hlspackager.akamaized.net/live/DB/CGTN_ENGLISH/HLS/CGTN_ENGLISH.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
     },
     {
-      "name": "CGTN Documentary",
-      "url": "https://hlspackager.akamaized.net/live/DB/CGTN_DOCUMENTARY/HLS/CGTN_DOCUMENTARY.m3u8",
+      "name": "CGTN",
+      "url": "https://0472.org/hls/cgtn.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
@@ -228,15 +214,29 @@
       "category": "cctv"
     },
     {
-      "name": "CGTN Spanish",
-      "url": "http://45.186.106.147:8880/play/a06f/index.m3u8",
+      "name": "CGTN Documentary",
+      "url": "https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
     },
     {
-      "name": "CCTV-5+",
-      "url": "https://php.jdshipin.com/TVOD/iptv.php?id=cctv5p",
+      "name": "CGTN Documentary",
+      "url": "https://hlspackager.akamaized.net/live/DB/CGTN_DOCUMENTARY/HLS/CGTN_DOCUMENTARY.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CGTN Global Biz",
+      "url": "https://fastlive.cctvplus.com/out/v1/2b3d8a0c805d437f9dc85b764c2ac599/index.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CGTN Spanish",
+      "url": "http://45.186.106.147:8880/play/a06f/index.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
@@ -250,14 +250,14 @@
     },
     {
       "name": "云南卫视",
-      "url": "http://183.207.248.71/cntv/live1/yunnanstv/yunnanstv",
+      "url": "http://183.207.248.71/gitv/live1/G_YUNNAN/G_YUNNAN",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
     },
     {
       "name": "云南卫视",
-      "url": "http://183.207.248.71/gitv/live1/G_YUNNAN/G_YUNNAN",
+      "url": "http://183.207.248.71/cntv/live1/yunnanstv/yunnanstv",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
@@ -320,13 +320,6 @@
     },
     {
       "name": "江苏卫视",
-      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-jiangsustv/HD-2500k-1080P-jiangsustv",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "江苏卫视",
       "url": "http://183.207.248.71/cntv/live1/jiangsustv/jiangsustv",
       "logo": "",
       "group": "卫视台",
@@ -335,6 +328,13 @@
     {
       "name": "江苏卫视",
       "url": "http://183.207.248.71/gitv/live1/JSWS-HD/JSWS-HD",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "江苏卫视",
+      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-jiangsustv/HD-2500k-1080P-jiangsustv",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
