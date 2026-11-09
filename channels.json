@@ -1,5 +1,5 @@
 {
-  "update": "2026-11-08T05:46:39.670Z",
+  "update": "2026-11-09T05:56:56.207Z",
   "count": 500,
   "sources": 8,
   "channels": [
@@ -1748,13 +1748,6 @@
     },
     {
       "name": "江苏卫视",
-      "url": "https://stream1.freetv.fun/a36bf102c616caed6d75bdbcafd48786253f7828d67752d49c7f3184923311f3.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2022/05/30/large/20220530225651709500_84.jpg",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "江苏卫视",
       "url": "https://stream1.freetv.fun/7eeb24db75a813d994e18ea960efe66f52873af8c3e79e3c0fc4ef9c0fe56d87.m3u8",
       "logo": "https://epg.pw/media/images/channel/2022/05/30/large/20220530225651709500_84.jpg",
       "group": "卫视台",
@@ -2328,20 +2321,6 @@
       "category": "satellite"
     },
     {
-      "name": "凤凰卫视",
-      "url": "https://stream1.freetv.fun/08e5440bb83a804440e341ae792cffc38d6844b04d5a2c7a4fc5ee04a6fe6bc6.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2024/06/10/large/20240610235948618467_91.png",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "凤凰中文",
-      "url": "https://stream1.freetv.fun/c8ad10f8d135ebbea6b77779874c1d8a6da07d925786ac11f855c0dfa87b4487.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2025/01/28/large/20250128061049622730_55.png",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
       "name": "凤凰资讯",
       "url": "https://stream1.freetv.fun/8207fefca4ec53194577b2ed278461db2f591ad800e535ba46d497749e2d7ee5.ctv",
       "logo": "https://epg.pw/media/images/channel/2023/07/23/large/20230723140505929891_55.png",
@@ -2721,13 +2700,6 @@
     },
     {
       "name": "广东影视",
-      "url": "https://stream1.freetv.fun/14aee7ac3331e19df1a911e1d6290415ee8a6c46ec11668fc100a9f7d58d42a1.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2024/01/14/large/20240114130217262909_90.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "广东影视",
       "url": "https://stream1.freetv.fun/fd9a43bef6735146ddf93f77ed8c58c90932e0744af45f48cb33228371f28162.m3u8",
       "logo": "https://epg.pw/media/images/channel/2024/01/14/large/20240114130217262909_90.png",
       "group": "电影类",
@@ -2743,6 +2715,13 @@
     {
       "name": "广东影视",
       "url": "https://stream1.freetv.fun/befb766cccc3f4aea99c123080b37aaadd09e409aaad63a496f1e970d7ecfcfd.m3u8",
+      "logo": "https://epg.pw/media/images/channel/2024/01/14/large/20240114130217262909_90.png",
+      "group": "电影类",
+      "category": "movie"
+    },
+    {
+      "name": "广东影视",
+      "url": "https://stream1.freetv.fun/14aee7ac3331e19df1a911e1d6290415ee8a6c46ec11668fc100a9f7d58d42a1.m3u8",
       "logo": "https://epg.pw/media/images/channel/2024/01/14/large/20240114130217262909_90.png",
       "group": "电影类",
       "category": "movie"
@@ -3499,6 +3478,27 @@
     {
       "name": "江夏新闻综合",
       "url": "https://stream1.freetv.fun/b721fd17d5166827b490ce21270dce5dd9736ae6e5fc2b5795c609252f252d01.m3u8",
+      "logo": "https://epg.pw/media/images/channel/2022/11/01/large/20221101022911570371_38.jpg",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "江夏新闻综合",
+      "url": "https://stream1.freetv.fun/b38f41690632b95b07c92b5a24c991f3c8421893a14fc6e13f5ae2e17e46b1fc.m3u8",
+      "logo": "https://epg.pw/media/images/channel/2022/11/01/large/20221101022911570371_38.jpg",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "江津新闻综合",
+      "url": "https://stream1.freetv.fun/853211a15b5e75e0b042605a7a3bc5fca98ac2724a20d997e2280c1511833106.m3u8",
+      "logo": "https://epg.pw/media/images/channel/2022/11/01/large/20221101022911570371_38.jpg",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "镇江新闻综合",
+      "url": "https://stream1.freetv.fun/ff76d0e72c75bde4f4036208c822dde219743cc1105e9774dcdeab0e51753aeb.m3u8",
       "logo": "https://epg.pw/media/images/channel/2022/11/01/large/20221101022911570371_38.jpg",
       "group": "新闻类",
       "category": "news"
