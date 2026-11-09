@@ -1,5 +1,5 @@
 {
-  "update": "2026-11-09T05:56:56.207Z",
+  "update": "2026-11-09T12:22:55.951Z",
   "count": 500,
   "sources": 8,
   "channels": [
@@ -1419,13 +1419,6 @@
     },
     {
       "name": "大湾区卫视",
-      "url": "https://stream1.freetv.fun/427b3b9c6ea2a93238d9e2f5f906270a68916caeb285042a975452f0126a6e24.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2024/01/14/large/20240114132000365190_44.png",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "大湾区卫视",
       "url": "https://stream1.freetv.fun/febac61363de39122f0ca637205bff9a5e1c5a1c4b59db0af4e980eb492ad709.m3u8",
       "logo": "https://epg.pw/media/images/channel/2024/01/14/large/20240114132000365190_44.png",
       "group": "卫视台",
@@ -2728,13 +2721,6 @@
     },
     {
       "name": "广东影视高清",
-      "url": "https://stream1.freetv.fun/6bebaac90570df001f0cdefe9391601e6d109033ab27618c4d82efb1eb7a88e4.ctv",
-      "logo": "https://epg.pw/media/images/channel/2023/12/26/large/20231226205507462932_79.png",
-      "group": "电影类",
-      "category": "movie"
-    },
-    {
-      "name": "广东影视高清",
       "url": "https://stream1.freetv.fun/b9c5e3662009b09da2855287e88635ca7e0ea7513b166fe64d9d0fd18bef8899.ctv",
       "logo": "https://epg.pw/media/images/channel/2023/12/26/large/20231226205507462932_79.png",
       "group": "电影类",
@@ -2743,6 +2729,13 @@
     {
       "name": "广东影视高清",
       "url": "https://stream1.freetv.fun/e441e7bd00436bc0033da990ab5978c4f96fa463cb160326386a0d5f841014e7.ctv",
+      "logo": "https://epg.pw/media/images/channel/2023/12/26/large/20231226205507462932_79.png",
+      "group": "电影类",
+      "category": "movie"
+    },
+    {
+      "name": "广东影视高清",
+      "url": "https://stream1.freetv.fun/6bebaac90570df001f0cdefe9391601e6d109033ab27618c4d82efb1eb7a88e4.ctv",
       "logo": "https://epg.pw/media/images/channel/2023/12/26/large/20231226205507462932_79.png",
       "group": "电影类",
       "category": "movie"
@@ -3021,50 +3014,8 @@
       "category": "news"
     },
     {
-      "name": "tvbs新闻",
-      "url": "https://stream1.freetv.fun/5bad1e2d485e59cb1ef7353889b99add71e736816a9b993d98ba670303c51367.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2025/01/28/large/20250128055934838968_50.png",
-      "group": "新闻类",
-      "category": "news"
-    },
-    {
-      "name": "tvbs新闻",
-      "url": "https://stream1.freetv.fun/b9008aeb80dd41cc97f7006561fd5af645903c8fe9f44cb2e1e866c841842054.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2025/01/28/large/20250128055934838968_50.png",
-      "group": "新闻类",
-      "category": "news"
-    },
-    {
-      "name": "中天新闻 *$",
-      "url": "https://stream1.freetv.fun/2e5ea7a94f8b536b824d80670f398f48d1efa96faac6a5226cdc92b55d7a2e16.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2022/03/05/large/20220305151207450324_69.png",
-      "group": "新闻类",
-      "category": "news"
-    },
-    {
-      "name": "中天新闻",
-      "url": "https://stream1.freetv.fun/26909b95e0b48a92beff981e4af1a947e0f4eaf4515fb45d81de571b7a5aaeb0.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2022/03/05/large/20220305151207450324_69.png",
-      "group": "新闻类",
-      "category": "news"
-    },
-    {
-      "name": "中天新闻",
-      "url": "https://stream1.freetv.fun/d0dc419e572496e04901fdd844b4f116a46a43cf2651e93153312310bd703995.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2022/03/05/large/20220305151207450324_69.png",
-      "group": "新闻类",
-      "category": "news"
-    },
-    {
       "name": "中天新闻",
       "url": "https://stream1.freetv.fun/966a882718752fcf477567b8ecca5a53feb6bbf6b7e60a8d1030f9be6892c25d.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2022/03/05/large/20220305151207450324_69.png",
-      "group": "新闻类",
-      "category": "news"
-    },
-    {
-      "name": "中天新闻",
-      "url": "https://stream1.freetv.fun/d5a6ec037d2c4635d144520d0ddf989faeb6a5f8d5d85e3c5a5c07d2ca2d79b3.m3u8",
       "logo": "https://epg.pw/media/images/channel/2022/03/05/large/20220305151207450324_69.png",
       "group": "新闻类",
       "category": "news"
@@ -3234,34 +3185,6 @@
       "name": "大安新闻综合",
       "url": "https://stream1.freetv.fun/4e3c60a7236120c2bee70b13b5947036e26e1f25ca4bcc5e68297675eb9a284b.m3u8",
       "logo": "https://epg.pw/media/images/channel/2022/10/31/large/20221031232831325255_59.jpg",
-      "group": "新闻类",
-      "category": "news"
-    },
-    {
-      "name": "寰宇新闻",
-      "url": "https://stream1.freetv.fun/5bc2192b68243b3b4682609d306db8f3d5b61cc875fe9c26702040e560911ed8.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2023/07/24/large/20230724134652233694_13.png",
-      "group": "新闻类",
-      "category": "news"
-    },
-    {
-      "name": "寰宇新闻 *$",
-      "url": "https://stream1.freetv.fun/366a3588d09381efa33ffe4e332191e6a8d7d507fb293f2109acc3e1586b1f39.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2023/07/24/large/20230724134652233694_13.png",
-      "group": "新闻类",
-      "category": "news"
-    },
-    {
-      "name": "寰宇新闻",
-      "url": "https://stream1.freetv.fun/d9e077d94c5ba3a10f9d1a26d5c1f3aa5d4d3f811e1f85120c5b742aaa506157.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2023/07/24/large/20230724134652233694_13.png",
-      "group": "新闻类",
-      "category": "news"
-    },
-    {
-      "name": "寰宇新闻",
-      "url": "https://stream1.freetv.fun/cc3ac399d86099e5a3206d38ac3738ad97285b606895947d3786fbcd544081fd.m3u8",
-      "logo": "https://epg.pw/media/images/channel/2023/07/24/large/20230724134652233694_13.png",
       "group": "新闻类",
       "category": "news"
     },
@@ -3502,6 +3425,83 @@
       "logo": "https://epg.pw/media/images/channel/2022/11/01/large/20221101022911570371_38.jpg",
       "group": "新闻类",
       "category": "news"
+    },
+    {
+      "name": "江津新闻综合",
+      "url": "https://stream1.freetv.fun/9906a631d5d64a247810eac6fba14d27a3298aaf88fb394015763aa3407130cf.m3u8",
+      "logo": "https://epg.pw/media/images/channel/2022/11/01/large/20221101022911570371_38.jpg",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "江津新闻综合",
+      "url": "https://stream1.freetv.fun/957dd8f59dc49b19a8efc9750a105e05620a9d6f361968ca65f64aea5cc02340.m3u8",
+      "logo": "https://epg.pw/media/images/channel/2022/11/01/large/20221101022911570371_38.jpg",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "非凡新闻",
+      "url": "rtmp://f13h.mine.nu/sat/tv581",
+      "logo": "https://epg.pw/media/images/channel/2016/06/17/large/20160617165249161501_56.png",
+      "group": "新闻类",
+      "category": "news"
+    },
+    {
+      "name": "优漫卡通",
+      "url": "http://183.207.249.15/PLTV/4/224/3221225933/index.m3u8",
+      "logo": "",
+      "group": "卡通类",
+      "category": "cartoon"
+    },
+    {
+      "name": "优漫卡通",
+      "url": "http://223.110.243.171/PLTV/3/224/3221226982/index.m3u8",
+      "logo": "",
+      "group": "卡通类",
+      "category": "cartoon"
+    },
+    {
+      "name": "动画王国",
+      "url": "http://183.207.248.71/cntv/live1/donghuawg/donghuawg",
+      "logo": "",
+      "group": "卡通类",
+      "category": "cartoon"
+    },
+    {
+      "name": "南京少儿",
+      "url": "https://live.nbs.cn/channels/njtv/sepd/m3u8:500k/live.m3u8",
+      "logo": "",
+      "group": "卡通类",
+      "category": "cartoon"
+    },
+    {
+      "name": "嘉佳卡通",
+      "url": "http://223.110.245.139/PLTV/4/224/3221227009/index.m3u8",
+      "logo": "",
+      "group": "卡通类",
+      "category": "cartoon"
+    },
+    {
+      "name": "嘉佳卡通",
+      "url": "http://112.25.48.68/live/program/live/jjkt/1300000/mnf.m3u8",
+      "logo": "",
+      "group": "卡通类",
+      "category": "cartoon"
+    },
+    {
+      "name": "四川妇女儿童",
+      "url": "http://scgctvshow.sctv.com/hdlive/sctv7/index.m3u8",
+      "logo": "",
+      "group": "卡通类",
+      "category": "cartoon"
+    },
+    {
+      "name": "山东少儿",
+      "url": "http://livealone302.iqilu.com/iqilu/sepd.m3u8",
+      "logo": "",
+      "group": "卡通类",
+      "category": "cartoon"
     }
   ]
 }

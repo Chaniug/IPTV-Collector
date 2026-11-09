@@ -1,6 +1,6 @@
 {
-  "update": "2026-11-09T05:56:56.210Z",
-  "count": 209,
+  "update": "2026-11-09T12:22:55.954Z",
+  "count": 216,
   "sources": 8,
   "channels": [
     {
@@ -1465,6 +1465,55 @@
       "logo": "",
       "group": "新闻类",
       "category": "news"
+    },
+    {
+      "name": "优漫卡通",
+      "url": "http://183.207.249.15/PLTV/4/224/3221225933/index.m3u8",
+      "logo": "",
+      "group": "卡通类",
+      "category": "cartoon"
+    },
+    {
+      "name": "优漫卡通",
+      "url": "http://223.110.243.171/PLTV/3/224/3221226982/index.m3u8",
+      "logo": "",
+      "group": "卡通类",
+      "category": "cartoon"
+    },
+    {
+      "name": "动画王国",
+      "url": "http://183.207.248.71/cntv/live1/donghuawg/donghuawg",
+      "logo": "",
+      "group": "卡通类",
+      "category": "cartoon"
+    },
+    {
+      "name": "南京少儿",
+      "url": "https://live.nbs.cn/channels/njtv/sepd/m3u8:500k/live.m3u8",
+      "logo": "",
+      "group": "卡通类",
+      "category": "cartoon"
+    },
+    {
+      "name": "嘉佳卡通",
+      "url": "http://223.110.245.139/PLTV/4/224/3221227009/index.m3u8",
+      "logo": "",
+      "group": "卡通类",
+      "category": "cartoon"
+    },
+    {
+      "name": "嘉佳卡通",
+      "url": "http://112.25.48.68/live/program/live/jjkt/1300000/mnf.m3u8",
+      "logo": "",
+      "group": "卡通类",
+      "category": "cartoon"
+    },
+    {
+      "name": "山东少儿",
+      "url": "http://livealone302.iqilu.com/iqilu/sepd.m3u8",
+      "logo": "",
+      "group": "卡通类",
+      "category": "cartoon"
     }
   ]
 }
