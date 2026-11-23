@@ -1,6 +1,6 @@
 {
-  "update": "2026-11-22T06:25:22.342Z",
-  "count": 54,
+  "update": "2026-11-23T07:16:23.938Z",
+  "count": 57,
   "sources": 8,
   "channels": [
     {
@@ -214,6 +214,13 @@
       "category": "cctv"
     },
     {
+      "name": "CGTN Arabic",
+      "url": "https://arabic-liveali.cgtn.com/hls/LSveq57bErWLinBnxosqjisZ220802LSTefTAS9zc9mpU08y3np9TH220802cd/playlist.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
       "name": "CGTN Documentary",
       "url": "https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8",
       "logo": "",
@@ -228,8 +235,29 @@
       "category": "cctv"
     },
     {
+      "name": "CGTN French",
+      "url": "https://francais-liveali.cgtn.com/hls/LSvev95OuFZtKLc6CeKEFYXj220802LSTeV6PO0Ut9r71Uq3k5goCA220802cd/playlist.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
       "name": "CGTN Global Biz",
       "url": "https://fastlive.cctvplus.com/out/v1/2b3d8a0c805d437f9dc85b764c2ac599/index.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CGTN Russian",
+      "url": "https://russian-liveali.cgtn.com/hls/LSvexABhNipibK5KRuUkvHZ7220802LSTeze9o8tdFXMHsb1VosgoT220802cd/playlist.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CGTN Spanish",
+      "url": "https://espanol-liveali.cgtn.com/hls/LSveOGBaBw41Ea7ukkVAUdKQ220802LSTexu6xAuFH8VZNBLE1ZNEa220802cd/playlist.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
@@ -370,13 +398,6 @@
     {
       "name": "浙江卫视",
       "url": "http://183.207.248.71/gitv/live1/G_ZHEJIANG/G_ZHEJIANG",
-      "logo": "",
-      "group": "卫视台",
-      "category": "satellite"
-    },
-    {
-      "name": "深圳卫视",
-      "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-shenzhenstv/HD-2500k-1080P-shenzhenstv",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"

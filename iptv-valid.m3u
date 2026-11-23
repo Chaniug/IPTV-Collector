@@ -60,12 +60,20 @@ https://hlspackager.akamaized.net/live/DB/CGTN_ENGLISH/HLS/CGTN_ENGLISH.m3u8
 https://0472.org/hls/cgtn.m3u8
 #EXTINF:-1 tvg-id="CGTN" tvg-name="CGTN" tvg-logo="" group-title="央视台",CGTN
 https://dai.google.com/linear/hls/event/r4sa-f6GSN2XIvzKv5jVng/master.m3u8
+#EXTINF:-1 tvg-id="CGTNArabic" tvg-name="CGTN Arabic" tvg-logo="" group-title="央视台",CGTN Arabic
+https://arabic-liveali.cgtn.com/hls/LSveq57bErWLinBnxosqjisZ220802LSTefTAS9zc9mpU08y3np9TH220802cd/playlist.m3u8
 #EXTINF:-1 tvg-id="CGTNDocumentary" tvg-name="CGTN Documentary" tvg-logo="" group-title="央视台",CGTN Documentary
 https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8
 #EXTINF:-1 tvg-id="CGTNDocumentary" tvg-name="CGTN Documentary" tvg-logo="" group-title="央视台",CGTN Documentary
 https://hlspackager.akamaized.net/live/DB/CGTN_DOCUMENTARY/HLS/CGTN_DOCUMENTARY.m3u8
+#EXTINF:-1 tvg-id="CGTNFrench" tvg-name="CGTN French" tvg-logo="" group-title="央视台",CGTN French
+https://francais-liveali.cgtn.com/hls/LSvev95OuFZtKLc6CeKEFYXj220802LSTeV6PO0Ut9r71Uq3k5goCA220802cd/playlist.m3u8
 #EXTINF:-1 tvg-id="CGTNGlobalBiz" tvg-name="CGTN Global Biz" tvg-logo="" group-title="央视台",CGTN Global Biz
 https://fastlive.cctvplus.com/out/v1/2b3d8a0c805d437f9dc85b764c2ac599/index.m3u8
+#EXTINF:-1 tvg-id="CGTNRussian" tvg-name="CGTN Russian" tvg-logo="" group-title="央视台",CGTN Russian
+https://russian-liveali.cgtn.com/hls/LSvexABhNipibK5KRuUkvHZ7220802LSTeze9o8tdFXMHsb1VosgoT220802cd/playlist.m3u8
+#EXTINF:-1 tvg-id="CGTNSpanish" tvg-name="CGTN Spanish" tvg-logo="" group-title="央视台",CGTN Spanish
+https://espanol-liveali.cgtn.com/hls/LSveOGBaBw41Ea7ukkVAUdKQ220802LSTexu6xAuFH8VZNBLE1ZNEa220802cd/playlist.m3u8
 #EXTINF:-1 tvg-id="CGTNSpanish" tvg-name="CGTN Spanish" tvg-logo="" group-title="央视台",CGTN Spanish
 http://45.186.106.147:8880/play/a06f/index.m3u8
 
@@ -107,6 +115,4 @@ http://183.207.248.71/cntv/live1/HD-2500k-1080P-zhejiangstv/HD-2500k-1080P-zheji
 http://183.207.248.71/cntv/live1/zhejiangstv/zhejiangstv
 #EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="" group-title="卫视台",浙江卫视
 http://183.207.248.71/gitv/live1/G_ZHEJIANG/G_ZHEJIANG
-#EXTINF:-1 tvg-id="深圳卫视" tvg-name="深圳卫视" tvg-logo="" group-title="卫视台",深圳卫视
-http://183.207.248.71/cntv/live1/HD-2500k-1080P-shenzhenstv/HD-2500k-1080P-shenzhenstv
 
