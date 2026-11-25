@@ -1,6 +1,6 @@
 {
-  "update": "2026-11-24T09:39:19.668Z",
-  "count": 163,
+  "update": "2026-11-25T08:10:41.020Z",
+  "count": 164,
   "sources": 8,
   "channels": [
     {
@@ -48,6 +48,13 @@
     {
       "name": "CCTV-4 Asia",
       "url": "http://74.91.26.218:82/live/cctv4hd.m3u8",
+      "logo": "",
+      "group": "央视台",
+      "category": "cctv"
+    },
+    {
+      "name": "CCTV-4 Europe",
+      "url": "https://r.eu.cdn-redge.media/livehls/oeu/mt/live/cctv_4/live.livx/playlist.m3u8",
       "logo": "",
       "group": "央视台",
       "category": "cctv"
