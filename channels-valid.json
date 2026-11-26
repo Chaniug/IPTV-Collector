@@ -1,6 +1,6 @@
 {
-  "update": "2026-11-25T08:10:41.020Z",
-  "count": 40,
+  "update": "2026-11-26T07:58:52.668Z",
+  "count": 41,
   "sources": 8,
   "channels": [
     {
@@ -279,6 +279,13 @@
     {
       "name": "BRTV 北京卫视",
       "url": "http://go.bkpcp.top/mg/bjws",
+      "logo": "",
+      "group": "卫视台",
+      "category": "satellite"
+    },
+    {
+      "name": "云南卫视",
+      "url": "http://183.207.248.71/gitv/live1/G_YUNNAN/G_YUNNAN",
       "logo": "",
       "group": "卫视台",
       "category": "satellite"
