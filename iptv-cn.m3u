@@ -34,8 +34,6 @@ http://74.91.26.218:82/live/cctv7hd.m3u8
 http://74.91.26.218:82/live/cctv8hd.m3u8
 #EXTINF:-1 tvg-id="CCTV-8K" tvg-name="CCTV-8K" tvg-logo="" group-title="央视台",CCTV-8K
 http://192.151.150.154/live/cctv8k.m3u8
-#EXTINF:-1 tvg-id="CCTV-8K" tvg-name="CCTV-8K" tvg-logo="" group-title="央视台",CCTV-8K
-http://198.204.240.250:82/live/cctv8k.m3u8
 #EXTINF:-1 tvg-id="CCTV-9" tvg-name="CCTV-9" tvg-logo="" group-title="央视台",CCTV-9
 https://xykt-fix.github.io/Y77.m3u8
 #EXTINF:-1 tvg-id="CCTV-10" tvg-name="CCTV-10" tvg-logo="" group-title="央视台",CCTV-10
@@ -352,6 +350,20 @@ http://60.30.52.41/live/bhtv1/playlist.m3u8
 http://117.156.28.119/270000001111/1110000145/index.m3u8
 #EXTINF:-1 tvg-id="白城新闻综合" tvg-name="白城新闻综合" tvg-logo="" group-title="新闻类",白城新闻综合
 https://stream2.jlntv.cn/baicheng1/sd/live.m3u8
+#EXTINF:-1 tvg-id="白山新闻综合" tvg-name="白山新闻综合" tvg-logo="" group-title="新闻类",白山新闻综合
+https://stream2.jlntv.cn/baishan1/sd/live.m3u8
+#EXTINF:-1 tvg-id="篮球资讯" tvg-name="篮球资讯" tvg-logo="" group-title="新闻类",篮球资讯
+http://223.110.245.139/PLTV/4/224/3221227023/index.m3u8
+#EXTINF:-1 tvg-id="西安商务资讯" tvg-name="西安商务资讯" tvg-logo="" group-title="新闻类",西安商务资讯
+http://stream2.xiancity.cn/xatv3/playlist.m3u8
+#EXTINF:-1 tvg-id="西安新闻" tvg-name="西安新闻" tvg-logo="" group-title="新闻类",西安新闻
+http://stream2.xiancity.cn/xatv1/playlist.m3u8
+#EXTINF:-1 tvg-id="辽源新闻综合" tvg-name="辽源新闻综合" tvg-logo="" group-title="新闻类",辽源新闻综合
+https://stream2.jlntv.cn/liaoyuan1/sd/live.m3u8
+#EXTINF:-1 tvg-id="通化新闻" tvg-name="通化新闻" tvg-logo="" group-title="新闻类",通化新闻
+https://stream2.jlntv.cn/tonghua1/sd/live.m3u8
+#EXTINF:-1 tvg-id="邗江资讯" tvg-name="邗江资讯" tvg-logo="" group-title="新闻类",邗江资讯
+http://223.110.245.139/PLTV/4/224/3221227154/index.m3u8
 
 #EXTINF:-1 tvg-id="五星体育" tvg-name="五星体育" tvg-logo="" group-title="体育类",五星体育
 http://223.110.245.147/ott.js.chinamobile.com/PLTV/3/224/3221226799/index.m3u8
